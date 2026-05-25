@@ -1,3 +1,7 @@
+> ⚠️ **OBSOLETO (2026-05-25).** O projeto NÃO usa mais Vercel. O deploy agora é
+> **static export → Hostinger** via branch `production`. Veja **`DEPLOY-HOSTINGER.md`**.
+> O conteúdo abaixo fica só como registro histórico do fluxo Vercel.
+
 # Publicar um preview para o cliente (Vercel)
 
 Objetivo: URL `*.vercel.app` privada para o cliente revisar/aprovar — **sem**

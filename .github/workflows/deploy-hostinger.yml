@@ -1,0 +1,45 @@
+name: Deploy Hostinger (static export)
+
+# Builda o site (Next.js static export → out/) e publica o conteúdo na branch
+# `production`, que é o que a Hostinger serve. Para atualizar o site no ar,
+# basta dar push na `main` — este workflow cuida do resto.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {} # permite disparar manualmente pela aba Actions
+
+permissions:
+  contents: write # necessário para o GITHUB_TOKEN empurrar para a branch production
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (next build → static export em ./out)
+        run: npm run build
+
+      - name: Publish ./out para a branch production
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: production
+          # Sem .nojekyll/CNAME aqui: o destino é Hostinger (Apache), não GH Pages.
+          # O .htaccess e o contato.php vêm de public/ e já estão dentro de ./out.
+          commit_message: "deploy: ${{ github.event.head_commit.message }}"

@@ -1,0 +1,60 @@
+# .htaccess — Braga Jr. Advogados · hospedagem estática Hostinger (Apache/LiteSpeed)
+#
+# Por que existe: `output: 'export'` do Next gera HTML puro e IGNORA o
+# `redirects()` do next.config (que só roda em servidor Node). Estes 301
+# preservam o link equity da migração do WordPress. Fonte da verdade dos
+# redirects = este arquivo (espelha o antigo next.config.mjs + MIGRATION-MAP.md).
+#
+# Copiado para a raiz do site no deploy (out/.htaccess).
+
+Options -MultiViews -Indexes
+
+# O export gera tanto `atuacao.html` (página da seção) quanto a pasta
+# `atuacao/` (sub-páginas). Sem isto, o Apache redireciona /atuacao → /atuacao/
+# e procura um index inexistente → 403. DirectorySlash Off + a regra de .html
+# abaixo (que checa o arquivo ANTES da pasta) servem a página da seção.
+DirectorySlash Off
+
+RewriteEngine On
+
+# ───────────── 301 da migração WordPress (SEO link equity) ─────────────
+# Páginas equivalentes no site novo
+RewriteRule ^areas-de-atuacao(/.*)?$        /atuacao [R=301,L]
+RewriteRule ^sobre-nos(/.*)?$               /sobre [R=301,L]
+RewriteRule ^textos-e-noticias(/.*)?$       /blog [R=301,L]
+RewriteRule ^mapa-do-site/?$                /sitemap.xml [R=301,L]
+
+# Posts antigos do WP (preservam equity → /blog ou área correspondente)
+RewriteRule ^principios-lei-responsabilidade-fiscal-jorge-braga/?$                              /blog [R=301,L]
+RewriteRule ^a-retorica-nas-decisoes-judiciais-entre-a-busca-do-justo-e-a-seguranca-juridica/?$ /blog [R=301,L]
+RewriteRule ^defesa-em-sindicancia-rj/?$    /atuacao/direito-do-servidor [R=301,L]
+
+# Categorias do WP → área (específicas ANTES do catch-all)
+RewriteRule ^category/direito-servidor-publico/?$       /atuacao/direito-do-servidor [R=301,L]
+RewriteRule ^category/direito-publico-administrativo/?$ /atuacao/administracao-publica [R=301,L]
+RewriteRule ^category(/.*)?$                /blog [R=301,L]
+
+# Páginas de autor do WP → /sobre
+RewriteRule ^author(/.*)?$                  /sobre [R=301,L]
+
+# Área restrita ainda não existe → canal de contato
+RewriteRule ^area-restrita/?$               /contato [R=301,L]
+
+# NOTA: /elementor-2168 e lixo de plugin NÃO são redirecionados de propósito —
+# 404 é o sinal correto p/ o Google deindexar conteúdo gerado por plugin.
+
+# ───────────── URLs limpas (sem expor .html) ─────────────
+# 1) /pagina.html visível → 301 para /pagina (canonical sem extensão).
+#    Casa só na requisição literal do browser (THE_REQUEST), então não cria loop
+#    com o rewrite interno abaixo.
+RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 2) Serve /pagina a partir de /pagina.html. Checa o ARQUIVO .html diretamente
+#    (não usa !-d), então funciona mesmo quando existe pasta homônima — caso de
+#    /atuacao (atuacao.html) e /blog (blog.html).
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# ───────────── Página 404 estática gerada pelo export ─────────────
+ErrorDocument 404 /404.html

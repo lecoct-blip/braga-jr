@@ -59,7 +59,7 @@ export function ContactForm() {
 
     setStatus('sending');
     try {
-      const res = await fetch('/api/contato', {
+      const res = await fetch('/contato.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
