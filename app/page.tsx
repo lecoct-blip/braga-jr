@@ -186,7 +186,7 @@ export default function HomePage() {
 
       {/* ───────── FAIXA DE DADOS ────────────────────────────────────── */}
       <div className="section--elev" style={{ borderTop: '1px solid var(--border-soft)', borderBottom: '1px solid var(--border-soft)' }}>
-        <div className="container" style={{ padding: '64px 32px' }}>
+        <div className="container" style={{ paddingTop: 64, paddingBottom: 64 }}>
           <div className="stat-row" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
             {STATS.map((s, i) => (
               <div key={s.unit} className="reveal" data-delay={i + 1}>
@@ -305,7 +305,7 @@ export default function HomePage() {
                 label="FOTO · biblioteca do escritório · livros antigos · luz lateral"
                 alt="Biblioteca do escritório Braga Jr. Advogados, Centro do Rio de Janeiro"
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                style={{ height: 540 }}
+                style={{ height: 'clamp(380px, 80vw, 540px)' }}
               />
             </div>
             <div className="reveal" data-delay="2">
@@ -382,7 +382,7 @@ export default function HomePage() {
               <Link
                 key={p.name}
                 href={p.href ?? '/sobre'}
-                className="card card--link reveal"
+                className="card card--link reveal card-split"
                 data-delay={i + 1}
                 style={{ display: 'grid', gridTemplateColumns: '170px 1fr', gap: 24, padding: 28, alignItems: 'start' }}
               >

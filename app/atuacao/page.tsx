@@ -132,7 +132,7 @@ export default function AtuacaoPage() {
                   <ul style={{
                     listStyle: 'none', padding: 0, margin: '24px 0 0',
                     fontSize: 13, color: 'var(--ink-muted)', lineHeight: 1.7,
-                    display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px 18px',
+                    display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '6px 18px',
                   }}>
                     {a.bullets.map((b) => (
                       <li key={b} style={{ display: 'flex', gap: 8 }}>

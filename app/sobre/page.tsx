@@ -97,7 +97,7 @@ export default function SobrePage() {
                 label="FOTO · biblioteca do escritório · livros antigos · luz lateral"
                 alt="Biblioteca do escritório Braga Jr. Advogados, Centro do Rio de Janeiro"
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                style={{ height: 540 }}
+                style={{ height: 'clamp(380px, 80vw, 540px)' }}
               />
             </div>
             <div className="reveal" data-delay="2">
@@ -272,7 +272,7 @@ export default function SobrePage() {
 
           <div style={{ position: 'relative' }}>
             {FIRM_TIMELINE.map((t, i) => (
-              <div key={t.year} className="reveal" data-delay={(i % 3) + 1} style={{
+              <div key={t.year} className="reveal timeline-row" data-delay={(i % 3) + 1} style={{
                 display: 'grid', gridTemplateColumns: '160px 1fr 1.5fr', gap: 48,
                 padding: '36px 0', borderTop: i === 0 ? '1px solid var(--border)' : 'none',
                 borderBottom: '1px solid var(--border-soft)',
@@ -336,7 +336,7 @@ export default function SobrePage() {
             {TEAM.filter((p) => p.feature).map((p, i) => (
               <div
                 key={p.name}
-                className="card reveal"
+                className="card reveal card-split"
                 data-delay={i + 1}
                 style={{ display: 'grid', gridTemplateColumns: '170px 1fr', gap: 24, padding: 28, alignItems: 'start' }}
               >

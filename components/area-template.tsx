@@ -147,7 +147,7 @@ export function AreaTemplate({
           <div className="grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start' }}>
             <div className="reveal">
               <Eyebrow>Sócio responsável</Eyebrow>
-              <div className="card" style={{ marginTop: 24, display: 'grid', gridTemplateColumns: '160px 1fr', gap: 24, padding: 28 }}>
+              <div className="card card-split" style={{ marginTop: 24, display: 'grid', gridTemplateColumns: '160px 1fr', gap: 24, padding: 28 }}>
                 <Figure
                   src="images/equipe/jorge-braga-jr.jpg"
                   aspect="4/5"

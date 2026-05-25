@@ -183,8 +183,11 @@ a:focus-visible,
 .container--narrow { max-width: var(--container-narrow); }
 .container--wide   { max-width: var(--container-wide); }
 
-.section { padding: clamp(64px, 9vw, 144px) 0; position: relative; }
-.section--tight { padding: clamp(48px, 6vw, 96px) 0; }
+/* padding vertical em LONGHAND (não `X 0`): o shorthand zerava o
+   padding-left/right e, num elemento `.container.section`, matava o gutter
+   lateral no mobile (conteúdo encostava na borda + marquee vazava). */
+.section { padding-top: clamp(64px, 9vw, 144px); padding-bottom: clamp(64px, 9vw, 144px); position: relative; }
+.section--tight { padding-top: clamp(48px, 6vw, 96px); padding-bottom: clamp(48px, 6vw, 96px); }
 .section--deep  { background: var(--bg-deep); }
 .section--elev  { background: var(--bg-elev); }
 
@@ -288,6 +291,10 @@ a:focus-visible,
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-mono); font-size: 11px; color: var(--ink-faint);
   text-align: center; padding: 16px;
+  /* O briefing inclui o caminho do arquivo (sem espaços) — palavra longa que,
+     em grids 2-col no celular, inflaria a coluna e causaria scroll lateral.
+     Permitir quebra mantém o placeholder dentro da largura. */
+  overflow-wrap: anywhere;
 }
 .ph::before {
   content: ""; position: absolute; inset: 0;
@@ -713,12 +720,24 @@ a:focus-visible,
   .grid-3col        { grid-template-columns: 1fr !important; }
   .hero-grid        { grid-template-columns: 1fr !important; gap: 32px !important; }
   .hero-side        { display: none !important; }
-  .section          { padding: 64px 0 !important; }
-  h1                { font-size: 42px !important; }
-  h2                { font-size: 32px !important; }
-  h3                { font-size: 24px !important; }
-  .display-xl       { font-size: 52px !important; }
-  .display-lg       { font-size: 42px !important; }
+  .section          { padding-top: 64px !important; padding-bottom: 64px !important; }
+  /* Títulos fluidos: escalam entre 320 e 768px em vez de px fixo (evita o H1
+     da Home estourar a largura em 320px). Limite superior = tamanho de antes. */
+  h1                { font-size: clamp(30px, 8.5vw, 42px) !important; }
+  h2                { font-size: clamp(25px, 6.5vw, 32px) !important; }
+  h3                { font-size: clamp(20px, 5vw, 24px) !important; }
+  .display-xl       { font-size: clamp(36px, 11vw, 52px) !important; }
+  .display-lg       { font-size: clamp(32px, 8.5vw, 42px) !important; }
+  /* Subtítulos dentro de artigos NÃO devem inflar acima do desktop. A regra
+     `h2/h3 !important` acima os pegava (28px→32px, hierarquia invertida); como
+     `.article-body h2` é mais específico + !important, volta a vencer. */
+  .article-body h2  { font-size: clamp(22px, 6vw, 28px) !important; }
+  .article-body h3  { font-size: clamp(19px, 4.5vw, 22px) !important; }
+  /* Grids internos de card com coluna fixa (foto+texto, ano+marco) empilham no
+     celular — senão o texto fica espremido em ~80px. São estilos inline, então
+     precisam de classe-gancho para o media query alcançá-los. */
+  .card-split       { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .timeline-row     { grid-template-columns: 1fr !important; gap: 6px !important; padding: 24px 0 !important; }
   .pagehead         { padding-top: 96px !important; padding-bottom: 32px !important; }
   .stat-row         { grid-template-columns: repeat(2, 1fr) !important; }
   .footer-grid      { grid-template-columns: 1fr !important; gap: 32px !important; }
@@ -726,28 +745,78 @@ a:focus-visible,
   .acts             { grid-template-columns: 1fr !important; }
   .socio-hero       { grid-template-columns: 1fr !important; }
   .contato-grid     { grid-template-columns: 1fr !important; }
-  /* Header: tabs envolvem em vez de sumir (mobile sem nav = ruim p/ SEO/UX;
-     a11y melhora permitida pelo README §4). Hambúrguer fica p/ depois (§9.4). */
+  /* Header mobile: barra enxuta = logo + hambúrguer. Tabs e CTA da barra
+     somem; a navegação e o WhatsApp passam pro painel deslizante (§9.4). */
   .site-header-inner { grid-template-columns: 1fr auto !important; gap: 12px !important; padding: 14px 20px !important; }
   .site-brand       { font-size: 20px !important; }
   .site-tabs        { display: none !important; }
-  .site-cta         { padding: 9px 14px !important; font-size: 12px !important; }
-  .site-nav-mobile  { display: flex !important; }
+  .site-cta         { display: none !important; }
+  .site-burger      { display: inline-flex !important; }
 }
 
-/* Nav mobile (linha de abas rolável abaixo do brand) — só < 768px */
-.site-nav-mobile { display: none; }
-@media (max-width: 768px) {
-  .site-nav-mobile {
-    grid-column: 1 / -1;
-    display: flex; gap: 4px; overflow-x: auto;
-    padding: 4px 20px 12px; margin: 0; list-style: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  .site-nav-mobile a {
-    font-family: var(--font-body); font-size: 13px; font-weight: 500;
-    color: var(--ink-muted); padding: 6px 12px; white-space: nowrap;
-    border: 1px solid var(--border-soft); border-radius: 999px;
-  }
-  .site-nav-mobile a.is-active { color: var(--ink); border-color: var(--border-strong); }
+/* ─── Menu mobile: hambúrguer + painel deslizante (só < 768px) ──────────── */
+.site-burger { display: none; } /* desktop: oculto */
+
+.site-burger-box { position: relative; width: 22px; height: 16px; }
+.site-burger-bar {
+  position: absolute; left: 0; width: 100%; height: 2px; border-radius: 2px;
+  background: currentColor;
+  transition: transform var(--t-fast) var(--ease),
+              opacity   var(--t-fast) var(--ease),
+              top       var(--t-fast) var(--ease);
+}
+.site-burger-bar:nth-child(1) { top: 0; }
+.site-burger-bar:nth-child(2) { top: 7px; }
+.site-burger-bar:nth-child(3) { top: 14px; }
+/* aberto → vira X */
+.site-burger[aria-expanded='true'] .site-burger-bar:nth-child(1) { top: 7px; transform: rotate(45deg); }
+.site-burger[aria-expanded='true'] .site-burger-bar:nth-child(2) { opacity: 0; }
+.site-burger[aria-expanded='true'] .site-burger-bar:nth-child(3) { top: 7px; transform: rotate(-45deg); }
+
+.site-mobile-backdrop {
+  position: fixed; inset: 0; z-index: 70;
+  background: rgba(0, 0, 0, 0.42);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity var(--t-med) var(--ease), visibility var(--t-med) var(--ease);
+}
+.site-mobile-backdrop.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
+
+.site-mobile-panel {
+  position: absolute; top: 100%; left: 0; right: 0; z-index: 80;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.55);
+  padding: 8px 20px 22px;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity var(--t-med) var(--ease),
+              transform var(--t-med) var(--ease),
+              visibility var(--t-med) var(--ease);
+}
+.site-mobile-panel.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+
+.site-mobile-nav ul { list-style: none; margin: 0; padding: 0; }
+.site-mobile-nav li + li { border-top: 1px solid var(--border-soft); }
+.site-mobile-nav a {
+  display: block; padding: 16px 4px;
+  font-family: var(--font-display); font-size: 21px; letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.site-mobile-nav a.is-active { color: var(--accent); }
+.site-mobile-wa {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin-top: 18px; padding: 15px;
+  font-family: var(--font-body); font-size: 15px; font-weight: 500;
+  /* --bronze é token fixo (não inverte no dark) — igual .btn--primary. Evita
+     o botão sumir no tema escuro, onde --ink vira claro como --ice. */
+  color: var(--ice); background: var(--bronze); border-radius: 2px;
+}
+.site-mobile-wa .wa-glyph { width: 16px; height: 16px; }
+
+/* Painel e fundo nunca aparecem no desktop, mesmo que o estado fique aberto. */
+@media (min-width: 769px) {
+  .site-mobile-panel, .site-mobile-backdrop { display: none; }
+}
+/* Respeita quem pediu menos movimento. */
+@media (prefers-reduced-motion: reduce) {
+  .site-mobile-panel, .site-mobile-backdrop, .site-burger-bar { transition: none; }
 }
