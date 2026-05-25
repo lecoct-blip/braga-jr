@@ -1,0 +1,40 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js / build output
+/.next
+/out
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# production / deploy
+/.vercel
+
+# environment (segredos) — .env.example PERMANECE versionado de propósito
+.env
+.env.local
+.env*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# testing / coverage
+/coverage
+
+# OS
+.DS_Store
+Thumbs.db
+
+# editores
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# certificados / chaves
+*.pem
