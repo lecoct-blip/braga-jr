@@ -53,10 +53,10 @@ const RAW: Omit<Post, 'status'>[] = [
   },
   {
     slug: 'progressao-funcional-rj', kicker: 'Servidor',
-    dateLabel: 'Fev · 2026', published: '2026-02-10', read: '7 min',
-    title: 'Progressão funcional bloqueada: três caminhos administrativos antes da via judicial',
+    dateLabel: 'Fev · 2026', published: '2026-02-10', read: '12 min',
+    title: 'Progressão funcional bloqueada: três caminhos antes da via judicial',
     excerpt:
-      'Critérios para distinguir bloqueio formal de bloqueio material — e quando vale acionar a CGE antes do MS.',
+      'Três caminhos administrativos — requerimento, recurso hierárquico e canais institucionais — costumam resolver o bloqueio antes do mandado de segurança.',
   },
   {
     slug: 'lei-licitacoes-fiscalizacao', kicker: 'Licitações',
@@ -86,7 +86,7 @@ const RAW: Omit<Post, 'status'>[] = [
  * corpo redigido aguardando sign-off; resto = placeholder (só metadados).
  */
 const PUBLISHED = new Set<string>(['pad-controle-judicial']);
-const DRAFT = new Set<string>([]);
+const DRAFT = new Set<string>(['progressao-funcional-rj']);
 
 export const POSTS: Post[] = RAW.map((p) => ({
   ...p,

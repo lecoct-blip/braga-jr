@@ -596,10 +596,36 @@ a:focus-visible,
   font-size: 21px; line-height: 1.55; color: var(--ink);
   font-family: var(--font-display); max-width: 40ch;
 }
-.article-body { max-width: 70ch; }
+.article-body { max-width: 70ch; overflow-wrap: break-word; }
 .article-body p { font-size: 18px; line-height: 1.75; color: var(--ink-muted); margin-bottom: 22px; }
 .article-body h2 { font-size: 28px; margin: 44px 0 14px; }
 .article-body h3 { font-size: 22px; margin: 32px 0 10px; }
+.article-body strong { color: var(--ink); font-weight: 600; }
+.article-body a { color: var(--accent); border-bottom: 1px solid var(--border); }
+.article-body ul, .article-body ol { margin: 0 0 22px; padding-left: 22px; color: var(--ink-muted); font-size: 18px; line-height: 1.7; }
+.article-body li { margin-bottom: 8px; }
+.article-body li::marker { color: var(--accent); }
+.article-body blockquote {
+  margin: 28px 0; padding: 6px 0 6px 22px; border-left: 2px solid var(--accent);
+  font-family: var(--font-display); font-size: 19px; line-height: 1.55;
+  color: var(--ink); font-style: italic;
+}
+.article-body blockquote cite {
+  display: block; margin-top: 12px; font-family: var(--font-mono); font-size: 12px;
+  font-style: normal; letter-spacing: 0.03em; color: var(--ink-faint);
+}
+/* Tabela: wrapper com scroll horizontal — nunca quebra a largura da página no mobile */
+.article-table { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 24px 0; }
+.article-table table { border-collapse: collapse; width: 100%; min-width: 520px; }
+.article-table th, .article-table td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--border-soft); }
+.article-table th { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+.article-table td { font-size: 15px; line-height: 1.5; color: var(--ink-muted); }
+/* Sumário (índice no topo do artigo) */
+.article-toc { margin: 28px 0 8px; padding: 18px 22px; background: var(--bg-soft); border: 1px solid var(--border-soft); border-radius: 2px; }
+.article-toc-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px; }
+.article-toc ol { margin: 0; padding-left: 20px; color: var(--ink-muted); font-size: 15px; line-height: 1.7; }
+.article-toc a { color: var(--ink-muted); border: 0; }
+.article-toc a:hover { color: var(--accent); }
 .article-meta {
   display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline;
   font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint);
