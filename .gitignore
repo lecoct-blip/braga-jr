@@ -38,3 +38,6 @@ Thumbs.db
 
 # certificados / chaves
 *.pem
+
+# Claude Code — notas locais (pessoais, não versionar)
+.claude.local.md
