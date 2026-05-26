@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import { Infographic } from '@/components/infographic';
 
 /**
  * Corpos dos posts de blog. Os primeiros foram escritos como SCAFFOLD no tom
@@ -227,6 +228,13 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
         Cada uma dessas causas exige uma estratégia própria. E todas elas devem
         ser, num primeiro momento, atacadas pela via administrativa.
       </p>
+
+      <Infographic
+        src="images/blog/progressao-funcional-rj/fluxograma-3-caminhos.svg"
+        alt="Fluxograma dos três caminhos administrativos antes da via judicial: requerimento com pedido de reconsideração, recurso hierárquico e provocação de canais institucionais — e o ponto em que o caso segue para mandado de segurança ou ação ordinária."
+        label="FLUXOGRAMA · 3 caminhos administrativos → via judicial · requerimento · recurso hierárquico · canais institucionais · 16:10"
+        caption="Os três caminhos administrativos e o ponto de transição para a via judicial."
+      />
 
       <h2 id="caminho-1">Caminho 1 — Requerimento administrativo com pedido de reconsideração</h2>
       <p>

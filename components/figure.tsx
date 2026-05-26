@@ -68,6 +68,9 @@ export function Figure({
   // automaticamente. Assim a slot pode pedir .jpg e o arquivo em disco ser .webp
   // (ou vice-versa) sem precisar mudar referências.
   const actual = findActualFile(cleaned);
+  // O escritório entrega sempre em .webp — o briefing do placeholder sugere o
+  // nome com .webp, mesmo que o src referencie .jpg (o findActualFile resolve).
+  const suggested = cleaned.replace(/\.(jpe?g|png)$/i, '.webp');
   const aspectClass = ASPECT_CLASS[aspect];
 
   if (actual) {
@@ -100,7 +103,7 @@ export function Figure({
         {label}
         <br />
         <span style={{ display: 'inline-block', marginTop: 10, color: 'var(--accent)' }}>
-          {`salvar como: public/${cleaned}`}
+          {`salvar como: public/${suggested}`}
         </span>
       </span>
     </div>
