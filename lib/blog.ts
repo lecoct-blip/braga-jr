@@ -85,8 +85,8 @@ const RAW: Omit<Post, 'status'>[] = [
  * Atribui status. PUBLISHED = revisado e liberado pelo Dr. Jorge; DRAFT =
  * corpo redigido aguardando sign-off; resto = placeholder (só metadados).
  */
-const PUBLISHED = new Set<string>(['pad-controle-judicial']);
-const DRAFT = new Set<string>(['progressao-funcional-rj']);
+const PUBLISHED = new Set<string>(['pad-controle-judicial', 'progressao-funcional-rj']);
+const DRAFT = new Set<string>([]);
 
 export const POSTS: Post[] = RAW.map((p) => ({
   ...p,
