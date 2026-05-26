@@ -58,6 +58,14 @@ export const NAP = {
 } as const;
 
 /**
+ * Bio do sócio-fundador — assinatura ao final de cada artigo do blog
+ * (app/blog/[slug]/page.tsx). Fonte única: alterar aqui reflete em todos os
+ * posts. Nome e OAB vêm de NAP.
+ */
+export const FOUNDER_BIO =
+  'Atua há mais de três décadas em Direito Público, com atuação consolidada em causas de servidores públicos federais, estaduais e municipais, perante tribunais de todas as instâncias, inclusive em sustentação oral no STF e no STJ. Formação pela PUC-Rio, com pós-graduações em Direito Público e Privado (EMERJ), Advocacia Pública (UERJ/IPGE, convênio com a PGE-RJ) e Direito Empresarial (IBMEC).';
+
+/**
  * Constantes LGPD. O escritório não possui CNPJ próprio → identificação do
  * controlador é feita por nome + responsável técnico + OAB + endereço, que é
  * aceito pela ANPD (art. 5º, VI: controlador pode ser PF ou PJ desde que

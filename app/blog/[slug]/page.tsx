@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Eyebrow } from '@/components/ui';
 import { Figure } from '@/components/figure';
-import { JsonLd, breadcrumb, buildOg, SITE_URL, ORG_ID, NAP } from '@/lib/site';
+import { JsonLd, breadcrumb, buildOg, SITE_URL, ORG_ID, NAP, FOUNDER_BIO } from '@/lib/site';
 import { POSTS, getPost, longDate } from '@/lib/blog';
 import { POST_BODIES } from '@/lib/blog-content';
 
@@ -149,24 +149,43 @@ export default function PostPage({ params }: Params) {
             )}
           </div>
 
-          {/* CTA — README §7.6 */}
-          <div
-            className="reveal"
-            data-delay="3"
-            style={{
-              marginTop: 56, padding: 'clamp(28px, 4vw, 44px)',
-              border: '1px solid var(--border)', background: 'var(--bg-soft)',
-              textAlign: 'center',
-            }}
-          >
-            <Eyebrow noRule>Tem dúvida sobre o tema?</Eyebrow>
-            <h2 style={{ marginTop: 16, fontSize: 'var(--t-display-sm)' }}>
-              Converse com <span className="s-it">o sócio responsável.</span>
-            </h2>
-            <div style={{ marginTop: 28 }}>
-              <Link href="/contato" className="btn btn--primary">
-                Agendar consulta estratégica <span className="arrow">→</span>
-              </Link>
+          {/* Assinatura do autor (responsável técnico) ao fim do artigo —
+              reforça E-E-A-T/autoria nomeada e integra os CTAs. Substitui o CTA
+              genérico anterior. Bio em lib/site.tsx (fonte única). */}
+          <div className="reveal" data-delay="3" style={{ marginTop: 56 }}>
+            <Eyebrow noRule>Sobre o autor</Eyebrow>
+            <div
+              className="card card-split"
+              style={{
+                marginTop: 20, display: 'grid', gridTemplateColumns: '150px 1fr',
+                gap: 28, padding: 'clamp(24px, 4vw, 36px)', alignItems: 'start',
+              }}
+            >
+              <Figure
+                src="images/equipe/jorge-braga-jr.jpg"
+                aspect="4/5"
+                label="FOTO · Dr. Jorge Braga Jr. · 4:5 · olhar direto · fundo neutro"
+                alt={`${NAP.partner}, sócio-fundador — Braga Jr. Advogados, Rio de Janeiro`}
+                sizes="150px"
+                style={{ width: '100%' }}
+              />
+              <div>
+                <div className="serif" style={{ fontSize: 24, lineHeight: 1.2 }}>{NAP.partner}</div>
+                <div className="mono" style={{ fontSize: 11, color: 'var(--accent)', letterSpacing: '0.12em', marginTop: 6 }}>
+                  {NAP.oab}
+                </div>
+                <p style={{ marginTop: 16, fontSize: 15, lineHeight: 1.7, color: 'var(--ink-muted)' }}>
+                  {FOUNDER_BIO}
+                </p>
+                <div style={{ marginTop: 22, display: 'flex', gap: 28, flexWrap: 'wrap' }}>
+                  <Link href="/publicacoes" className="btn btn--link">
+                    Ver publicações <span className="arrow">→</span>
+                  </Link>
+                  <Link href="/contato" className="btn btn--link">
+                    Agendar consulta <span className="arrow">→</span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
