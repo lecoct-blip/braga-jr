@@ -60,10 +60,10 @@ const RAW: Omit<Post, 'status'>[] = [
   },
   {
     slug: 'lei-licitacoes-fiscalizacao', kicker: 'Licitações',
-    dateLabel: 'Jan · 2026', published: '2026-01-15', read: '9 min',
+    dateLabel: 'Mai · 2026', published: '2026-05-27', read: '11 min',
     title: 'O servidor que fiscaliza contrato sob a Lei 14.133: responsabilidades ampliadas',
     excerpt:
-      'A nova lei mudou o regime de responsabilização do servidor fiscal — implicações práticas para o dia a dia administrativo.',
+      'A nova lei profissionalizou a função e elevou a responsabilização pessoal do fiscal. O que mudou em relação à Lei 8.666 e como o servidor designado reduz a exposição ao TCU.',
   },
   {
     slug: 'sustentacao-virtual-tribunais', kicker: 'Tribunais',
@@ -90,6 +90,7 @@ const PUBLISHED = new Set<string>([
   'progressao-funcional-rj',
   'dpo-terceirizado-pme',
   'sindicato-legitimidade-stf',
+  'lei-licitacoes-fiscalizacao',
 ]);
 const DRAFT = new Set<string>([]);
 

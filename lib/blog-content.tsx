@@ -1277,4 +1277,312 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
       </p>
     </>
   ),
+
+  // ───────────── Publicado ─────────────
+  'lei-licitacoes-fiscalizacao': () => (
+    <>
+      <p>
+        A portaria chega por e-mail ou cai na pasta funcional sem grande cerimônia.
+        Em poucas linhas, a autoridade designa o servidor como fiscal de um contrato
+        administrativo — uma obra, um serviço continuado, uma aquisição. Pode vir
+        junto com a designação como gestor, pode vir solitária, pode valer para um
+        único contrato ou para uma carteira inteira. O que muitos servidores ainda
+        não internalizaram é que, sob a Lei 14.133/2021, aquele ato aparentemente
+        burocrático passou a ativar um regime de responsabilização pessoal
+        substancialmente mais rigoroso que o da Lei 8.666/93.
+      </p>
+      <p>
+        Este artigo trata da figura do fiscal de contrato administrativo — servidor
+        público civil ou militar, federal, estadual ou municipal, designado para
+        acompanhar a execução de contrato sob a nova lei. Não se confunde com o
+        auditor fiscal tributário nem com o fiscal de obras urbanísticas: o recorte
+        aqui é o agente que assina o relatório de fiscalização, atesta nota fiscal e
+        responde — pessoalmente — quando algo desanda.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#secao-1">O que mudou: do &ldquo;olho gordo&rdquo; à função profissionalizada</a></li>
+          <li><a href="#secao-2">Gestor, fiscal técnico, fiscal administrativo: quem faz o quê</a></li>
+          <li><a href="#secao-3">As atribuições legais na prática</a></li>
+          <li><a href="#secao-4">O regime de responsabilização: dolo e erro grosseiro</a></li>
+          <li><a href="#secao-5">Lei 8.666 vs. Lei 14.133: o que mudou para o fiscal</a></li>
+          <li><a href="#secao-6">Cenários típicos de exposição pessoal</a></li>
+          <li><a href="#secao-7">Boas práticas para reduzir a exposição</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="secao-1">O que mudou: <span className="s-it">do &ldquo;olho gordo&rdquo; à função profissionalizada</span></h2>
+      <p>
+        Na vigência da Lei 8.666/93, a fiscalização de contrato era tratada quase como
+        atribuição secundária — algo que o servidor exercia &ldquo;além das suas
+        funções normais&rdquo;, com pouca capacitação formal e responsabilização
+        concentrada nas hipóteses extremas. O resultado, conhecido por quem atuou em
+        PADs e tomadas de contas, era previsível: o fiscal aparecia no centro do
+        processo só quando o estrago já estava feito, e a defesa partia de um vazio
+        probatório quase total.
+      </p>
+      <p>
+        A Lei 14.133/2021 reposicionou a figura. A fiscalização foi inserida desde o
+        planejamento da contratação — não é mais uma etapa que começa na assinatura do
+        contrato. A capacitação do fiscal passou a ser exigência expressa: o art. 7º
+        determina que a designação recaia, preferencialmente, sobre servidor efetivo
+        do quadro permanente, observada a capacidade para o desempenho das atividades.
+        As atribuições foram organizadas nos arts. 117 a 120, e o regime de
+        responsabilização ficou tecnicamente mais robusto — o que pode ser lido tanto
+        como mais proteção (parâmetro objetivo de aferição) quanto como mais exposição
+        (impossibilidade de alegar simples desconhecimento).
+      </p>
+      <p>
+        No âmbito federal, o Decreto 11.246/2022 detalhou as atribuições do gestor, do
+        fiscal técnico, do fiscal administrativo e do fiscal setorial. Estados e
+        municípios editaram regulamentos próprios, com variações relevantes — e o
+        fiscal designado precisa, antes de qualquer ato, ler o seu.
+      </p>
+
+      <h2 id="secao-2">Gestor, fiscal técnico, fiscal administrativo: <span className="s-it">quem faz o quê</span></h2>
+      <p>
+        Uma das inovações mais subestimadas da nova lei é a segregação de funções na
+        execução contratual. Onde antes uma única pessoa carregava todo o peso, agora a
+        Administração pode — e, em contratos complexos, deve — distribuir o trabalho
+        entre figuras distintas:
+      </p>
+      <ul>
+        <li><strong>Gestor de contrato.</strong> Coordena administrativamente a execução: cronograma físico-financeiro, pagamentos, aditivos e apostilamentos, recebimento definitivo. Atua na camada documental e processual.</li>
+        <li><strong>Fiscal técnico.</strong> Verifica em campo se o objeto está sendo entregue conforme as especificações. Atesta medições, registra ocorrências, notifica formalmente o contratado. É o agente que &ldquo;vê&rdquo; a execução.</li>
+        <li><strong>Fiscal administrativo.</strong> Acompanha a regularidade da contratada durante a execução: condições de habilitação, recolhimento de encargos trabalhistas e previdenciários, garantia contratual. Central em serviços continuados com cessão de mão de obra.</li>
+        <li><strong>Fiscal setorial.</strong> Quando o contrato tem execução geograficamente dispersa, atua localmente em substituição parcial do fiscal técnico.</li>
+      </ul>
+      <p>
+        A acumulação de funções é admitida em contratos de menor complexidade, mas o
+        TCU aponta, em sucessivas representações, que a acumulação indevida é, em si,
+        fator de fragilização da fiscalização — e fragilidade fiscalizatória é o
+        gatilho clássico da responsabilização pessoal. O servidor designado para
+        acumular gestor e fiscal técnico em contrato de grande porte, sem capacitação
+        adequada, já começa exposto perante o controle externo.
+      </p>
+
+      <h2 id="secao-3">As atribuições legais na prática</h2>
+      <p>O art. 117 da Lei 14.133/2021 estrutura a função em três comandos:</p>
+      <blockquote>
+        Art. 117. A execução do contrato deverá ser acompanhada e fiscalizada por um ou
+        mais fiscais do contrato, representantes da Administração especialmente
+        designados conforme requisitos estabelecidos no art. 7º desta Lei, ou pelos
+        respectivos substitutos, permitida a contratação de terceiros para assisti-los
+        e subsidiá-los com informações pertinentes a essa atribuição.
+        <span style={{ display: 'block', marginTop: 8 }}>§ 1º O fiscal do contrato anotará em registro próprio todas as ocorrências relacionadas à execução do contrato, determinando o que for necessário para a regularização das faltas ou dos defeitos observados.</span>
+        <span style={{ display: 'block', marginTop: 8 }}>§ 2º O fiscal do contrato informará a seus superiores, em tempo hábil para a adoção das medidas convenientes, as situações que demandarem decisões e providências que ultrapassarem sua competência.</span>
+        <cite>Lei 14.133/2021, art. 117.</cite>
+      </blockquote>
+      <p>Três obrigações concretas saltam do texto e organizam o dia a dia da função:</p>
+      <p>
+        <strong>Registrar.</strong> Todas as ocorrências — favoráveis e desfavoráveis —
+        devem ser anotadas em livro próprio, sistema eletrônico ou relatório periódico.
+        O registro é, ao mesmo tempo, instrumento de gestão e blindagem jurídica.
+        Ocorrência não registrada é, para o controle externo, ocorrência que não
+        existiu — e a omissão tem sido tratada pelo TCU como conduta autônoma de
+        responsabilização.
+      </p>
+      <p>
+        <strong>Determinar a regularização.</strong> Identificada uma falha, o fiscal
+        não pode se limitar a observar: deve notificar formalmente o contratado, fixar
+        prazo de correção e documentar a resposta. A notificação é prova essencial em
+        qualquer defesa posterior.
+      </p>
+      <p>
+        <strong>Escalar para o superior.</strong> Quando a situação ultrapassa a
+        competência do fiscal — sanção, rescisão, reequilíbrio econômico-financeiro —, o
+        dever é comunicar o gestor e a autoridade superior em tempo hábil. A omissão é,
+        isoladamente, falta funcional punível.
+      </p>
+
+      <h2 id="secao-4">O regime de responsabilização: <span className="s-it">dolo e erro grosseiro</span></h2>
+      <p>
+        A peça-chave da arquitetura de responsabilização é o art. 28 da LINDB,
+        introduzido pela Lei 13.655/2018:
+      </p>
+      <blockquote>
+        &ldquo;O agente público responderá pessoalmente por suas decisões ou opiniões
+        técnicas em caso de dolo ou erro grosseiro.&rdquo;
+        <cite>Art. 28 da LINDB (Lei 13.655/2018).</cite>
+      </blockquote>
+      <p>
+        O Decreto 9.830/2019, no art. 12, § 1º, conceitua erro grosseiro como aquele
+        &ldquo;manifesto, evidente e inescusável praticado com culpa grave,
+        caracterizada por ação ou omissão com elevado grau de negligência, imprudência
+        ou imperícia&rdquo;. Não é qualquer descuido: é o descuido que um profissional
+        médio da área, nas circunstâncias concretas, não cometeria.
+      </p>
+      <p>
+        O parâmetro tem duas leituras, e o fiscal precisa conhecer ambas. De um lado,
+        protege: a responsabilização não pode ser objetiva, depende de prova de dolo ou
+        culpa grave, e o controle externo tem o ônus de demonstrar concretamente a
+        inobservância do dever de cuidado. De outro, expõe: o TCU tem caracterizado como
+        erro grosseiro condutas que, à primeira vista, pareciam meros descuidos
+        administrativos.
+      </p>
+      <p>
+        O caso mais frequente é o atesto indevido: o fiscal assina relatório ou
+        certifica nota fiscal afirmando que o serviço foi executado, quando a execução
+        não ocorreu — ou ocorreu de forma diversa da contratada. Na ausência de
+        elementos probatórios mínimos (medições, fotografias, relatórios de vistoria,
+        ordens de serviço), o tribunal tem entendido que a deficiência na fiscalização é
+        a causa determinante do prejuízo ao erário e configura erro grosseiro,
+        sujeitando o agente a devolução do dano e a multa.
+      </p>
+      <p>
+        Importante: a responsabilização do fiscal pode ocorrer em esferas simultâneas e
+        autônomas — administrativa-disciplinar (o PAD do servidor), de controle externo
+        (Tomada de Contas Especial no TCU ou no TCE-RJ, com multa e ressarcimento) e
+        civil (ação de regresso da Fazenda, art. 37, § 6º, da Constituição). Em
+        hipóteses extremas — fraude, conluio, recebimento de vantagem — somam-se a
+        esfera penal e a improbidade administrativa.
+      </p>
+
+      <h2 id="secao-5">Lei 8.666 vs. Lei 14.133: <span className="s-it">o que mudou para o fiscal</span></h2>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr><th>Aspecto</th><th>Lei 8.666/93 (anterior)</th><th>Lei 14.133/21 (atual)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Profissionalização</td><td>Função acessória, sem exigência de capacitação</td><td>Exigência de competência técnica (art. 7º)</td></tr>
+            <tr><td>Segregação de funções</td><td>Gestor e fiscal frequentemente confundidos</td><td>Distinção formal: gestor, fiscal técnico, administrativo e setorial</td></tr>
+            <tr><td>Registro de ocorrências</td><td>Recomendado, sem detalhamento</td><td>Obrigatório, em livro ou sistema próprio (art. 117, § 1º)</td></tr>
+            <tr><td>Capacitação</td><td>Inexistente como exigência legal</td><td>Decorrente do dever de gestão por competências (art. 7º)</td></tr>
+            <tr><td>Suporte técnico</td><td>Não previsto expressamente</td><td>Contratação de terceiros para assistir o fiscal (art. 117)</td></tr>
+            <tr><td>Parâmetro de responsabilização</td><td>Construção jurisprudencial difusa</td><td>Art. 28 da LINDB: dolo ou erro grosseiro</td></tr>
+            <tr><td>Recebimento provisório e definitivo</td><td>Confuso na prática</td><td>Distinção clara entre fiscal (provisório) e gestor (definitivo)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A nova lei oferece, em tese, mais proteção ao fiscal diligente — porque
+        consagrou o parâmetro do dolo ou erro grosseiro, vedou a responsabilização
+        objetiva e admitiu suporte técnico externo. Mas expõe muito mais o fiscal
+        negligente — porque deixou as obrigações claras, formalizadas e auditáveis. Em
+        resumo: o regime atual recompensa quem documenta e pune quem improvisa.
+      </p>
+
+      <h2 id="secao-6">Cenários típicos de <span className="s-it">exposição pessoal</span></h2>
+      <p>
+        Em mais de três décadas de atuação em PADs, sindicâncias e defesas perante o TCU
+        e o TCE-RJ, o escritório identifica três padrões recorrentes de exposição do
+        fiscal de contrato. Vale conhecê-los antes do problema aparecer.
+      </p>
+      <p>
+        <strong>Atesto sem lastro.</strong> O fiscal certifica a execução para liberar
+        pagamento sem realizar (ou sem registrar) a vistoria correspondente. Quando a
+        auditoria identifica obra inacabada, serviço não prestado ou objeto fora de
+        especificação, o atesto se converte em prova contra o agente — e o tribunal
+        costuma reconhecer o erro grosseiro, sobretudo quando o fiscal tinha qualificação
+        técnica para identificar a falha.
+      </p>
+      <p>
+        <strong>Omissão diante de inadimplemento de encargos.</strong> Em contratos de
+        terceirização com cessão de mão de obra, o fiscal administrativo deve acompanhar
+        o recolhimento de encargos trabalhistas e previdenciários. Não o fazendo, a
+        Administração pode ser chamada à responsabilidade subsidiária pela Justiça do
+        Trabalho (Súmula 331 do TST) — e o servidor responsável pela falha responde em
+        regresso e na esfera disciplinar.
+      </p>
+      <p>
+        <strong>Designação sem capacitação técnica adequada.</strong> O servidor é
+        designado para fiscalizar objeto que excede sua qualificação — um servidor
+        administrativo nomeado fiscal de obra de engenharia, por exemplo. O erro original
+        é da autoridade designante, mas o fiscal que aceita e atua sem requerer suporte
+        técnico assume parcela do risco. A defesa, aqui, depende de demonstrar
+        formalmente que o servidor advertiu a chefia sobre a inadequação — e a
+        advertência precisa estar documentada.
+      </p>
+
+      <h2 id="secao-7">Boas práticas para <span className="s-it">reduzir a exposição</span></h2>
+      <p>
+        Receber a designação não obriga a aceitar o risco em silêncio. Sete medidas
+        costumam fazer diferença:
+      </p>
+      <ol>
+        <li><strong>Leia a portaria com olho técnico.</strong> Verifique o escopo da designação (gestor, fiscal técnico, administrativo, setorial), o substituto, o prazo e o contrato específico. Designação genérica é fonte de problema.</li>
+        <li><strong>Solicite formalmente a capacitação prevista em lei.</strong> Se a Administração designa sem oferecer treinamento, o pedido por escrito desloca o ônus para a autoridade designante.</li>
+        <li><strong>Advirta sobre incompatibilidade técnica, se houver.</strong> Por memorando, com cópia para a chefia. Negado o pedido, o servidor passa a atuar com lastro probatório de boa-fé.</li>
+        <li><strong>Mantenha registro contínuo e organizado.</strong> Diário de fiscalização, fotografias datadas, e-mails arquivados, atas, ordens de serviço. O sistema oficial é o primeiro destino; o backup pessoal é a sua proteção.</li>
+        <li><strong>Não atesta sem vistoria documentada.</strong> Cada atesto deve ter ao menos uma evidência objetiva por trás. Atesto &ldquo;no automático&rdquo; é a fonte número um de exposição.</li>
+        <li><strong>Notifique formalmente o contratado a cada irregularidade.</strong> Não basta conversar: comunicação por escrito, com prazo e protocolo. Sem notificação, a inadimplência da contratada vira omissão fiscalizatória do servidor.</li>
+        <li><strong>Escalone na hora certa.</strong> Quando a situação ultrapassa a sua alçada, comunique por escrito o gestor e a autoridade superior. O dever do art. 117, § 2º, é também escudo.</li>
+      </ol>
+
+      <h2 id="consideracoes">Defesa técnica, <span className="s-it">não improvisação</span></h2>
+      <p>
+        A figura do fiscal de contrato deixou de ser papel coadjuvante. Sob a Lei
+        14.133/2021, o servidor designado opera no centro de um regime de
+        responsabilização tecnicamente sofisticado, com parâmetros claros de aferição do
+        dolo e do erro grosseiro, instrumentos de controle externo robustos e múltiplas
+        esferas de responsabilidade que podem ser ativadas em paralelo.
+      </p>
+      <p>
+        A boa notícia é que esse mesmo regime, lido a favor do servidor diligente,
+        oferece linhas de defesa muito mais claras do que o regime difuso da lei
+        anterior. O fiscal que documenta, notifica, escalona e registra — e que age
+        dentro do marco do art. 28 da LINDB — tem hoje um arsenal probatório que era
+        impensável há dez anos.
+      </p>
+      <p>
+        Quando uma Tomada de Contas Especial chega ao TCU ou ao TCE-RJ, ou quando se
+        instaura PAD por suposta omissão fiscalizatória, a defesa raramente se constrói
+        no calor do problema. Ela se constrói nos anos anteriores — no diário de
+        fiscalização que ninguém leu, no e-mail arquivado, na notificação protocolada. A
+        advocacia entra para articular juridicamente o que o servidor já fez bem, ou para
+        reconstruir, dentro do possível, o que faltou. As duas situações são tratáveis; a
+        primeira é, simplesmente, muito mais defensável.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>Posso recusar a designação como fiscal de contrato?</h3>
+      <p>
+        Em regra, não — a função decorre do vínculo funcional e o servidor designado tem
+        o dever de aceitar. O que pode (e, em alguns casos, deve) fazer é apresentar
+        formalmente as razões de inadequação (sobrecarga, ausência de capacitação,
+        conflito de interesse), por escrito, à autoridade designante. A recusa motivada
+        desloca o ônus para a Administração; a recusa pura e simples pode configurar
+        falta funcional.
+      </p>
+      <h3>Sou fiscal técnico e o gestor autorizou pagamento de medição que considero incorreta. Quem responde?</h3>
+      <p>
+        Em princípio, cada um responde pelos atos próprios. Se o fiscal técnico registrou
+        formalmente sua discordância antes do pagamento (memorando, e-mail, ata), a
+        responsabilidade pela liberação tende a recair sobre o gestor e a autoridade
+        superior. Sem registro formal, a tese da discordância fica fragilizada. A
+        documentação prévia é essencial.
+      </p>
+      <h3>O TCU pode me responsabilizar mesmo eu não tendo recebido vantagem?</h3>
+      <p>
+        Sim. A responsabilização pelo Tribunal de Contas não exige enriquecimento ilícito
+        nem dolo de vantagem pessoal: basta a comprovação de conduta culposa grave, de
+        dano ao erário e de nexo causal entre a omissão fiscalizatória e o prejuízo.
+      </p>
+      <h3>Quanto tempo o TCU tem para abrir uma Tomada de Contas Especial?</h3>
+      <p>
+        A pretensão de ressarcimento ao erário é imprescritível quando decorre de ato
+        doloso de improbidade (STF, Tema 897). Nos demais casos há prazos prescricionais,
+        que variam conforme a natureza da imputação. Na prática, contratos de execução
+        prolongada podem gerar processos de controle anos depois — mais um motivo para
+        conservar pessoalmente cópia da documentação produzida.
+      </p>
+      <h3>Posso contratar advogado por conta própria para acompanhar uma TCE ou PAD?</h3>
+      <p>
+        Sim. Embora o procedimento admita defesa pessoal, a complexidade técnica do
+        processo perante tribunais de contas e em PADs sobre contratos administrativos
+        torna a assistência de advogado especializado recomendável desde a notificação
+        inicial — não apenas na fase recursal.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/administracao-publica">Administração Pública</Link>{' '}
+        reúne a atuação do escritório em licitações e contratos sob a Lei 14.133,
+        sanções e defesa em tomada de contas no TCU e no TCE-RJ.
+      </p>
+    </>
+  ),
 };
