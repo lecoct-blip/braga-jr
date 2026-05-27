@@ -46,10 +46,10 @@ const RAW: Omit<Post, 'status'>[] = [
   },
   {
     slug: 'sindicato-legitimidade-stf', kicker: 'Sindical',
-    dateLabel: 'Mar · 2026', published: '2026-03-12', read: '10 min',
-    title: 'Legitimidade processual extraordinária de sindicato: o estado da questão no STF',
+    dateLabel: 'Mai · 2026', published: '2026-05-27', read: '11 min',
+    title: 'Legitimidade processual extraordinária do sindicato no STF',
     excerpt:
-      'Recorte da jurisprudência recente sobre representação processual de categoria — quando a entidade pode, e quando precisa de procuração.',
+      'Quando o sindicato representa a categoria sem procuração, quando precisa, e o que muda diante de associações, federações e mandado de segurança coletivo.',
   },
   {
     slug: 'progressao-funcional-rj', kicker: 'Servidor',
@@ -86,7 +86,7 @@ const RAW: Omit<Post, 'status'>[] = [
  * corpo redigido aguardando sign-off; resto = placeholder (só metadados).
  */
 const PUBLISHED = new Set<string>(['pad-controle-judicial', 'progressao-funcional-rj']);
-const DRAFT = new Set<string>(['dpo-terceirizado-pme']);
+const DRAFT = new Set<string>(['dpo-terceirizado-pme', 'sindicato-legitimidade-stf']);
 
 export const POSTS: Post[] = RAW.map((p) => ({
   ...p,

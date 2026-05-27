@@ -910,4 +910,371 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
       </p>
     </>
   ),
+
+  // ───────────── Rascunho (noindex) — aguardando sign-off do Dr. Jorge ─────────────
+  'sindicato-legitimidade-stf': () => (
+    <>
+      <p>
+        A diretoria deliberou. A categoria está exposta a um ato administrativo
+        lesivo — uma portaria que altera regra de progressão, um corte de
+        gratificação, um edital que muda critérios de seleção interna. O sindicato
+        vai a juízo. Semanas depois, na contestação, o ente público levanta a tese
+        clássica: o sindicato seria parte ilegítima porque não anexou autorização
+        dos substituídos, nem lista nominal dos filiados, nem ata de assembleia
+        específica.
+      </p>
+      <p>
+        A pergunta volta sempre na mesma forma: o sindicato precisa de procuração
+        para representar a categoria em juízo? A resposta, fixada pelo Supremo
+        Tribunal Federal e repetida em centenas de julgados, é <span className="s-it">não</span>{' '}
+        — mas com nuances que distinguem o sindicato da associação, da federação e do
+        mandado de segurança coletivo. Errar essa fronteira faz o processo coletivo
+        morrer na preliminar de ilegitimidade; acertá-la transforma uma única ação no
+        instrumento capaz de pacificar a situação de toda a categoria.
+      </p>
+      <p>
+        Este artigo cobre o estado atual da questão no STF, com foco operacional para
+        a diretoria sindical e para a assessoria jurídica das entidades.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#base-constitucional">A base constitucional: art. 8º, III, da CF/88</a></li>
+          <li><a href="#tema-823">O Tema 823 do STF: a tese de ampla legitimidade extraordinária</a></li>
+          <li><a href="#sindicato-vs-associacao">Sindicato ≠ associação: a fronteira do Tema 82</a></li>
+          <li><a href="#ms-coletivo">Mandado de segurança coletivo: regra própria (Súmulas 629 e 630)</a></li>
+          <li><a href="#limites">Os limites da ampla legitimidade: federações, filiação e base territorial</a></li>
+          <li><a href="#boas-praticas">Boas práticas para a diretoria sindical</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="base-constitucional">A base constitucional: <span className="s-it">art. 8º, III, da CF/88</span></h2>
+      <p>
+        A legitimidade extraordinária do sindicato nasce diretamente da Constituição.
+        O art. 8º, III, da CF/88 determina que cabe ao sindicato a defesa dos direitos
+        e interesses coletivos ou individuais da categoria, inclusive em questões
+        judiciais ou administrativas.
+      </p>
+      <p>
+        A redação é deliberadamente ampla. O constituinte não falou em
+        &ldquo;direitos da categoria autorizados em assembleia&rdquo;, nem em
+        &ldquo;interesses dos sindicalizados que outorgarem procuração&rdquo;. Falou
+        em direitos da categoria — abrangendo, por interpretação consolidada, tanto
+        direitos coletivos em sentido estrito quanto direitos individuais homogêneos
+        dos integrantes daquele grupo profissional.
+      </p>
+      <p>
+        Essa amplitude tem uma razão histórica. Antes da CF/88, a jurisprudência
+        trabalhista tendia a restringir a substituição processual sindical a
+        hipóteses específicas previstas em lei — o TST chegou a editar a Súmula 310,
+        que limitava drasticamente essa atuação. Com a nova ordem constitucional, o
+        STF passou a interpretar o art. 8º, III, como cláusula geral de legitimação
+        extraordinária, e o TST, em consequência, cancelou a Súmula 310 em 2003. A
+        partir daí, a fronteira foi sendo desenhada nos repetitivos.
+      </p>
+
+      <h2 id="tema-823">O Tema 823 do STF: <span className="s-it">a tese de ampla legitimidade</span></h2>
+      <p>
+        O marco que organiza a matéria é o Tema 823 da repercussão geral, fixado no
+        julgamento do RE 883.642, relatado pelo Min. Ricardo Lewandowski (acórdão
+        publicado no DJe de 26/06/2015). A tese é direta:
+      </p>
+      <blockquote>
+        &ldquo;Os sindicatos possuem ampla legitimidade extraordinária para defender
+        em juízo os direitos e interesses coletivos ou individuais dos integrantes da
+        categoria que representam, inclusive nas liquidações e execuções de sentença,
+        independentemente de autorização dos substituídos.&rdquo;
+        <cite>STF, Tema 823 da repercussão geral — RE 883.642, Rel. Min. Ricardo Lewandowski.</cite>
+      </blockquote>
+      <p>
+        Três dimensões dessa tese precisam ser destacadas — é nelas que o ente público
+        costuma testar a defesa.
+      </p>
+      <p>
+        <strong>Primeiro:</strong> a legitimidade é extraordinária — o sindicato atua
+        como substituto processual, defendendo em nome próprio direito alheio. Não é
+        representação por procuração; por isso, não se exige outorga de mandato dos
+        sindicalizados.
+      </p>
+      <p>
+        <strong>Segundo:</strong> a tese alcança tanto direitos coletivos em sentido
+        estrito (indivisíveis, da categoria como um todo) quanto direitos individuais
+        homogêneos (de origem comum, mas divisíveis e quantificáveis). É essa segunda
+        categoria que torna o instrumento poderoso para servidores: gratificações não
+        pagas, progressões negadas, parcelas suprimidas — tipicamente homogêneas —
+        podem ser cobradas em ação única.
+      </p>
+      <p>
+        <strong>Terceiro:</strong> a legitimidade vai além da fase de conhecimento —
+        alcança a liquidação e a execução da sentença coletiva. O sindicato pode
+        promover o protesto interruptivo da prescrição em favor da categoria e
+        executar o título sem refazer a autorização individual de cada substituído.
+      </p>
+      <p>
+        O Superior Tribunal de Justiça acompanha esse entendimento: reafirma que o
+        sindicato, como substituto processual, tem legitimidade para defender
+        interesses coletivos de toda a categoria — e não apenas dos filiados —, sendo
+        dispensável a juntada de relação nominal e de autorização expressa.
+      </p>
+      <p>
+        Em casos análogos atuados pelo escritório — inclusive em sustentação oral
+        perante tribunais superiores — essa moldura tem sido decisiva para superar
+        preliminares de ilegitimidade levantadas por entes públicos.
+      </p>
+
+      <h2 id="sindicato-vs-associacao">Sindicato ≠ associação: <span className="s-it">a fronteira do Tema 82</span></h2>
+      <p>
+        A confusão mais comum no processo coletivo é tratar sindicato e associação
+        como se fossem regidos pela mesma regra. Não são. A Constituição os disciplina
+        em dispositivos diferentes, com requisitos diferentes — e o STF formalizou a
+        distinção em outro repetitivo, o Tema 82.
+      </p>
+      <p>
+        No julgamento do RE 573.232/SC, Rel. Min. Marco Aurélio (Plenário, 14/05/2014),
+        o STF fixou duas teses sobre associações:
+      </p>
+      <blockquote>
+        &ldquo;I – A previsão estatutária genérica não é suficiente para legitimar a
+        atuação, em juízo, de associações na defesa de direitos dos filiados, sendo
+        indispensável autorização expressa, ainda que deliberada em assembleia, nos
+        termos do art. 5º, XXI, da Constituição Federal; II – As balizas subjetivas do
+        título judicial, formalizado em ação proposta por associação, são definidas
+        pela representação no processo de conhecimento, limitada a execução aos
+        associados apontados na inicial.&rdquo;
+        <cite>STF, Tema 82 — RE 573.232/SC, Rel. Min. Marco Aurélio.</cite>
+      </blockquote>
+      <p>
+        Esse Tema 82, complementado pelo Tema 499 (RE 612.043, Min. Marco Aurélio),
+        trouxe consequências graves para associações que litigavam apoiadas só em
+        cláusula estatutária genérica: ações extintas, execuções limitadas a quem
+        constasse da inicial, beneficiários posteriores obrigados a propor ações
+        próprias.
+      </p>
+      <p>A razão jurídica dessa diferença é constitucional. O STF resumiu com precisão:</p>
+      <blockquote>
+        &ldquo;A legitimidade das entidades associativas para promover demandas em
+        favor de seus associados tem assento no art. 5º, XXI, da Constituição, e a das
+        entidades sindicais está disciplinada no art. 8º, III. Todavia, em se tratando
+        de entidades associativas, a Constituição subordina a propositura da ação a um
+        requisito específico, que não existe em relação aos sindicatos: o de estarem
+        essas associações &lsquo;expressamente autorizadas&rsquo; a demandar.&rdquo;
+        <cite>Supremo Tribunal Federal.</cite>
+      </blockquote>
+      <p>
+        A consequência prática é clara: ao examinar a legitimidade ativa numa ação
+        coletiva, o ponto de partida não é o estatuto da entidade autora — é o artigo
+        da Constituição que a fundamenta. Sindicato vai pelo art. 8º, III: substituição
+        processual, sem autorização. Associação vai pelo art. 5º, XXI: representação,
+        com autorização expressa.
+      </p>
+      <p>
+        Para a diretoria de uma entidade híbrida (uma &ldquo;associação dos servidores
+        de…&rdquo; que, na prática, exerce papel sindical), essa distinção é o primeiro
+        nó a desatar. Antes de litigar, vale revisar o registro sindical, o
+        enquadramento e o que o estatuto diz sobre a natureza jurídica da entidade.
+      </p>
+
+      <h2 id="ms-coletivo">Mandado de segurança coletivo: <span className="s-it">regra própria</span></h2>
+      <p>
+        Há um terceiro regime, distinto dos anteriores, que vale tanto para sindicato
+        quanto para associação: o mandado de segurança coletivo, previsto no art. 5º,
+        LXX, da CF/88 e regulado pela Lei 12.016/2009.
+      </p>
+      <p>
+        Aqui a regra é a da substituição processual pura, independentemente da natureza
+        da entidade impetrante. Duas súmulas do STF — anteriores à atual lei do MS, mas
+        plenamente vigentes — sintetizam o entendimento:
+      </p>
+      <blockquote>
+        &ldquo;A impetração de mandado de segurança coletivo por entidade de classe em
+        favor dos associados independe da autorização destes.&rdquo;
+        <cite>Súmula 629 do STF.</cite>
+      </blockquote>
+      <blockquote>
+        &ldquo;A entidade de classe tem legitimação para o mandado de segurança ainda
+        quando a pretensão veiculada interesse apenas a uma parte da respectiva
+        categoria.&rdquo;
+        <cite>Súmula 630 do STF.</cite>
+      </blockquote>
+      <p>
+        A Lei 12.016/2009, posterior aos enunciados, incorporou a regra no art. 21:
+        organização sindical, entidade de classe ou associação legalmente constituída
+        há pelo menos um ano, em defesa dos interesses de seus membros, não precisa de
+        autorização especial. O STF reafirmou esse regime no Tema 1.119, esclarecendo
+        que, no MS coletivo, não se exige autorização expressa, lista nominal nem
+        comprovação de filiação prévia — por se tratar de substituição processual,
+        distinta das ações coletivas ordinárias do Tema 82.
+      </p>
+      <p>
+        Para o sindicato, isso significa que o MS coletivo é uma rota processual com
+        menor risco de preliminar de ilegitimidade. Quando o ato impugnado é ato de
+        autoridade pública e cabe pedido liminar, costuma ser a via mais eficiente.
+      </p>
+
+      <h2 id="limites">Os limites da ampla legitimidade: <span className="s-it">federações, filiação e base territorial</span></h2>
+      <p>
+        A tese do Tema 823 é ampla, mas não é ilimitada. Três pontos merecem atenção da
+        diretoria e do jurídico da entidade.
+      </p>
+      <h3>Federações sindicais: tema constitucional em aberto</h3>
+      <p>
+        A jurisprudência tradicional do STF é restritiva quanto às federações. A
+        literalidade do art. 8º, III, refere-se a &ldquo;sindicato&rdquo;, e os
+        precedentes, em geral, recusam estender a legitimidade extraordinária para
+        defesa coletiva da categoria às federações.
+      </p>
+      <p>
+        O assunto, contudo, está sendo reapreciado. Em janeiro de 2025, o STF admitiu o
+        processamento do RE 1.520.376, em que se discute a legitimidade extraordinária
+        das federações sindicais para propor ações coletivas quando não houver
+        sindicato representativo da categoria na região. A repercussão geral foi
+        reconhecida sob relatoria do Min. Roberto Barroso; o mérito ainda não foi
+        julgado.
+      </p>
+      <p>
+        Até que o STF decida, a orientação prudente para federações é, sempre que
+        possível, articular a propositura com os sindicatos filiados de base, ou
+        recorrer ao mandado de segurança coletivo, cujas Súmulas 629 e 630 admitem
+        entidades de classe em sentido amplo.
+      </p>
+      <h3>Filiação à época da propositura: o ponto sensível da execução</h3>
+      <p>
+        Embora o Tema 823 dispense autorização e lista nominal para a ação de
+        conhecimento, alguns tribunais têm exigido, para fins de execução individual, a
+        comprovação de que o beneficiário pertencia à categoria à época do ajuizamento
+        da ação coletiva. O TJDFT, por exemplo, admite a exigência de comprovação de
+        filiação dos substituídos à época da propositura para aferir a legitimidade dos
+        beneficiários da execução.
+      </p>
+      <p>
+        É questão controvertida, com entendimentos distintos entre turmas e tribunais.
+        O posicionamento dominante no STJ, todavia, é o de que a substituição processual
+        sindical abrange toda a categoria, não apenas os filiados — fiel à letra do art.
+        8º, III. Em casos limítrofes, a estratégia precisa ser construída desde a
+        petição inicial, deixando explícito o pedido em favor da categoria.
+      </p>
+      <h3>Base territorial e enquadramento</h3>
+      <p>
+        A legitimidade do sindicato é vinculada à sua base territorial e ao
+        enquadramento da categoria. Um sindicato municipal não defende servidores de
+        outro município; um de servidores estaduais não substitui federais; e um de
+        certa categoria não substitui categoria diversa, ainda que próxima.
+      </p>
+      <p>
+        Essa fronteira costuma aparecer em sindicatos com estatutos que abrangem
+        múltiplas categorias correlatas, ou em disputas de representatividade. Antes de
+        propor a ação, confirme com o jurídico se o pleito está dentro da base
+        territorial registrada e da categoria efetivamente representada.
+      </p>
+
+      <h2 id="quadro">Quadro comparativo <span className="s-it">dos três regimes</span></h2>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th>Sindicato (art. 8º, III)</th>
+              <th>Associação (art. 5º, XXI)</th>
+              <th>MS coletivo (art. 5º, LXX)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Natureza da atuação</td><td>Substituição processual</td><td>Representação processual</td><td>Substituição processual</td></tr>
+            <tr><td>Autorização dos beneficiários</td><td>Dispensada</td><td>Expressa (assembleia ou individual)</td><td>Dispensada</td></tr>
+            <tr><td>Lista nominal na inicial</td><td>Dispensada</td><td>Necessária</td><td>Dispensada</td></tr>
+            <tr><td>Repetitivo / súmula</td><td>Tema 823 (RE 883.642)</td><td>Temas 82 e 499 (RE 573.232 e RE 612.043)</td><td>Súmulas 629 e 630; Tema 1.119</td></tr>
+            <tr><td>Beneficiários da execução</td><td>Toda a categoria</td><td>Apenas associados listados na inicial</td><td>Toda a categoria substituída</td></tr>
+            <tr><td>Direitos abrangidos</td><td>Coletivos e individuais homogêneos</td><td>Coletivos e individuais (limitados)</td><td>Coletivos e individuais homogêneos</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="boas-praticas">Boas práticas para a diretoria sindical</h2>
+      <p>
+        A partir desse quadro, sete cuidados operacionais reduzem o risco de extinção
+        por ilegitimidade ativa:
+      </p>
+      <ol>
+        <li><strong>Confirme a natureza jurídica da entidade antes de litigar.</strong> Sindicato com registro regular ou associação civil? A resposta define o regime aplicável.</li>
+        <li><strong>Verifique a base territorial e o enquadramento</strong> no estatuto e no registro. A legitimidade não vai além desses limites.</li>
+        <li><strong>Opte pelo mandado de segurança coletivo</strong> quando o ato impugnado for de autoridade pública e couber liminar — é a via com menos preliminares de ilegitimidade.</li>
+        <li><strong>Em ações ordinárias, fundamente a inicial</strong> expressamente no art. 8º, III, da CF/88 e no Tema 823/STF, deixando claro que a substituição abrange a categoria, não só filiados.</li>
+        <li><strong>Convoque assembleia geral específica em caso de dúvida.</strong> A ata não é exigida do sindicato, mas reforça o lastro de representatividade e impede questionamento posterior.</li>
+        <li><strong>Documente a deliberação da diretoria em ata regular,</strong> com indicação precisa do objeto da ação, do ato impugnado e do fundamento jurídico.</li>
+        <li><strong>Planeje a execução desde a propositura.</strong> Em alguns tribunais, a fronteira &ldquo;categoria × filiados à época&rdquo; é controvertida — quanto mais claro o pedido inicial, menor o atrito na liquidação.</li>
+      </ol>
+
+      <h2 id="consideracoes">Considerações finais: <span className="s-it">defesa da categoria com técnica processual</span></h2>
+      <p>
+        A ampla legitimidade extraordinária do sindicato é um dos pilares da tutela
+        coletiva no Brasil pós-1988. O Supremo consolidou essa amplitude no Tema 823 e
+        a manteve em centenas de julgados. Mas a regra ampla convive com bordas
+        precisas — a fronteira com a associação (Tema 82), a regra própria do MS
+        coletivo (Súmulas 629 e 630; Tema 1.119), o regime ainda aberto das federações
+        (RE 1.520.376) e os pontos de atrito na execução.
+      </p>
+      <p>
+        Para a entidade sindical, dominar essa cartografia é o que separa uma ação
+        coletiva que pacifica a situação da categoria em poucos anos de uma ação que
+        morre na preliminar e empurra os filiados para o caminho individual — mais
+        caro, mais lento, processualmente fragmentado.
+      </p>
+      <p>
+        A produção de jurisprudência nessa matéria não acabou: com o RE 1.520.376
+        pendente sobre federações e o debate vivo sobre os limites territoriais e
+        temporais da substituição, o tema seguirá em evolução. Acompanhar essa
+        evolução, mais do que ler a súmula, é o que estrutura a defesa institucional do
+        sindicato.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>O sindicato precisa juntar procuração de cada sindicalizado para propor ação coletiva?</h3>
+      <p>
+        Não. Pelo Tema 823 do STF, a legitimidade do sindicato é extraordinária — ele
+        atua em nome próprio na defesa de direito alheio. Procuração individual só é
+        exigida quando o sindicalizado figura pessoalmente como parte, não na
+        substituição processual.
+      </p>
+      <h3>Se a entidade for &ldquo;associação&rdquo;, não &ldquo;sindicato&rdquo;, muda alguma coisa?</h3>
+      <p>
+        Muda muito. Associações regem-se pelo art. 5º, XXI, e pelo Tema 82: precisam de
+        autorização expressa dos associados, em assembleia ou individualmente, e a
+        execução fica limitada aos que constarem da inicial. Antes de litigar, confirme
+        a natureza jurídica da entidade no estatuto e no registro.
+      </p>
+      <h3>E no mandado de segurança coletivo?</h3>
+      <p>
+        Aqui a regra é única para sindicato e associação: dispensa-se autorização, lista
+        nominal e filiação prévia. As Súmulas 629 e 630 do STF e o art. 21 da Lei
+        12.016/2009 garantem essa amplitude — confirmada pelo Tema 1.119.
+      </p>
+      <h3>O servidor que se filiou depois da propositura da ação se beneficia do resultado?</h3>
+      <p>
+        A regra geral, decorrente da substituição processual, é que a ação defende a
+        categoria, não apenas os filiados. A jurisprudência majoritária do STJ admite
+        que o servidor da categoria, ainda que filiado depois, se beneficie da sentença
+        coletiva. Decisões pontuais de tribunais estaduais exigem comprovação de
+        filiação à época da propositura para fins de execução — o ponto deve ser
+        articulado caso a caso.
+      </p>
+      <h3>Federação sindical pode propor ação coletiva pela categoria?</h3>
+      <p>
+        A jurisprudência tradicional do STF é restritiva. Em janeiro de 2025, o Supremo
+        admitiu repercussão geral sobre o tema no RE 1.520.376, para discutir se as
+        federações têm legitimidade quando não há sindicato representativo na região.
+        Até a definição do mérito, a via mais segura para federações é o mandado de
+        segurança coletivo ou a propositura em conjunto com os sindicatos filiados de
+        base.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/entidades-sindicais">Entidades Sindicais e Associativas</Link>{' '}
+        reúne a atuação do escritório na assessoria a sindicatos e associações — da
+        consultoria preventiva à sustentação em tribunais superiores.
+      </p>
+    </>
+  ),
 };
