@@ -39,10 +39,10 @@ const RAW: Omit<Post, 'status'>[] = [
   },
   {
     slug: 'dpo-terceirizado-pme', kicker: 'Compliance',
-    dateLabel: 'Abr · 2026', published: '2026-04-08', read: '6 min',
-    title: 'Encarregado de dados terceirizado: quando faz sentido para a PME',
+    dateLabel: 'Mai · 2026', published: '2026-05-27', read: '9 min',
+    title: 'Encarregado terceirizado: quando faz sentido para a PME',
     excerpt:
-      'Para empresas que ainda não maturaram a função interna, qual o custo-benefício real e quais riscos persistem.',
+      'Custo-benefício, riscos e armadilhas do DPO externo para empresas que ainda não maturaram a função de proteção de dados.',
   },
   {
     slug: 'sindicato-legitimidade-stf', kicker: 'Sindical',
@@ -86,7 +86,7 @@ const RAW: Omit<Post, 'status'>[] = [
  * corpo redigido aguardando sign-off; resto = placeholder (só metadados).
  */
 const PUBLISHED = new Set<string>(['pad-controle-judicial', 'progressao-funcional-rj']);
-const DRAFT = new Set<string>([]);
+const DRAFT = new Set<string>(['dpo-terceirizado-pme']);
 
 export const POSTS: Post[] = RAW.map((p) => ({
   ...p,

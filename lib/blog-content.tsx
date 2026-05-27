@@ -566,4 +566,348 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
       </p>
     </>
   ),
+
+  // ───────────── Rascunho (noindex) — aguardando sign-off do Dr. Jorge ─────────────
+  'dpo-terceirizado-pme': () => (
+    <>
+      <p>
+        A diretoria de uma empresa de médio porte recebe um e-mail da ANPD pedindo
+        esclarecimentos sobre um incidente de segurança. O endereço de contato do
+        encarregado, divulgado no rodapé do site, é o de um gerente de TI que pediu
+        demissão há oito meses. Ninguém atualizou. Ninguém respondeu. A autoridade
+        abre processo administrativo sancionador.
+      </p>
+      <p>
+        Esse cenário — variações dele — explica por que a discussão sobre
+        terceirizar a função de encarregado deixou de ser teórica. Para a pequena e
+        média empresa que processa dados pessoais como parte normal da operação (e
+        isso inclui praticamente todas), a pergunta não é mais <span className="s-it">se</span>{' '}
+        a função existe, mas como mantê-la viva sem inflar o custo fixo.
+      </p>
+      <p>
+        Este artigo trata do encarregado de dados terceirizado — o chamado{' '}
+        <span className="s-it">DPO as a Service</span> — sob três ângulos: o que a
+        lei e a Autoridade Nacional de Proteção de Dados (ANPD) exigem, quando o
+        modelo terceirizado faz sentido, e quais riscos se escondem em contratos mal
+        desenhados.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#secao-1">O encarregado depois da Resolução CD/ANPD nº 18/2024</a></li>
+          <li><a href="#secao-2">A PME está obrigada a ter encarregado?</a></li>
+          <li><a href="#secao-3">Encarregado interno vs. terceirizado: comparativo objetivo</a></li>
+          <li><a href="#secao-4">Quando o modelo terceirizado faz sentido — e quando não</a></li>
+          <li><a href="#secao-5">Cláusulas essenciais no contrato de DPO externo</a></li>
+          <li><a href="#secao-6">Riscos de uma terceirização mal estruturada</a></li>
+          <li><a href="#secao-7">Boas práticas para contratar o encarregado externo</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="secao-1">O encarregado depois da Resolução CD/ANPD nº 18/2024</h2>
+      <p>
+        A figura do encarregado nasce no art. 41 da Lei 13.709/2018 (LGPD): cabe ao
+        controlador indicar uma pessoa responsável por receber comunicações dos
+        titulares e da Autoridade e por orientar a organização sobre o tratamento de
+        dados.
+      </p>
+      <p>
+        Durante quase seis anos, a previsão permaneceu genérica. Em julho de 2024, a
+        ANPD publicou a Resolução CD/ANPD nº 18/2024, que aprova o regulamento sobre
+        a atuação do encarregado pelo tratamento de dados pessoais no âmbito da LGPD.
+        A norma trouxe quatro mudanças que afetam diretamente a escolha entre modelo
+        interno e terceirizado:
+      </p>
+      <ul>
+        <li>
+          <strong>Indicação formal obrigatória.</strong> A indicação deve ocorrer por
+          ato formal — documento escrito, datado e assinado. Não basta colocar o nome
+          no rodapé do site; é preciso instrumento juridicamente válido que comprove a
+          designação.
+        </li>
+        <li>
+          <strong>Pessoa natural ou jurídica.</strong> O encarregado pode ser pessoa
+          natural ou jurídica — o que ratifica, em texto regulamentar, a viabilidade do
+          DPO terceirizado contratado por empresa especializada (antes apenas inferido
+          da omissão da lei).
+        </li>
+        <li>
+          <strong>Substituto formalmente designado.</strong> A função não pode ficar
+          acéfala. Férias, licença, vacância: tudo deve ser coberto por substituto
+          previamente nomeado, sob pena de a empresa ficar sem canal válido perante a
+          ANPD.
+        </li>
+        <li>
+          <strong>Autonomia técnica e ausência de conflito de interesse.</strong> O
+          encarregado deve atuar com ética, integridade e autonomia técnica — barreira
+          clara a indicações de fachada, como o gerente de TI sobrecarregado ou o sócio
+          operacional que decide os próprios tratamentos.
+        </li>
+      </ul>
+      <p>
+        Vale lembrar que o art. 41 da LGPD não impõe certificação profissional
+        específica: o exercício da atividade não pressupõe inscrição em entidade nem
+        formação própria — embora, na prática, conhecimento jurídico e técnico em
+        proteção de dados seja indispensável para que a função tenha efeito real.
+      </p>
+
+      <h2 id="secao-2">A PME está obrigada a <span className="s-it">ter encarregado?</span></h2>
+      <p>
+        Aqui mora uma confusão comum. A regra geral do art. 41 da LGPD obriga o
+        controlador a indicar encarregado. Mas a Resolução CD/ANPD nº 2/2022 —
+        específica para agentes de tratamento de pequeno porte — flexibilizou esse
+        dever.
+      </p>
+      <p>
+        São considerados agentes de pequeno porte microempresas, empresas de pequeno
+        porte, startups, pessoas jurídicas sem fins lucrativos, pessoas naturais e
+        entes privados despersonalizados, dentro dos limites de receita das Leis
+        Complementares 123/2006 e 182/2021. Para esse grupo não há obrigação de
+        indicar encarregado, desde que disponibilizado um canal de comunicação com o
+        titular — lógica reforçada pela Resolução nº 18/2024.
+      </p>
+      <p>Mas atenção a três armadilhas:</p>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr><th>Situação</th><th>A flexibilização se aplica?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ME ou EPP dentro do limite de receita e com tratamento de baixo risco</td><td>Sim — encarregado dispensado, canal obrigatório</td></tr>
+            <tr><td>ME ou EPP que faça tratamento de alto risco (dados sensíveis, perfilamento, crianças e adolescentes, vigilância de zona pública, tecnologias emergentes)</td><td>Não — encarregado obrigatório</td></tr>
+            <tr><td>ME ou EPP que pertença a grupo econômico de grande porte</td><td>Não — encarregado obrigatório</td></tr>
+            <tr><td>PME acima dos limites da LC 123/2006</td><td>Não — regime geral, encarregado obrigatório</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A maior parte das PMEs que pensa em DPO terceirizado já saiu da hipótese de
+        dispensa: ou trata dados sensíveis (clínicas, escolas, RH terceirizado,
+        fintechs), ou faz perfilamento (e-commerce, marketing digital), ou pertence a
+        grupo econômico maior. Ou seja: a obrigação existe, e a discussão real é
+        apenas como cumpri-la.
+      </p>
+      <p>
+        Mesmo nos casos de dispensa formal, manter um canal funcional de atendimento
+        ao titular continua obrigatório — e implementá-lo sem alguém tecnicamente
+        responsável é receita previsível para incidente.
+      </p>
+
+      <h2 id="secao-3">Encarregado interno vs. terceirizado: <span className="s-it">comparativo objetivo</span></h2>
+      <p>
+        Não existe escolha universalmente correta. Existe o ajuste entre porte da
+        empresa, volume de tratamento, sensibilidade dos dados e maturidade do
+        programa de privacidade.
+      </p>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr><th>Eixo</th><th>Encarregado interno</th><th>Encarregado terceirizado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Custo fixo mensal</td><td>Salário + encargos (sênior em RJ/SP: ~R$ 12 a 25 mil/mês)</td><td>Honorário contratado — usualmente R$ 2,5 a 10 mil/mês conforme a complexidade</td></tr>
+            <tr><td>Disponibilidade</td><td>Integral, presencial</td><td>Conforme contrato — exige SLA bem definido</td></tr>
+            <tr><td>Conhecimento do negócio</td><td>Profundo (após a curva de aprendizado)</td><td>Genérico no início; especializa-se com o tempo</td></tr>
+            <tr><td>Independência técnica</td><td>Vulnerável à hierarquia interna</td><td>Estruturalmente maior — não responde à chefia operacional</td></tr>
+            <tr><td>Substituição em ausências</td><td>Depende do planejamento de RH</td><td>Em regra, a contratada já oferece substituto</td></tr>
+            <tr><td>Risco de conflito de interesse</td><td>Alto se acumular função operacional (TI, jurídico, RH)</td><td>Baixo — atuação especializada</td></tr>
+            <tr><td>Atendimento à fiscalização da ANPD</td><td>Depende de treinamento contínuo</td><td>Em geral, a contratada tem repertório de casos</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Para a PME típica — receita entre R$ 5 e 50 milhões, sem departamento
+        jurídico estruturado, tratando dados de clientes, funcionários e parceiros —
+        o modelo interno raramente se sustenta no custo-benefício. Já para empresas
+        que tratam dados sensíveis em escala (saúde, educação, finanças), a tendência
+        é o modelo híbrido: encarregado terceirizado como função formal, somado a um{' '}
+        <span className="s-it">data protection champion</span> interno que centraliza
+        as demandas do dia a dia.
+      </p>
+
+      <h2 id="secao-4">Quando o modelo terceirizado faz sentido — <span className="s-it">e quando não</span></h2>
+      <p>A decisão prática gira em torno de cinco perguntas concretas.</p>
+      <p><strong>Faz sentido terceirizar quando:</strong></p>
+      <ul>
+        <li>a empresa não tem profissional internamente qualificado em LGPD e contratar um sênior dedicado é incompatível com o orçamento;</li>
+        <li>o volume de tratamento é moderado — fluxos previsíveis, sem operações de altíssimo risco recorrentes;</li>
+        <li>a operação não exige presença física constante (atendimento de titulares e comunicação com a ANPD é, por natureza, remoto);</li>
+        <li>a empresa busca rapidez na adequação inicial — uma consultoria especializada entrega em meses o que um profissional interno construiria em anos;</li>
+        <li>há necessidade de blindagem em momento crítico: rodada de investimento com due diligence de privacidade, expansão para mercado regulado, M&amp;A com cláusula de reps and warranties em LGPD.</li>
+      </ul>
+      <p><strong>Não faz sentido (ou exige cautela redobrada) quando:</strong></p>
+      <ul>
+        <li>o tratamento de dados é a essência do negócio — health techs, insurtechs, plataformas de relacionamento; aqui a função pede presença diária e integração com o produto;</li>
+        <li>há conflito de interesse estrutural entre a contratada e a contratante (ex.: a mesma firma que presta serviço de marketing pretende atuar como encarregado da empresa cujos dados ela opera — arranjo vedado pelo regulamento da ANPD);</li>
+        <li>a operação é multinacional e exige presença local em jurisdições com regulação própria;</li>
+        <li>a empresa nunca passou por mapeamento de dados — terceirizar antes de mapear é colocar o telhado antes da fundação.</li>
+      </ul>
+
+      <h2 id="secao-5">Cláusulas essenciais no contrato de DPO externo</h2>
+      <p>
+        Um contrato genérico de prestação de serviço não atende ao papel de
+        encarregado. As cláusulas a seguir são mínimas, não exaustivas.
+      </p>
+      <p>
+        <strong>Designação formal e divulgação.</strong> O contrato deve incluir o
+        ato formal de indicação, com nome (se pessoa natural) ou identificação da
+        pessoa jurídica e do profissional responsável. As informações de contato
+        precisam ser divulgadas no site da contratante, em local de fácil acesso (art.
+        41, § 1º, da LGPD).
+      </p>
+      <p>
+        <strong>Escopo de atuação detalhado.</strong> As quatro atribuições do art.
+        41, § 2º, da LGPD (atendimento a titulares, comunicação com a ANPD, orientação
+        a empregados e contratados, outras definidas pelo controlador) devem estar no
+        contrato. Sem detalhamento, contratante e contratada terminam discutindo, no
+        meio da crise, de quem era a responsabilidade.
+      </p>
+      <p>
+        <strong>SLA de atendimento.</strong> Prazos máximos para resposta ao titular
+        (a LGPD prevê 15 dias para confirmação e acesso, art. 19 — o contrato pode ser
+        mais rigoroso), para comunicação interna de incidente e para resposta à ANPD.
+      </p>
+      <p>
+        <strong>Plano de comunicação de incidentes.</strong> Quem aciona quem, e em
+        quantas horas. A comunicação à ANPD tem prazo próprio (a Resolução CD/ANPD nº
+        15/2024 fixou o prazo de reporte) — a empresa precisa estar pronta para
+        cumpri-lo.
+      </p>
+      <p>
+        <strong>Substituto formal.</strong> Como exige a Resolução nº 18/2024, o
+        contrato deve indicar previamente quem substitui o encarregado em ausências e
+        impedimentos.
+      </p>
+      <p>
+        <strong>Autonomia técnica.</strong> Cláusula expressa de que o encarregado não
+        se subordina à área operacional da contratante e de que suas recomendações
+        constarão de registro escrito — para a empresa não ficar exposta caso uma
+        orientação seja ignorada pela alta administração.
+      </p>
+      <p>
+        <strong>Confidencialidade e segurança da informação.</strong> Obviedade que
+        não pode faltar: o encarregado externo terá acesso a dados pessoais e a
+        segredos de negócio.
+      </p>
+      <p>
+        <strong>Cessação da relação.</strong> Como se dará a transição, a devolução de
+        documentos e o prazo de sigilo pós-contrato. A saída desorganizada é fonte
+        recorrente de problemas.
+      </p>
+
+      <h2 id="secao-6">Riscos de uma <span className="s-it">terceirização mal estruturada</span></h2>
+      <p>A terceirização não é blindagem automática. Quatro riscos práticos merecem atenção.</p>
+      <p>
+        <strong>Captura comercial.</strong> Algumas empresas vendem o serviço como
+        pacote padronizado e descontinuam a atenção depois do onboarding — a função
+        vira carimbo. Quando o incidente acontece, o contrato é vago e ninguém responde
+        a tempo. Mitigação: SLA escrito, reuniões mensais obrigatórias, relatórios
+        trimestrais documentados.
+      </p>
+      <p>
+        <strong>Conflito de interesse.</strong> Vale repetir: a mesma empresa que
+        presta serviço de tecnologia, marketing ou call center — e que, portanto, atua
+        como operadora no fluxo de dados — não deve ser o encarregado do controlador. É
+        arranjo que fragiliza a independência exigida pelo regulamento.
+      </p>
+      <p>
+        <strong>Não conformidade da própria contratada.</strong> O encarregado externo
+        precisa ser, ele mesmo, conforme à LGPD. Vale pedir a política de proteção de
+        dados, as credenciais dos profissionais e o termo de confidencialidade assinado
+        pela equipe que terá acesso.
+      </p>
+      <p>
+        <strong>Descontinuidade.</strong> O que acontece se a contratada encerrar
+        atividades, sofrer incidente grave ou perder o profissional-chave? O contrato
+        deve prever continuidade — base de conhecimento, documentação atualizada, plano
+        de substituição.
+      </p>
+      <p>
+        Em pareceres prestados a entidades atendidas pelo escritório, observa-se um
+        padrão: a maior parte das autuações da ANPD em PMEs decorre não da ausência de
+        um programa de privacidade, mas da ausência de canal funcional de atendimento
+        ao titular e do descumprimento de prazos de resposta. O encarregado
+        terceirizado mal contratado replica exatamente esse vazio — com a desvantagem
+        extra de o contrato sugerir que &ldquo;alguém está cuidando&rdquo;.
+      </p>
+
+      <h2 id="secao-7">Boas práticas para contratar o encarregado externo</h2>
+      <ol>
+        <li><strong>Mapeie antes.</strong> Levante quais dados a empresa trata, em quais bases legais e para quais finalidades. Sem isso, o encarregado entra cego.</li>
+        <li><strong>Defina o ponto focal interno.</strong> Mesmo com DPO externo, alguém dentro da empresa precisa receber demandas operacionais e repassar. Sem ponto focal, a comunicação trava.</li>
+        <li><strong>Avalie a maturidade técnica do prestador.</strong> Peça referências, exemplos de relatórios produzidos e o perfil dos profissionais alocados.</li>
+        <li><strong>Negocie SLA específico.</strong> Prazos curtos para resposta ao titular e a incidentes; multas contratuais quando relevantes.</li>
+        <li><strong>Exija a formalização da indicação.</strong> Ato formal escrito, publicação no site, substituto designado.</li>
+        <li><strong>Estabeleça periodicidade obrigatória.</strong> Reuniões mensais com relatório, revisão semestral de processos, atualização anual do mapeamento.</li>
+        <li><strong>Não termine o contrato sem transição.</strong> Preveja uma fase de transferência de conhecimento caso o vínculo encerre.</li>
+      </ol>
+
+      <h2 id="consideracoes">Considerações finais</h2>
+      <p>
+        O encarregado terceirizado é uma estrutura jurídica legítima e, para a maior
+        parte das PMEs brasileiras, economicamente racional. Mas a Resolução CD/ANPD
+        nº 18/2024 elevou o nível de exigência: indicação formal, substituto
+        designado, autonomia técnica e vedação ao conflito de interesse transformaram
+        o que era prática informal em função regulamentada.
+      </p>
+      <p>
+        Para a empresa que pondera o modelo, o ponto crítico não é a decisão entre
+        interno e externo — é a qualidade do contrato e a continuidade da operação. Um
+        encarregado externo bem contratado oferece maturidade jurídica e técnica que a
+        maioria das PMEs não consegue replicar internamente. Mal contratado, vira ficha
+        técnica decorativa que não responde quando a ANPD pergunta.
+      </p>
+      <p>
+        A pergunta correta, portanto, não é &ldquo;vale a pena terceirizar?&rdquo;, mas
+        &ldquo;como estruturar a terceirização para que ela cumpra o que a lei e o
+        regulamento exigem?&rdquo;. Essa é a discussão que vale ser feita antes da
+        contratação — não depois do incidente.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>A pequena empresa é obrigada a ter encarregado de dados?</h3>
+      <p>
+        Depende do enquadramento. Microempresas e EPPs dentro dos limites da LC
+        123/2006, que não realizem tratamento de alto risco e não pertençam a grupo
+        econômico maior, estão dispensadas da indicação formal pelo regulamento da
+        ANPD (Resolução nº 2/2022), mas precisam manter canal de comunicação com o
+        titular. Acima desses limites, a indicação volta a ser obrigatória.
+      </p>
+      <h3>O encarregado precisa ter formação em Direito?</h3>
+      <p>
+        Não. A LGPD e a Resolução CD/ANPD nº 18/2024 não exigem inscrição em conselho,
+        certificação ou formação específica. Na prática, espera-se conhecimento
+        jurídico em proteção de dados e conhecimento técnico em segurança da
+        informação — independentemente do diploma de origem.
+      </p>
+      <h3>O encarregado pode ser pessoa jurídica?</h3>
+      <p>
+        Sim. O regulamento da ANPD admite expressamente que a função seja exercida por
+        pessoa natural ou jurídica. Quando contratada por meio de empresa, o contrato
+        deve identificar o profissional responsável pela operação cotidiana da função.
+      </p>
+      <h3>Posso indicar como encarregado a empresa que já presta serviço de TI ou marketing para a minha?</h3>
+      <p>
+        Em regra, não. Se a prestadora atua como operadora no fluxo de dados da
+        contratante, indicá-la como encarregado configura conflito de interesse vedado
+        pelo regulamento da ANPD. O encarregado deve ter autonomia técnica em relação
+        às áreas que operam os dados.
+      </p>
+      <h3>Qual o prazo para indicar encarregado depois de uma autuação da ANPD?</h3>
+      <p>
+        Não há prazo regulamentar único — a ANPD costuma fixá-lo em cada notificação.
+        Mas o ponto relevante é outro: indicar encarregado depois da autuação não
+        afasta a sanção pelo descumprimento prévio. A obrigação existe desde a entrada
+        em vigor da LGPD.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao">Áreas de atuação</Link>{' '}
+        reúne as frentes do escritório, incluindo Compliance e LGPD — programa de
+        integridade, adequação à LGPD e atuação como encarregado.
+      </p>
+    </>
+  ),
 };
