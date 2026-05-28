@@ -67,10 +67,10 @@ const RAW: Omit<Post, 'status'>[] = [
   },
   {
     slug: 'sustentacao-virtual-tribunais', kicker: 'Tribunais',
-    dateLabel: 'Dez · 2025', published: '2025-12-09', read: '5 min',
-    title: 'Sustentação oral em sessão virtual: o que mudou na prática nos tribunais superiores',
+    dateLabel: 'Mai · 2026', published: '2026-05-27', read: '10 min',
+    title: 'Sustentação oral em sessão virtual: o que mudou nos tribunais superiores',
     excerpt:
-      'Notas sobre a sustentação remota em sessões virtuais e híbridas — preparação, ritmo, limites técnicos.',
+      'A Lei 14.365/2022, a Resolução CNJ 591/2024 e o novo regime do STJ mudaram o ritual da sustentação oral. Como o advogado deve agir hoje em RE, REsp e agravos.',
   },
   {
     slug: 'holding-familiar-3-perguntas', kicker: 'Família · Sucessões',
@@ -92,6 +92,7 @@ const PUBLISHED = new Set<string>([
   'sindicato-legitimidade-stf',
   'lei-licitacoes-fiscalizacao',
   'holding-familiar-3-perguntas',
+  'sustentacao-virtual-tribunais',
 ]);
 const DRAFT = new Set<string>([]);
 

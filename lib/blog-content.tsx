@@ -1977,4 +1977,312 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
       </p>
     </>
   ),
+
+  // ───────────── Publicado ─────────────
+  'sustentacao-virtual-tribunais': () => (
+    <>
+      <p>
+        A pauta do tribunal cai no e-mail numa quarta-feira. O recurso especial que você
+        acompanha há quatro anos foi incluído em sessão virtual — aquela em que os
+        ministros votam, cada um no seu gabinete, ao longo de sete dias corridos. A
+        primeira reação costuma ser a mesma: vou conseguir sustentar oralmente? Em caso
+        positivo, como? E, se preferir o ritual da sessão presencial, é possível levar o
+        caso para lá?
+      </p>
+      <p>
+        Esse cenário, que durante a pandemia parecia transitório, virou regra estrutural
+        do Judiciário brasileiro. A Lei 14.365/2022 ampliou as hipóteses de sustentação
+        oral em agravos; a Resolução CNJ 591/2024 fixou parâmetros mínimos para os
+        julgamentos eletrônicos em todos os tribunais; e, em janeiro de 2025, o STJ
+        publicou a Resolução GP 3/2025, reorganizando o regime das sessões virtuais
+        assíncronas. Para quem litiga nos tribunais superiores, conhecer essa engrenagem
+        deixou de ser detalhe — virou a diferença entre falar ou não falar no julgamento.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#tres-modelos">Sessão presencial, telepresencial e virtual: três coisas diferentes</a></li>
+          <li><a href="#lei-14365">O que mudou com a Lei 14.365/2022: novas hipóteses</a></li>
+          <li><a href="#stf">STF: o peticionamento eletrônico e a regra das 48 horas</a></li>
+          <li><a href="#stj">STJ: a Resolução GP 3/2025 e as sessões assíncronas</a></li>
+          <li><a href="#cnj-591">Resolução CNJ 591/2024: destaque, OAB e a decisão de Barroso</a></li>
+          <li><a href="#tabela">Tabela comparativa: STF × STJ na sessão virtual</a></li>
+          <li><a href="#checklist">Checklist: oito passos antes de uma sustentação virtual</a></li>
+          <li><a href="#conclusao">Considerações finais</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="tres-modelos">Sessão presencial, telepresencial e virtual: <span className="s-it">três coisas diferentes</span></h2>
+      <p>
+        A confusão começa no vocabulário. No léxico atual dos tribunais superiores, três
+        modalidades convivem.
+      </p>
+      <p>
+        A <strong>sessão presencial</strong> é o ritual clássico: ministros reunidos no
+        plenário, advogados na tribuna, julgamento em tempo real. A <strong>sessão
+        telepresencial</strong> (ou videoconferência) ocorre de modo síncrono, mas com
+        participantes em locais distintos, conectados por vídeo. Em ambas, o advogado fala
+        ao vivo, o colegiado escuta na hora e o debate é imediato.
+      </p>
+      <p>
+        A <strong>sessão virtual</strong> — também chamada de assíncrona — é
+        estruturalmente diferente. Os ministros votam ao longo de um período predefinido
+        (no STJ, sete dias corridos), cada um no momento que escolher. Não há reunião
+        simultânea. Quando há sustentação oral, ela é gravada antes e disponibilizada no
+        sistema de votação, para que cada julgador a assista ao proferir o voto.
+      </p>
+      <p>
+        A diferença não é só operacional: ela altera o tempo do julgamento, o modo como o
+        argumento é construído e a oportunidade real de influência. Em sessão presencial, a
+        sustentação dialoga com o debate que vai se desenrolar; em sessão virtual, é peça
+        fechada, sem possibilidade de réplica.
+      </p>
+
+      <h2 id="lei-14365">O que mudou com a Lei 14.365/2022: <span className="s-it">novas hipóteses</span></h2>
+      <p>
+        A Lei 14.365/2022 ampliou prerrogativas da advocacia ao alterar o Estatuto da OAB,
+        o CPC e o CPP. Para este tema, o ponto central é a inclusão do § 2º-B no art. 7º da
+        Lei 8.906/1994, que passou a admitir sustentação oral em recursos antes vedados —
+        no recurso interposto contra decisão monocrática de relator que julgar o mérito ou
+        não conhecer, entre outras hipóteses, de:
+      </p>
+      <ul>
+        <li>agravo interno ou regimental em recurso especial e em recurso extraordinário;</li>
+        <li>agravo interno ou regimental em embargos de divergência;</li>
+        <li>ação rescisória, mandado de segurança, reclamação, habeas corpus e demais ações de competência originária.</li>
+      </ul>
+      <p>
+        O STJ adequou-se rapidamente: pela Emenda Regimental 41/2022, o art. 160 do RISTJ
+        passou a prever quinze minutos de sustentação em agravo interno, equiparando-o aos
+        demais recursos da pauta (cinco minutos nos agravos regimentais em matéria penal). O
+        TST seguiu caminho semelhante, com dez minutos para os agravos após decisão
+        monocrática em recurso de revista e embargos.
+      </p>
+      <p>
+        Há, porém, uma fronteira jurisprudencial importante. O STJ firmou que a Lei
+        14.365/2022, ao mencionar o agravo regimental em recurso especial (REsp), não
+        estendeu a prerrogativa ao agravo regimental no agravo em recurso especial (AREsp)
+        — espécies que a legislação processual trata como distintas:
+      </p>
+      <blockquote>
+        &ldquo;A inovação introduzida no EOAB pela Lei 14.365/2022 garantiu ao advogado o
+        direito de sustentação no agravo interno ou regimental em sede de recurso especial,
+        mas nada dispôs sobre o julgamento de agravo regimental no agravo em recurso
+        especial.&rdquo;
+        <cite>STJ, 5ª Turma — AgRg no AREsp 2.170.433.</cite>
+      </blockquote>
+      <p>
+        Na prática, antes de inscrever sustentação oral, o advogado precisa identificar com
+        precisão a classe processual do recurso: REsp e AREsp seguem regimes diferentes,
+        ainda que pareçam próximos.
+      </p>
+
+      <h2 id="stf">STF: o peticionamento eletrônico e <span className="s-it">a regra das 48 horas</span></h2>
+      <p>
+        No Supremo, o regime atual da sustentação oral em sessão virtual deriva da Resolução
+        642/2019 e do Procedimento Judiciário 11/2020. Nas hipóteses regimentais de
+        cabimento, o advogado pode encaminhar a sustentação por meio eletrônico após a
+        publicação da pauta e até 48 horas antes do início do julgamento em ambiente
+        virtual.
+      </p>
+      <p>
+        O envio é feito pelo sistema de Peticionamento do STF, na opção &ldquo;Quero enviar
+        Sustentação Oral&rdquo;. O arquivo deve seguir os parâmetros técnicos do Tribunal
+        (formato, tamanho e duração equivalentes ao prazo regimental presencial
+        correspondente). O prazo das 48 horas é contínuo, independentemente de feriado
+        forense: cair em véspera de feriado não dilata o limite.
+      </p>
+      <p>
+        Já nas sessões presenciais (ou por videoconferência), o ritual é outro: o advogado
+        precisa se inscrever em formulário eletrônico até 24 horas antes da sessão, após o
+        que recebe as instruções operacionais. Tratar uma sessão virtual como se fosse
+        presencial — inscrevendo-se no formulário tradicional e aparecendo no dia —
+        significa perder o prazo de envio do arquivo e, com ele, a sustentação.
+      </p>
+
+      <h2 id="stj">STJ: a Resolução GP 3/2025 e <span className="s-it">as sessões assíncronas</span></h2>
+      <p>
+        O STJ passou por reorganização normativa importante. A Emenda Regimental 45/2024
+        ampliou as hipóteses de julgamento eletrônico, e a Resolução STJ/GP 3, de 15 de
+        janeiro de 2025, regulamentou o procedimento — em diálogo com a Resolução CNJ
+        591/2024. As sessões virtuais do STJ estão hoje disciplinadas, em especial, nos
+        arts. 184-A a 184-J do RISTJ. Os principais pontos práticos:
+      </p>
+      <p>
+        <strong>Pauta e prazo de votação.</strong> A pauta é publicada com pelo menos cinco
+        dias úteis de antecedência. Os ministros têm sete dias corridos para registrar os
+        votos. Não atingido o quórum mínimo (art. 184-I do RISTJ), o processo é adiado para
+        a sessão virtual imediatamente subsequente.
+      </p>
+      <p>
+        <strong>Envio da sustentação oral.</strong> Encaminhada pela Central do Processo
+        Eletrônico (formulário em sustentacaooral.web.stj.jus.br), até 48 horas antes do
+        início do julgamento, em dois formatos:
+      </p>
+      <ul>
+        <li><strong>Áudio:</strong> arquivo MP3, até 10 MB;</li>
+        <li><strong>Vídeo:</strong> arquivo MP4, até 250 MB.</li>
+      </ul>
+      <p>A duração observa o prazo regimental do recurso — em geral, até 15 minutos.</p>
+      <p>
+        <strong>Publicidade das peças.</strong> Transcorrido o prazo do art. 184-D do RISTJ,
+        sustentações e memoriais ficam disponíveis ao público, salvo nos processos
+        sigilosos.
+      </p>
+      <p>
+        <strong>Pedido de preferência e destaque.</strong> Apresentado na forma do art. 10
+        da Resolução STJ/GP 3/2025, que dialoga com o art. 8º, II, da Resolução CNJ 591/2024
+        — detalhado adiante.
+      </p>
+      <p>
+        Em sustentações orais perante o STJ, o escritório vem observando que a qualidade
+        técnica do arquivo (áudio limpo, leitura clara da tese, foco nos pontos decisórios)
+        passou a importar tanto quanto a estrutura argumentativa: numa sessão assíncrona,
+        não há gesto da tribuna nem resposta do ministro — só a peça gravada.
+      </p>
+
+      <h2 id="cnj-591">Resolução CNJ 591/2024: <span className="s-it">destaque, OAB e a decisão de Barroso</span></h2>
+      <p>
+        A Resolução CNJ 591, de 23 de outubro de 2024, estabeleceu requisitos mínimos para o
+        julgamento de processos em ambiente eletrônico em todo o Judiciário, unificando
+        prazos, formatos e regras de pedido de destaque — e gerou controvérsia imediata. O
+        ponto mais sensível está no art. 8º:
+      </p>
+      <blockquote>
+        &ldquo;Não serão julgados em ambiente virtual os processos com pedido de destaque
+        feito: I – por qualquer membro do órgão colegiado; II – por qualquer das partes ou
+        pelo representante do Ministério Público, desde que requerido até 48 horas antes do
+        início da sessão e deferido pelo relator.&rdquo;
+        <cite>Resolução CNJ 591/2024, art. 8º.</cite>
+      </blockquote>
+      <p>
+        A leitura literal da parte final do inciso II sugeria que o destaque pedido pela
+        parte ficaria sujeito à decisão discricionária do relator — o que esvaziaria a
+        prerrogativa de levar o caso para sessão presencial e sustentar ao vivo. A OAB
+        reagiu com mobilização nacional, sustentando que a sustentação oral síncrona é
+        prerrogativa da advocacia e não pode ser substituída por arquivo gravado sem o
+        consentimento da parte.
+      </p>
+      <p>
+        Em decisão no processo 0007972-11.2024.2.00.0000, o ministro Luís Roberto Barroso,
+        então presidente do STF e do CNJ, esclareceu dois pontos centrais:
+      </p>
+      <ul>
+        <li>a Resolução não tornou obrigatório o julgamento assíncrono — apenas fixou requisitos mínimos para os tribunais que optarem por adotá-lo;</li>
+        <li>as hipóteses de julgamento presencial após pedido de destaque devem ser entendidas como necessárias, mas não exclusivas: cada tribunal pode regular os próprios pedidos de destaque, preservada a prerrogativa da advocacia.</li>
+      </ul>
+      <p>
+        Para o advogado, a conclusão é direta: o pedido de destaque, na maioria das cortes,
+        continua sendo o instrumento adequado para garantir sessão presencial com
+        sustentação síncrona — mas sua eficácia depende do regramento de cada tribunal e,
+        em alguns casos, do deferimento do relator.
+      </p>
+
+      <h2 id="tabela">Tabela comparativa: <span className="s-it">STF × STJ na sessão virtual</span></h2>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr><th>Aspecto</th><th>STF</th><th>STJ</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Base normativa</td><td>Resolução 642/2019; Procedimento Judiciário 11/2020</td><td>RISTJ, arts. 184-A a 184-J; Resolução STJ/GP 3/2025; Emenda Regimental 45/2024</td></tr>
+            <tr><td>Duração da sessão virtual</td><td>Definida em pauta</td><td>7 dias corridos para colheita de votos</td></tr>
+            <tr><td>Prazo para envio da sustentação</td><td>Até 48h antes do início do julgamento virtual</td><td>Até 48h antes do início do julgamento virtual</td></tr>
+            <tr><td>Plataforma de envio</td><td>Peticionamento — &ldquo;Quero enviar Sustentação Oral&rdquo;</td><td>Central do Processo Eletrônico — sustentacaooral.web.stj.jus.br</td></tr>
+            <tr><td>Formato do arquivo</td><td>Áudio ou vídeo, conforme requisitos técnicos</td><td>MP3 (máx. 10 MB) ou MP4 (máx. 250 MB)</td></tr>
+            <tr><td>Duração da sustentação</td><td>Equivalente ao prazo regimental presencial</td><td>Em regra, até 15 minutos</td></tr>
+            <tr><td>Sessão presencial / videoconferência</td><td>Inscrição até 24h antes em formulário próprio</td><td>Até 24h antes (videoconferência); 30 min antes (presencial)</td></tr>
+            <tr><td>Cabimento em agravos</td><td>Art. 7º, § 2º-B, da Lei 8.906/94</td><td>Art. 7º, § 2º-B + RISTJ art. 160; não cabe em AgRg no AREsp</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Os prazos podem ser alterados por atos normativos posteriores. Antes de cada
+        sustentação, é prudente conferir o regramento vigente no portal do tribunal.
+      </p>
+
+      <h2 id="checklist">Checklist: <span className="s-it">oito passos antes de uma sustentação virtual</span></h2>
+      <ol>
+        <li><strong>Confirme a classe processual.</strong> REsp, AREsp, agravo interno e agravo regimental seguem regimes diferentes — a leitura correta define se cabe sustentação.</li>
+        <li><strong>Identifique a modalidade da sessão.</strong> A pauta indica se o julgamento é virtual, telepresencial ou presencial; cada uma tem procedimento próprio de inscrição e envio.</li>
+        <li><strong>Marque o prazo das 48 horas</strong> a partir do início do julgamento virtual, não da publicação da pauta. O cronômetro corre mesmo em véspera de feriado forense.</li>
+        <li><strong>Verifique os requisitos técnicos do arquivo.</strong> No STJ, MP3 até 10 MB ou MP4 até 250 MB; no STF, as especificações do Procedimento Judiciário 11/2020 vigente. Arquivo fora do padrão é rejeitado.</li>
+        <li><strong>Estruture a sustentação como peça autônoma.</strong> Sem réplica ao voto, o argumento precisa antecipar contrapontos e fixar a tese no primeiro minuto.</li>
+        <li><strong>Avalie o pedido de destaque.</strong> Se o caso exige debate ao vivo (complexidade fática, tese inédita, dúvidas do colegiado), o destaque para sessão presencial é o instrumento adequado — observado o prazo de 48 horas e a regra de cada tribunal.</li>
+        <li><strong>Controle a qualidade da gravação.</strong> Áudio limpo, sem ruído, com leitura pausada. Em sessão virtual, o ministro ouve sozinho — distrações técnicas pesam.</li>
+        <li><strong>Confirme o protocolo de envio.</strong> O sistema gera comprovante; guarde-o até a conclusão do julgamento. Sustentações não juntadas, em casos raros, geram nulidade arguível em embargos de declaração.</li>
+      </ol>
+
+      <h2 id="conclusao">Considerações finais: <span className="s-it">o ritual mudou, a técnica permanece</span></h2>
+      <p>
+        A sessão virtual não tornou a sustentação oral menos importante — tornou-a mais
+        técnica. Antes, parte do efeito vinha da presença na tribuna, do tom de voz, da
+        pausa diante do colegiado. Hoje, o efeito depende do que está no arquivo: do recorte
+        da tese, da ordem dos argumentos, da clareza dos parâmetros normativos invocados.
+      </p>
+      <p>
+        Para quem atua perante o STF e o STJ — seja em recurso especial de servidor público,
+        mandado de segurança coletivo de entidade sindical, agravo em recurso especial de
+        empresa contratada pela Administração ou ação rescisória empresarial —, dominar o
+        regime das sessões virtuais deixou de ser detalhe operacional: virou parte da
+        estratégia processual desde a interposição do recurso. Com três décadas e meia de
+        atuação em Direito Público perante os tribunais superiores, o escritório observa que
+        a defesa bem-feita começa antes da pauta — no desenho do recurso, na escolha do
+        recurso adequado e na antecipação do regime de julgamento aplicável.
+      </p>
+      <p>
+        A reforma de 2022, a Resolução CNJ 591/2024 e a Resolução STJ/GP 3/2025 não esgotam o
+        tema. Cada tribunal regional e cada corte estadual está, no próprio ritmo, adaptando
+        os respectivos regimentos — quem litiga em rede precisa acompanhar essa engenharia
+        normativa em tempo real.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>Posso me opor à inclusão do meu recurso em sessão virtual no STJ?</h3>
+      <p>
+        O art. 184-A do RISTJ atribui ao relator a competência para incluir o processo em
+        sessão virtual, ressalvadas hipóteses específicas. A oposição é possível por pedido
+        de destaque, na forma da Resolução STJ/GP 3/2025 e dentro do prazo de 48 horas. O STJ
+        tem decidido que a oposição precisa demonstrar prejuízo concreto ao direito de
+        defesa.
+      </p>
+      <h3>Cabe sustentação oral em agravo regimental no agravo em recurso especial (AgRg no AREsp)?</h3>
+      <p>
+        Segundo a 5ª Turma do STJ (AgRg no AREsp 2.170.433), a Lei 14.365/2022 ampliou a
+        prerrogativa para o agravo regimental em recurso especial (REsp), mas não a estendeu
+        ao agravo regimental no AREsp, classe processual distinta. Antes de inscrever
+        sustentação, é essencial conferir a classe.
+      </p>
+      <h3>O prazo de 48 horas conta dias úteis ou corridos?</h3>
+      <p>
+        Conta horas corridas, a partir do início do julgamento virtual — não em dias úteis.
+        Segundo o STF, o prazo deve ser observado ainda que o término coincida com feriado
+        forense.
+      </p>
+      <h3>Posso enviar memoriais junto da sustentação oral?</h3>
+      <p>
+        Sim. No STF e no STJ, memoriais podem ser encaminhados pelas vias eletrônicas usuais
+        e, na sessão virtual do STJ, ficam disponíveis aos ministros junto da sustentação
+        gravada, ressalvados os processos sigilosos.
+      </p>
+      <h3>Se o relator pedir destaque depois de eu enviar a sustentação gravada, perco o direito de sustentar ao vivo?</h3>
+      <p>
+        Não. Havendo destaque, o julgamento é reiniciado em sessão presencial, com
+        possibilidade de sustentação oral síncrona (art. 6º, § 2º, da Resolução CNJ
+        591/2024). A peça gravada deixa de ser utilizada e o advogado sustenta ao vivo na
+        nova sessão.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/direito-do-servidor">Direito do Servidor Público</Link>{' '}
+        reúne a atuação em PAD, sindicâncias e mandados de segurança que frequentemente
+        desembocam em recursos no STJ e no STF; ver também{' '}
+        <Link href="/blog/pad-controle-judicial">PAD e o limite do controle judicial</Link>{' '}
+        e{' '}
+        <Link href="/blog/sindicato-legitimidade-stf">a legitimidade processual do sindicato no STF</Link>.
+      </p>
+    </>
+  ),
 };
