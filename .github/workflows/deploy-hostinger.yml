@@ -42,12 +42,17 @@ jobs:
           cp public/contato.php out/contato.php
           test -f out/.htaccess && grep -q Cache-Control out/.htaccess && echo "ok: .htaccess com cache headers"
 
+      # Publish via git puro — peaceiris/actions-gh-pages DESCARTA dotfiles
+      # (.htaccess) na publicação. `git add -A` inclui dotfiles, garantindo que
+      # .htaccess (redirects + cache) e contato.php cheguem à branch production.
       - name: Publish ./out para a branch production
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          publish_branch: production
-          # Sem .nojekyll/CNAME aqui: o destino é Hostinger (Apache), não GH Pages.
-          # .htaccess e contato.php são copiados explicitamente no passo acima.
-          commit_message: "deploy: ${{ github.event.head_commit.message }}"
+        run: |
+          cd out
+          git init -q
+          git checkout -q -b production
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "deploy: ${{ github.event.head_commit.message }}"
+          git push -f -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" production:production
+          echo "Publicado. Conteudo de production:"; git ls-files | grep -E "\.htaccess|contato\.php|^index\.html"
