@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/site';
 import { POSTS, isPublic } from '@/lib/blog';
 import { NICHES, isNichePublic } from '@/lib/niches-content';
+import { AREAS_CONTENT, isAreaPublic } from '@/lib/areas-content';
 import { FAQ_STATUS } from '@/lib/faq-content';
 
 // README §8.4 — lista rotas indexáveis (não inclui /style-guide nem /api).
@@ -24,6 +25,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(`${p.published}T12:00:00`),
       changeFrequency: 'yearly' as const,
       priority: 0.6,
+    })),
+    // Páginas de área (rotas dinâmicas /atuacao/[slug]) — só 'published'.
+    ...AREAS_CONTENT.filter(isAreaPublic).map((a) => ({
+      url: `${SITE_URL}/atuacao/${a.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
     })),
     // Idem nichos: só 'published' entra (piloto 'draft' fica fora).
     ...NICHES.filter(isNichePublic).map((n) => ({

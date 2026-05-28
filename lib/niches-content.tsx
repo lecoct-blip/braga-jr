@@ -135,7 +135,7 @@ export const NICHES: NicheContent[] = [
       { kicker: 'Internacional', title: 'Holding com componente internacional: o que muda no diagnóstico' },
       { kicker: 'Tributário', title: 'Lei 14.754/2023: tributação de offshore e o desenho da holding' },
     ],
-    status: 'draft',
+    status: 'published',
     seoTitle: 'Holding com Estrutura Brasil–Flórida no Rio',
     seoDescription:
       'Estruturação de holding com componente internacional Brasil–EUA: filial em Naples (FL) e coordenação com counsel licenciado. Direito brasileiro pela equipe.',

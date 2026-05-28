@@ -135,7 +135,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       { kicker: 'Sindical', title: 'Contribuição assistencial após o Tema 935: o que mudou na prática' },
       { kicker: 'Categoria', title: 'Data-base travada: quando a via é o dissídio e quando é a negociação' },
     ],
-    status: 'draft',
+    status: 'published',
     seoTitle: 'Advogado de Sindicatos no Rio de Janeiro',
     seoDescription:
       'Assessoria a sindicatos e associações: substituição processual, negociação coletiva, custeio e sustentação em STF/STJ. Rio de Janeiro.',
@@ -230,7 +230,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       { kicker: 'M&A', title: 'Due diligence: o que o comprador descobre tarde demais' },
       { kicker: 'Família · Sucessões', title: 'Holding familiar: três perguntas antes de estruturar' },
     ],
-    status: 'draft',
+    status: 'published',
     seoTitle: 'Advogado Empresarial no Rio de Janeiro',
     seoDescription:
       'Direito empresarial e corporativo: contratos, societário, M&A, acordo de sócios e planejamento patrimonial. Assessoria a empresas no Rio de Janeiro.',
@@ -323,7 +323,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       { kicker: 'Sucessões', title: 'Inventário: extrajudicial ou judicial — o critério que pouca gente aplica' },
       { kicker: 'Responsabilidade', title: 'Dano moral: o que sustenta o valor além da alegação' },
     ],
-    status: 'draft',
+    status: 'published',
     seoTitle: 'Advogado de Direito Civil no Rio de Janeiro',
     seoDescription:
       'Direito civil com método: contratos, responsabilidade civil, família, sucessões e imobiliário. Atuação consultiva e contenciosa no Rio de Janeiro.',
@@ -415,7 +415,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       { kicker: 'Empresa', title: 'Reclamatórias em série: tratar a causa, não só a defesa' },
       { kicker: 'M&A', title: 'Passivo trabalhista oculto: o que a due diligence precisa olhar' },
     ],
-    status: 'draft',
+    status: 'published',
     seoTitle: 'Advogado Trabalhista Empresarial no Rio',
     seoDescription:
       'Direito do trabalho pelo lado da empresa: compliance trabalhista, contratação, terceirização, defesa em reclamatórias e fiscalizações. Rio de Janeiro.',
@@ -507,7 +507,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       { kicker: 'Improbidade', title: 'A Lei 14.230 e o dolo específico: o que mudou na defesa' },
       { kicker: 'Controle', title: 'Tomada de contas no TCE-RJ: a defesa começa antes da citação' },
     ],
-    status: 'draft',
+    status: 'published',
     seoTitle: 'Advogado de Direito Administrativo no Rio',
     seoDescription:
       'Administração pública: licitações (Lei 14.133), contratos administrativos, sanções, tomada de contas no TCU/TCE-RJ e defesa em improbidade. Rio de Janeiro.',

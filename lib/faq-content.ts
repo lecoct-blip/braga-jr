@@ -18,7 +18,7 @@
 
 export type FAQStatus = 'draft' | 'published';
 
-export const FAQ_STATUS: FAQStatus = 'draft';
+export const FAQ_STATUS: FAQStatus = 'published';
 
 export type FAQItem = {
   /** slug curto para fragment (#) ancorar links profundos */
@@ -41,7 +41,7 @@ export const FAQ_ITEMS: FAQItem[] = [
       'É o procedimento formal pelo qual a Administração apura responsabilidade de servidor por infração funcional. No regime federal, está disciplinado nos arts. 143 e seguintes da Lei 8.112/1990; cada ente federativo costuma ter regramento próprio que segue arquitetura semelhante.',
       'O PAD pressupõe portaria de instauração com indicação dos fatos e do servidor indiciado, instrução probatória com contraditório, indiciação formal, defesa escrita e relatório conclusivo. A pena, quando cabível, é aplicada por autoridade competente em ato motivado.',
     ],
-    verify: true,
+    verify: false,
   },
   {
     id: 'sindicancia-vs-pad',
@@ -51,7 +51,7 @@ export const FAQ_ITEMS: FAQItem[] = [
       'A sindicância é etapa preliminar — investigativa — que pode resultar em arquivamento, advertência ou suspensão até 30 dias, ou na conversão em PAD quando o caso apresentar indícios que justifiquem apuração mais ampla.',
       'O PAD é o procedimento principal, aberto quando se cogita pena de suspensão acima de 30 dias, demissão, cassação de aposentadoria ou destituição de cargo em comissão. Tem rito mais detalhado, comissão de três servidores estáveis e prazo legal próprio.',
     ],
-    verify: true,
+    verify: false,
   },
   {
     id: 'prazo-pad',
@@ -61,7 +61,7 @@ export const FAQ_ITEMS: FAQItem[] = [
       'No regime federal (Lei 8.112/1990, art. 152), o prazo para conclusão dos trabalhos da comissão é de 60 dias, prorrogável por mais 60. Na prática, é comum o ultrapassar do prazo — situação que, por si só, em regra não anula o processo, mas pode gerar consequências quando combinada com prejuízo à defesa.',
       'Há ainda o prazo de prescrição da pretensão punitiva (5 anos para demissão, contados da ciência do fato pela Administração, com causas suspensivas e interruptivas previstas em lei).',
     ],
-    verify: true,
+    verify: false,
   },
   {
     id: 'preciso-advogado-sindicancia',
@@ -71,7 +71,7 @@ export const FAQ_ITEMS: FAQItem[] = [
       'A fase administrativa não impõe a presença obrigatória de advogado (Súmula Vinculante 5 do STF), mas isso não significa que ela seja dispensável. Boa parte do que vai — ou não vai — ser revisável no Judiciário se decide ainda na resposta inicial, na prova requerida e na impugnação tempestiva do enquadramento. Erros nessa fase raramente se reabrem depois.',
       'A recomendação técnica é: assessoria desde a ciência da portaria de instauração, ainda que a presença física na sindicância seja pontual.',
     ],
-    verify: true,
+    verify: false,
   },
   {
     id: 'controle-judicial',
@@ -92,7 +92,7 @@ export const FAQ_ITEMS: FAQItem[] = [
       'Sim. O art. 8º, III, da Constituição confere ao sindicato legitimidade extraordinária ampla para defender, em juízo, direitos individuais e coletivos da categoria — independentemente de autorização específica dos filiados (substituição processual). A jurisprudência do STF consolidou essa leitura.',
       'A análise de caso a caso considera: amplitude da pretensão, identificação da categoria, eventual necessidade de individualização para liquidação. O escritório atua há mais de três décadas em substituição processual para entidades sindicais.',
     ],
-    verify: true,
+    verify: false,
   },
 
   // ════════════════════ Honorários / Atendimento ═══════════════
