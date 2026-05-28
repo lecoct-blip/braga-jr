@@ -23,9 +23,8 @@ export function Footer() {
                 style={{
                   fontSize: 10,
                   letterSpacing: '0.2em',
-                  opacity: 0.55,
                   marginTop: 6,
-                  color: 'var(--ink-muted)',
+                  color: 'var(--ink-faint)',
                 }}
               >
                 EST. 1991 · {NAP.oab}
@@ -40,7 +39,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h5>Navegação</h5>
+            <h2>Navegação</h2>
             <ul>
               <li><Link href="/">Início</Link></li>
               <li><Link href="/atuacao">Áreas de atuação</Link></li>
@@ -55,7 +54,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h5>Sedes</h5>
+            <h2>Sedes</h2>
             <address style={{ fontStyle: 'normal', fontSize: 14, lineHeight: 1.6 }}>
               <span style={{ color: 'var(--ink-faint)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Brasil</span><br />
               {NAP.street}<br />
@@ -73,7 +72,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h5>Contato direto</h5>
+            <h2>Contato direto</h2>
             <p style={{ fontSize: 14, lineHeight: 1.7 }}>
               WhatsApp:{' '}
               <a href={NAP.whatsapp} target="_blank" rel="noopener" className="accent">

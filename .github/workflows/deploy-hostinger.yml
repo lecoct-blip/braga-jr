@@ -34,6 +34,14 @@ jobs:
       - name: Build (next build → static export em ./out)
         run: npm run build
 
+      # O `next build` (static export) NÃO copia dotfiles do public/ de forma
+      # confiável entre plataformas → garantimos .htaccess e contato.php no out/.
+      - name: Garante .htaccess e contato.php no out/
+        run: |
+          cp public/.htaccess out/.htaccess
+          cp public/contato.php out/contato.php
+          test -f out/.htaccess && grep -q Cache-Control out/.htaccess && echo "ok: .htaccess com cache headers"
+
       - name: Publish ./out para a branch production
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -41,5 +49,5 @@ jobs:
           publish_dir: ./out
           publish_branch: production
           # Sem .nojekyll/CNAME aqui: o destino é Hostinger (Apache), não GH Pages.
-          # O .htaccess e o contato.php vêm de public/ e já estão dentro de ./out.
+          # .htaccess e contato.php são copiados explicitamente no passo acima.
           commit_message: "deploy: ${{ github.event.head_commit.message }}"
