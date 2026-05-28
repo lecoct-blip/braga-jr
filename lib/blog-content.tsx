@@ -1585,4 +1585,396 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
       </p>
     </>
   ),
+
+  // ───────────── Publicado ─────────────
+  'holding-familiar-3-perguntas': () => (
+    <>
+      <p>
+        A consulta costuma chegar mais ou menos assim: &ldquo;Ouvi falar que, se eu
+        colocar tudo numa holding, meus filhos não pagam inventário e meu patrimônio
+        fica protegido contra qualquer credor.&rdquo; A frase contém três promessas —
+        economia de imposto, agilidade sucessória e blindagem patrimonial — e cada uma
+        delas é verdadeira até certo ponto, falsa em outros, e completamente equivocada
+        quando a estrutura é desenhada sem propósito.
+      </p>
+      <p>
+        A holding familiar é, há décadas, um dos instrumentos mais úteis do planejamento
+        patrimonial e sucessório no Brasil. Mas é também um dos mais vendidos como
+        solução universal — e isso tem consequências caras quando o desenho não
+        corresponde à realidade da família. Antes de assinar contrato social,
+        integralizar imóveis e doar quotas aos herdeiros, três perguntas precisam de
+        resposta honesta. Este artigo trata exatamente delas.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#secao-1">O que é, afinal, uma holding familiar</a></li>
+          <li><a href="#secao-2">Pergunta 1 — A holding resolve o problema que você tem?</a></li>
+          <li><a href="#secao-3">Pergunta 2 — A holding cabe no seu patrimônio?</a></li>
+          <li><a href="#secao-4">Pergunta 3 — A holding sobrevive à sua família?</a></li>
+          <li><a href="#secao-5">Quadro comparativo: holding × outras vias</a></li>
+          <li><a href="#secao-6">Boas práticas antes de constituir</a></li>
+          <li><a href="#consideracoes-finais">Considerações finais</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="secao-1">O que é, afinal, <span className="s-it">uma holding familiar</span></h2>
+      <p>
+        Tecnicamente, holding familiar é uma sociedade — em regra uma{' '}
+        <strong>sociedade limitada</strong>, regida pelos arts. 1.052 e seguintes do{' '}
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener">Código Civil</a>,
+        eventualmente uma sociedade anônima fechada — constituída com a finalidade
+        principal de <strong>deter participações em outras sociedades ou bens</strong>{' '}
+        (imóveis, aplicações financeiras, marcas) pertencentes a um mesmo núcleo
+        familiar.
+      </p>
+      <p>
+        O termo &ldquo;holding&rdquo; vem do verbo inglês <span className="s-it">to hold</span>{' '}
+        — segurar, deter. Não é um tipo societário próprio; é uma <strong>função</strong>{' '}
+        que uma sociedade convencional pode exercer: centralizar a titularidade do
+        patrimônio familiar em uma pessoa jurídica, de modo que a transmissão entre
+        gerações ocorra pela circulação de quotas, e não pela circulação dos bens em si.
+      </p>
+      <p>
+        A partir dessa função central, a holding serve a finalidades distintas que
+        costumam aparecer misturadas no discurso comercial — e essa mistura é a raiz da
+        maior parte dos arrependimentos. Em essência, usa-se a holding para três coisas,
+        que podem (ou não) coincidir no mesmo desenho:
+      </p>
+      <ul>
+        <li><strong>Planejamento sucessório</strong>, antecipando a partilha por doação de quotas em vida, geralmente com reserva de usufruto.</li>
+        <li><strong>Eficiência tributária</strong>, sobretudo quando há imóveis locados — a tributação dos aluguéis em pessoa jurídica, no lucro presumido, costuma ser inferior à do IR da pessoa física.</li>
+        <li><strong>Organização patrimonial e governança</strong>, regulando por contrato social e acordo de sócios como as decisões sobre os bens da família serão tomadas após a morte do fundador.</li>
+      </ul>
+      <p>
+        Note que <strong>blindagem patrimonial absoluta não está na lista</strong> — e há
+        boa razão jurídica para isso, retomada na Pergunta 3.
+      </p>
+
+      <h2 id="secao-2">Pergunta 1 — <span className="s-it">A holding resolve o problema que você tem?</span></h2>
+      <p>
+        Esta é a pergunta que poucas conversas iniciais fazem com seriedade. Antes de
+        discutir tipo societário, integralização de capital e cláusulas restritivas, o
+        que importa é diagnosticar: qual é o <strong>problema concreto</strong> que se
+        pretende resolver?
+      </p>
+      <h3>Se o problema é evitar inventário longo e caro</h3>
+      <p>
+        A holding ajuda, mas não substitui o ato de partilha. A doação de quotas em vida,
+        com reserva de usufruto, transfere a nua-propriedade aos herdeiros enquanto o
+        doador mantém o uso, a administração e os frutos. Quando o usufrutuário falece, a
+        consolidação da propriedade ocorre <strong>sem novo fato gerador de ITCMD</strong>{' '}
+        na maior parte dos estados, inclusive no Rio de Janeiro (Lei Estadual 7.174/2015)
+        — e essa é, em geral, a economia mais relevante do desenho.
+      </p>
+      <p>
+        Mas há um custo de entrada: a <strong>doação das quotas em vida é fato gerador de
+        ITCMD</strong> no momento da transferência. No Rio de Janeiro, a alíquota é
+        progressiva e pode chegar a 8%. Em vez de pagar imposto sobre herança no futuro,
+        paga-se sobre a doação no presente. A vantagem comparativa existe quando se espera
+        <strong> valorização do patrimônio</strong> entre a doação e o falecimento —
+        porque o ITCMD incide sobre o valor de hoje, não sobre o do dia da morte.
+      </p>
+      <p>
+        A reforma tributária da <strong>EC 132/2023</strong> tornou a progressividade do
+        ITCMD obrigatória em todos os estados, encerrando o cenário em que estados de
+        alíquota fixa baixa viabilizavam estruturas que hoje, com a progressividade até
+        8%, exigem reavaliação. Para patrimônios com expectativa de crescimento, a
+        antecipação ainda costuma valer; para patrimônios estáveis ou em retração, a conta
+        muda.
+      </p>
+      <h3>Se o problema é reduzir a carga tributária dos aluguéis</h3>
+      <p>
+        A pessoa física que recebe aluguéis recolhe IR pela tabela progressiva, com
+        alíquota marginal de até <strong>27,5%</strong> e poucas deduções. A pessoa
+        jurídica que detém o mesmo imóvel, sob o <strong>lucro presumido</strong>, tem
+        tributação efetiva que costuma ficar abaixo de <strong>15%</strong> (IRPJ, CSLL,
+        PIS e COFINS sobre base presumida). A diferença é relevante, mas alguns detalhes
+        mudam o cálculo:
+      </p>
+      <ul>
+        <li>o custo de constituir e manter a sociedade precisa ser confrontado com a economia anual;</li>
+        <li>a receita imobiliária precisa predominar de forma legítima na atividade da PJ — objeto social genérico operando como mero receptáculo de aluguéis pode ter o enquadramento questionado;</li>
+        <li>em municípios com ISS elevado sobre locação (raro, mas existente), a equação se altera.</li>
+      </ul>
+      <p>
+        Para patrimônios imobiliários pequenos (um ou dois imóveis locados), o custo de
+        manter a estrutura frequentemente consome a economia tributária. Para patrimônios
+        com vários imóveis, a diferença começa a ser substancial.
+      </p>
+      <h3>Se o problema é organizar uma sucessão com herdeiros em conflito</h3>
+      <p>
+        Aqui a holding ganha a função mais nobre — e menos discutida. O contrato social e
+        o <strong>acordo de sócios</strong> regulam, com precisão que o testamento não
+        alcança, como as decisões sobre o patrimônio serão tomadas após a morte do
+        fundador: quórum qualificado, direito de preferência, restrições à venda a
+        terceiros, mecanismos de saída do sócio descontente, administração colegiada.
+      </p>
+      <p>
+        Para famílias com herdeiros de relacionamentos distintos, sócios que não se falam
+        ou expectativas dissonantes sobre o patrimônio, <strong>essa função é
+        insubstituível</strong>. Nem doação direta, nem testamento, nem partilha em
+        inventário resolvem com a mesma precisão. É aqui, mais do que no ITCMD, que a
+        holding costuma justificar seu custo.
+      </p>
+
+      <h2 id="secao-3">Pergunta 2 — <span className="s-it">A holding cabe no seu patrimônio?</span></h2>
+      <p>
+        A pergunta soa estranha, mas é a que mais separa estruturas úteis de estruturas
+        decorativas. Holding tem custo de constituição e custo de manutenção, e esses
+        custos precisam guardar proporção com o patrimônio que se quer organizar.
+      </p>
+      <h3>Os custos de constituição</h3>
+      <p>A criação envolve, em regra:</p>
+      <ul>
+        <li><strong>Honorários advocatícios</strong> para o contrato social e o acordo de sócios;</li>
+        <li><strong>Honorários contábeis</strong> para abertura, planejamento tributário e organização do capital;</li>
+        <li><strong>ITBI sobre integralização de imóveis</strong>, na hipótese descrita a seguir;</li>
+        <li><strong>Custas registrais</strong> (Junta Comercial e cartórios de imóveis);</li>
+        <li><strong>ITCMD sobre a doação das quotas</strong>, quando há doação imediata com reserva de usufruto.</li>
+      </ul>
+      <h3>A armadilha do ITBI na integralização</h3>
+      <p>
+        A Constituição prevê, no{' '}
+        <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">art. 156, § 2º, I</a>,
+        <strong> imunidade de ITBI</strong> na transmissão de imóveis para integralização
+        de capital — salvo se a atividade preponderante da sociedade for compra e venda,
+        locação ou arrendamento de imóveis.
+      </p>
+      <p>
+        Aqui aparece o paradoxo que pega muita gente desprevenida: a maior parte das
+        holdings familiares com imóveis tem <strong>exatamente a atividade
+        preponderante</strong> que afasta a imunidade — porque a finalidade declarada é
+        deter e locar imóveis. Quando isso ocorre, o município pode exigir ITBI sobre o
+        valor venal de cada imóvel transferido.
+      </p>
+      <p>
+        Em outubro de 2020, no <strong>RE 796.376/SC (Tema 796</strong>, rel. p/ acórdão
+        Min. Alexandre de Moraes), o STF fixou tese de repercussão geral:
+      </p>
+      <blockquote>
+        &ldquo;A imunidade em relação ao ITBI, prevista no inciso I do § 2º do art. 156 da
+        Constituição Federal, não alcança o valor dos bens que exceder o limite do capital
+        social a ser integralizado.&rdquo;
+        <cite>STF, Tema 796 — RE 796.376/SC, Rel. p/ acórdão Min. Alexandre de Moraes.</cite>
+      </blockquote>
+      <p>
+        A consequência é dupla. Primeiro, a imunidade — quando aplicável — é limitada ao
+        valor do capital subscrito: o excedente paga ITBI. Segundo, em sociedades de
+        atividade preponderantemente imobiliária, a imunidade simplesmente não se aplica.
+        Isso não inviabiliza a integralização — mas ela precisa ser <strong>calculada
+        antes</strong>, não descoberta depois. Em municípios com ITBI elevado (no Rio, a
+        alíquota usual é de 3%), a integralização sem planejamento pode custar mais do que
+        o ITCMD que se pretendia economizar.
+      </p>
+      <h3>Os custos recorrentes</h3>
+      <p>Mensalmente, a holding consome:</p>
+      <ul>
+        <li>contabilidade e demonstrações financeiras;</li>
+        <li>declarações mensais de tributos (DCTFWeb, EFD-Contribuições, eventualmente EFD-Reinf);</li>
+        <li>declaração anual de IRPJ;</li>
+        <li>taxas e contribuições.</li>
+      </ul>
+      <p>
+        Para uma holding patrimonial razoavelmente organizada, o custo recorrente costuma
+        ficar entre <strong>R$ 1.500 e R$ 5.000 por mês</strong> (contabilidade +
+        assessoria jurídica de manutenção) — R$ 18 a 60 mil por ano, antes de qualquer
+        tributo. Para patrimônios pequenos (abaixo de R$ 1 a 2 milhões), raramente se
+        justifica. A regra prática: <strong>se a economia tributária e a redução de
+        litígios estimadas em dez anos não cobrem, com folga, o custo de manutenção no
+        mesmo período, a holding está sendo proposta no patrimônio errado.</strong>
+      </p>
+
+      <h2 id="secao-4">Pergunta 3 — <span className="s-it">A holding sobrevive à sua família?</span></h2>
+      <p>
+        Esta é a pergunta que separa estruturas que envelhecem bem das que viram fonte de
+        litígio entre os próprios herdeiros — o oposto do que motivou a constituição. Três
+        pontos decidem o desfecho.
+      </p>
+      <h3>O acordo de sócios é o documento mais importante</h3>
+      <p>
+        O contrato social define a estrutura; o <strong>acordo de sócios</strong> define
+        como a família vai conviver com ela. É lá que se regulam a política de distribuição
+        de lucros, as regras de venda de quotas, o direito de preferência, os mecanismos de
+        impasse, as hipóteses de exclusão de sócio e a governança da administração.
+      </p>
+      <p>
+        Estruturas que negligenciam o acordo de sócios descobrem, na primeira divergência,
+        que o contrato social isolado não dá conta dos conflitos reais — divergência que
+        costuma chegar não pelo mau caráter dos herdeiros, mas pela diferença entre quem
+        quer liquidez imediata e quem quer manter o patrimônio íntegro.
+      </p>
+      <h3>Sociedade entre cônjuges: cuidado com o regime de bens</h3>
+      <p>
+        O{' '}
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener">art. 977 do Código Civil</a>{' '}
+        veda que cônjuges casados em <strong>comunhão universal</strong> ou em{' '}
+        <strong>separação obrigatória</strong> sejam sócios entre si — restrição que
+        alcança holdings constituídas em conjunto pelos cônjuges. Nos demais regimes
+        (comunhão parcial, separação convencional, participação final nos aquestos), a
+        sociedade é permitida.
+      </p>
+      <p>
+        A consequência é direta: o regime de bens precisa ser verificado <strong>antes</strong>{' '}
+        da constituição. Casos de holdings desconstituídas anos depois por vício de
+        constituição ainda chegam aos tribunais — e desfazer custa muito mais do que fazer
+        com o regime adequado.
+      </p>
+      <h3>Blindagem patrimonial: o limite real do instrumento</h3>
+      <p>
+        A promessa de que &ldquo;a holding protege contra qualquer credor&rdquo; é a frase
+        mais perigosa do mercado de planejamento patrimonial. A sociedade tem patrimônio
+        próprio, distinto do dos sócios; em situação normal, credores do sócio atingem
+        apenas as <strong>quotas</strong> do devedor, não os bens da sociedade. Até aí, é
+        vantagem. Mas o ordenamento tem três mecanismos que furam essa proteção diante de
+        uso indevido:
+      </p>
+      <ul>
+        <li><strong>Desconsideração da personalidade jurídica</strong> (<a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener">art. 50 do Código Civil</a>, com a redação da Lei 13.874/2019), para desvio de finalidade e confusão patrimonial;</li>
+        <li><strong>Fraude à execução</strong> (art. 792 do CPC e Súmula 375 do STJ), quando a transferência ocorre na pendência de demanda capaz de levar o devedor à insolvência;</li>
+        <li><strong>Fraude contra credores</strong> (arts. 158 e seguintes do Código Civil), via ação pauliana, quando a estrutura é montada depois de surgida a dívida e prejudica o credor.</li>
+      </ul>
+      <p>
+        O STJ aplica esses mecanismos com regularidade quando a holding é constituída{' '}
+        <strong>às vésperas</strong> de uma execução, sem propósito negocial real além de
+        afastar o patrimônio do credor. Nessas situações, a estrutura inteira pode ser
+        desconstituída — e o sócio responde com o patrimônio que pretendia proteger,
+        acrescido de honorários e desgaste judicial.
+      </p>
+      <p>
+        A blindagem é real, mas pressupõe três condições: constituição em momento de
+        normalidade patrimonial (sem dívidas iminentes); sociedade com atividade efetiva,
+        não apenas formal; e separação real entre o patrimônio da sociedade e o dos sócios
+        — não há blindagem para quem usa a conta da holding como conta pessoal.
+      </p>
+
+      <h2 id="secao-5">Quadro comparativo: <span className="s-it">holding × outras vias</span></h2>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Eixo</th>
+              <th>Holding familiar</th>
+              <th>Doação direta c/ usufruto</th>
+              <th>Testamento</th>
+              <th>Inventário sem planejamento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Custo de constituição</td><td>Médio a alto (contrato, ITBI eventual, ITCMD)</td><td>Médio (escritura + ITCMD)</td><td>Baixo (escritura)</td><td>Baixo até o evento</td></tr>
+            <tr><td>Custo de manutenção</td><td>Alto (contabilidade, declarações)</td><td>Baixo</td><td>Nenhum</td><td>Nenhum</td></tr>
+            <tr><td>Eficiência tributária sobre aluguéis</td><td>Alta (lucro presumido)</td><td>Não altera</td><td>Não altera</td><td>Não altera</td></tr>
+            <tr><td>Antecipação da partilha</td><td>Sim</td><td>Sim</td><td>Não (post mortem)</td><td>Não</td></tr>
+            <tr><td>Governança entre herdeiros</td><td>Alta (acordo de sócios)</td><td>Limitada</td><td>Limitada</td><td>Inexistente</td></tr>
+            <tr><td>Flexibilidade futura</td><td>Média (alteração de contrato)</td><td>Baixa (irrevogável)</td><td>Alta (revogável)</td><td>Inexistente</td></tr>
+            <tr><td>Custo final do inventário</td><td>Reduzido (transmissão de quotas)</td><td>Reduzido</td><td>Pleno</td><td>Pleno</td></tr>
+            <tr><td>Exposição a litígio entre herdeiros</td><td>Reduzida com boa governança</td><td>Média</td><td>Média a alta</td><td>Alta</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Não existe instrumento superior em abstrato: cada via responde a um perfil. Família
+        pequena, patrimônio modesto e harmônica costuma ser melhor servida pela doação
+        direta com reserva de usufruto, eventualmente com testamento. Família com patrimônio
+        relevante, imóveis locados e tensões previsíveis tende a se beneficiar da holding.
+        Família sem patrimônio expressivo raramente justifica qualquer das duas — basta um
+        testamento bem redigido.
+      </p>
+
+      <h2 id="secao-6">Boas práticas <span className="s-it">antes de constituir</span></h2>
+      <p>
+        Quem chega à decisão de constituir uma holding familiar tem, antes do contrato
+        social, oito decisões técnicas que merecem cuidado:
+      </p>
+      <ol>
+        <li><strong>Diagnóstico patrimonial completo.</strong> Bens, dívidas, fontes de renda e exposições profissionais antes de qualquer desenho. Sem isso, a estrutura nasce cega.</li>
+        <li><strong>Verificação do regime de bens dos sócios,</strong> sobretudo havendo cônjuges entre eles — para evitar o impedimento do art. 977 do Código Civil.</li>
+        <li><strong>Análise tributária comparativa.</strong> Simulação do ITBI na integralização (com o excedente do Tema 796), do ITCMD na doação das quotas e da economia nos aluguéis em PJ versus PF. A conta tem que fechar em planilha, não em discurso.</li>
+        <li><strong>Contrato social com propósito.</strong> Atividade preponderante (com efeito direto sobre a imunidade do ITBI), capital social, forma de integralização, quotas de cada sócio.</li>
+        <li><strong>Acordo de sócios robusto.</strong> Distribuição de lucros, circulação de quotas, preferência, impasse, exclusão, governança. É aqui que se previne litígio.</li>
+        <li><strong>Cláusulas restritivas nas doações de quotas.</strong> Incomunicabilidade, inalienabilidade temporária e impenhorabilidade protegem as quotas contra eventos da vida dos herdeiros.</li>
+        <li><strong>Substituto e plano de sucessão da administração.</strong> Quem administra a holding após o falecimento do fundador, e como se dá a transição. Sem isso, a estrutura paralisa no momento mais delicado.</li>
+        <li><strong>Revisão periódica.</strong> Patrimônio cresce, legislação muda (a reforma tributária é o exemplo recente), herdeiros amadurecem. Holding de 2010 nunca revista raramente serve a 2026.</li>
+      </ol>
+      <p>
+        Em ações consultivas conduzidas pelo escritório para empresas familiares e grupos
+        com patrimônio diversificado, a observação que se repete é simples: a holding
+        constituída às pressas, só para &ldquo;economizar imposto&rdquo; e sem acordo de
+        sócios, é a que mais gera arrependimento dois anos depois. A constituída com
+        diagnóstico, propósito e governança raramente precisa ser desfeita.
+      </p>
+
+      <h2 id="consideracoes-finais">Considerações finais — <span className="s-it">instrumento, não milagre</span></h2>
+      <p>
+        A holding familiar não é nem panaceia nem armadilha: é <strong>instrumento
+        técnico</strong>. Como todo instrumento técnico, serve bem ao problema certo, no
+        patrimônio certo, com o desenho certo. Mal indicada, é cara, frágil e geradora de
+        mais conflito do que resolve. Bem indicada, é dos mecanismos mais eficientes do
+        direito brasileiro para a transmissão patrimonial entre gerações.
+      </p>
+      <p>
+        As três perguntas deste artigo — sobre o problema a resolver, sobre o caber no
+        patrimônio, sobre o sobreviver à família — não substituem a análise jurídica e
+        contábil concreta. Mas filtram, com razoável precisão, os casos em que a estrutura
+        merece avançar daqueles em que a melhor recomendação é, francamente, não constituir.
+      </p>
+      <p>
+        A consulta inicial costuma vir com a pergunta &ldquo;vale a pena fazer uma
+        holding?&rdquo;. A resposta tecnicamente honesta começa por inverter a pergunta:{' '}
+        <strong>o que se pretende resolver, com que patrimônio, e com que família?</strong>{' '}
+        A partir dessas três respostas, o instrumento adequado — holding, doação direta,
+        testamento ou combinação — se desenha sozinho.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>A holding familiar precisa ter imóveis para fazer sentido?</h3>
+      <p>
+        Não. Holdings podem ser puramente societárias (detendo participações em outras
+        empresas), puramente patrimoniais (apenas aplicações financeiras) ou mistas. O
+        ganho tributário sobre aluguéis é uma motivação comum, mas não a única — em famílias
+        com participações empresariais relevantes, a holding pode existir sem nenhum imóvel.
+      </p>
+      <h3>Posso constituir holding com filhos menores como sócios?</h3>
+      <p>
+        Sim, com cautela. Menores podem ser sócios em sociedade limitada, desde que
+        representados pelos pais e com o capital inteiramente integralizado. A administração
+        não pode ser exercida pelo menor — é comum reservá-la ao genitor sobrevivente ou a
+        administrador profissional designado.
+      </p>
+      <h3>O ITBI sempre incide quando integralizo imóveis na holding?</h3>
+      <p>
+        Não. A regra é a imunidade do art. 156, § 2º, I, da Constituição. As exceções
+        relevantes são duas: quando a atividade preponderante da sociedade é compra e venda,
+        locação ou arrendamento de imóveis (caso típico das holdings imobiliárias); e quando
+        o valor dos imóveis excede o capital integralizado (Tema 796 do STF), situação em que
+        o excedente é tributado. Cada operação exige cálculo específico.
+      </p>
+      <h3>Doação de quotas com reserva de usufruto significa que perco o controle?</h3>
+      <p>
+        Não — e essa é justamente a vantagem do desenho. O doador transfere a
+        nua-propriedade das quotas aos donatários e mantém o usufruto, que inclui, em regra,
+        o direito a voto, à percepção dos lucros e à administração da sociedade durante a
+        vida. O herdeiro só consolida a propriedade plena com o falecimento do usufrutuário.
+      </p>
+      <h3>Holding criada às pressas, depois de surgir uma dívida, protege o patrimônio?</h3>
+      <p>
+        Não — provavelmente é o pior cenário possível: a estrutura é desconstituída por
+        desconsideração da personalidade jurídica, fraude contra credores ou fraude à
+        execução, e o sócio ainda responde por honorários e despesas processuais. A
+        blindagem pressupõe constituição em momento de normalidade; não há atalho jurídico
+        para escapar de dívida já existente ou previsível.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/direito-civil">Direito Civil</Link>{' '}
+        reúne a atuação do escritório em família, sucessões e planejamento patrimonial; e o
+        artigo sobre{' '}
+        <Link href="/blog/dpo-terceirizado-pme">encarregado terceirizado</Link>{' '}
+        trata da função de compliance em empresas que sustentam holdings operacionais.
+      </p>
+    </>
+  ),
 };

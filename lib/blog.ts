@@ -74,10 +74,10 @@ const RAW: Omit<Post, 'status'>[] = [
   },
   {
     slug: 'holding-familiar-3-perguntas', kicker: 'Família · Sucessões',
-    dateLabel: 'Nov · 2025', published: '2025-11-11', read: '6 min',
+    dateLabel: 'Mai · 2026', published: '2026-05-27', read: '11 min',
     title: 'Holding familiar: três perguntas antes de estruturar',
     excerpt:
-      'Planejamento sucessório nem sempre exige holding. Critérios para distinguir necessidade real de modismo tributário.',
+      'A holding familiar não é vestido sob medida que serve a todo patrimônio. Três perguntas que separam o instrumento útil do erro caro.',
   },
 ];
 
@@ -91,6 +91,7 @@ const PUBLISHED = new Set<string>([
   'dpo-terceirizado-pme',
   'sindicato-legitimidade-stf',
   'lei-licitacoes-fiscalizacao',
+  'holding-familiar-3-perguntas',
 ]);
 const DRAFT = new Set<string>([]);
 
