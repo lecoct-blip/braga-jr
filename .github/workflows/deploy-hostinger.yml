@@ -42,17 +42,26 @@ jobs:
           cp public/contato.php out/contato.php
           test -f out/.htaccess && grep -q Cache-Control out/.htaccess && echo "ok: .htaccess com cache headers"
 
-      # Publish via git puro — peaceiris/actions-gh-pages DESCARTA dotfiles
-      # (.htaccess) na publicação. `git add -A` inclui dotfiles, garantindo que
-      # .htaccess (redirects + cache) e contato.php cheguem à branch production.
+      # Publish preservando o HISTÓRICO da branch production (clona + commita por
+      # cima, sem force-push). Crucial: `git init`/force-push reescreve o histórico
+      # e quebra o `git pull` (fast-forward) do deploy da Hostinger. `cp -a out/.`
+      # + `git add -A` incluem dotfiles (.htaccess), que o peaceiris descartava.
       - name: Publish ./out para a branch production
         run: |
-          cd out
-          git init -q
-          git checkout -q -b production
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          REMOTE="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          rm -rf .deploy
+          git clone --branch production --single-branch "$REMOTE" .deploy 2>/dev/null \
+            || { mkdir .deploy && cd .deploy && git init -q && git checkout -b production && cd ..; }
+          find .deploy -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a out/. .deploy/
+          cd .deploy
           git add -A
-          git commit -q -m "deploy: ${{ github.event.head_commit.message }}"
-          git push -f -q "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" production:production
-          echo "Publicado. Conteudo de production:"; git ls-files | grep -E "\.htaccess|contato\.php|^index\.html"
+          if git diff --cached --quiet; then
+            echo "sem mudanças para publicar"
+          else
+            git commit -q -m "deploy: ${{ github.event.head_commit.message }}"
+            git push -q "$REMOTE" production
+          fi
+          echo "production atualizada. dotfiles-chave:"; git ls-files | grep -E "\.htaccess|contato\.php" || true
