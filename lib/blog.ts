@@ -30,6 +30,13 @@ export const isPublic = (p: Post) => p.status === 'published';
 
 const RAW: Omit<Post, 'status'>[] = [
   {
+    slug: 'revisao-pasep-servidor-publico', kicker: 'Direito do servidor',
+    dateLabel: 'Jun · 2026', published: '2026-06-01', read: '9 min',
+    title: 'Revisão do PASEP do servidor: o que mudou após o Tema 1.150 do STJ',
+    excerpt:
+      'O STJ definiu que o Banco do Brasil responde por falhas nas contas do PASEP e que o prazo para discutir diferenças é de dez anos. Entenda quem ainda está no prazo.',
+  },
+  {
     slug: 'pad-controle-judicial', kicker: 'Direito do servidor',
     dateLabel: 'Mai · 2026', published: '2026-05-21', read: '8 min',
     title: 'PAD e o limite do controle judicial sobre o mérito administrativo',
@@ -86,6 +93,7 @@ const RAW: Omit<Post, 'status'>[] = [
  * corpo redigido aguardando sign-off; resto = placeholder (só metadados).
  */
 const PUBLISHED = new Set<string>([
+  'revisao-pasep-servidor-publico',
   'pad-controle-judicial',
   'progressao-funcional-rj',
   'dpo-terceirizado-pme',

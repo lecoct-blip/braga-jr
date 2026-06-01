@@ -16,6 +16,295 @@ import { Infographic } from '@/components/infographic';
  * apontado pela auditoria de concorrentes 2026-05-21.
  */
 export const POST_BODIES: Record<string, () => ReactNode> = {
+  // ───────────── Publicado em 2026-06-01 ─────────────
+  'revisao-pasep-servidor-publico': () => (
+    <>
+      <p>
+        Se você é servidor público e ingressou no serviço antes da Constituição
+        de 1988, é provável que tenha uma conta individual vinculada ao PASEP. E
+        é possível que nunca tenha olhado para ela com atenção — afinal, durante
+        décadas esse saldo ficou silencioso, sob administração de um banco, sem
+        extrato no fim do mês. A dúvida que tem levado muitos servidores e
+        aposentados a procurar orientação é direta: o valor que recebi (ou que
+        ainda está lá) corresponde ao que deveria?
+      </p>
+      <p>
+        Essa pergunta deixou de ser apenas teórica em 2023, quando o Superior
+        Tribunal de Justiça fixou, em recurso repetitivo, três definições
+        importantes sobre quem responde por eventuais falhas nessas contas e em
+        quanto tempo o servidor pode discuti-las. Este artigo explica o que
+        mudou, quem ainda está dentro do prazo e o que se examina antes de
+        cogitar qualquer medida — sem promessas, porque cada conta tem uma
+        história própria.
+      </p>
+
+      <p style={{ marginTop: 24, padding: '18px 22px', borderLeft: '3px solid var(--accent)', background: 'var(--bg-deep)', fontSize: 15, lineHeight: 1.65 }}>
+        <strong>Importante:</strong> este texto trata do PASEP do servidor
+        público civil — o Programa de Formação do Patrimônio do Servidor
+        Público. Não se confunde com o PIS do trabalhador da iniciativa privada
+        nem com benefícios previdenciários.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#o-que-e">O que é o PASEP e por que existem contas individuais</a></li>
+          <li><a href="#falhas">Onde estão as falhas que motivam as ações</a></li>
+          <li><a href="#tema-1150">O Tema 1.150 do STJ: as três definições</a></li>
+          <li><a href="#prazo">Quem ainda está no prazo (e por que o marco mudou tudo)</a></li>
+          <li><a href="#tabela">União ou Banco do Brasil? A diferença que define o prazo</a></li>
+          <li><a href="#analise">O que se analisa antes de qualquer medida</a></li>
+          <li><a href="#conclusao">Considerações finais</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="o-que-e">O que é o PASEP <span className="s-it">e por que existem contas individuais</span></h2>
+      <p>
+        O PASEP foi instituído pela Lei Complementar nº 8, de 1970 com a
+        finalidade de formar um patrimônio individual para o servidor público.
+        A ideia era simples: a União fazia depósitos vinculados ao servidor, e
+        esses valores deveriam ser corrigidos e remunerados ao longo do tempo,
+        formando uma poupança individualizada.
+      </p>
+      <p>
+        Com a Constituição de 1988 (art. 239), a arrecadação do PIS/PASEP foi
+        redirecionada para o financiamento do seguro-desemprego e do abono
+        salarial. Na prática, os depósitos em novas contas individuais
+        cessaram. As contas de quem já havia contribuído, porém, permaneceram
+        — e continuaram (ou deveriam continuar) rendendo.
+      </p>
+      <p>
+        É por isso que o tema interessa sobretudo a quem ingressou no serviço
+        público até 1988: são esses servidores e aposentados que possuem saldo
+        individual vinculado, administrado pelo Banco do Brasil.
+      </p>
+
+      <h2 id="falhas">Onde estão as falhas <span className="s-it">que motivam as ações</span></h2>
+      <p>
+        A administração correta desses valores — manter as contas
+        individualizadas, aplicar os índices devidos, registrar a movimentação
+        — é responsabilidade da instituição financeira administradora. Ao
+        longo das décadas, alegam-se falhas recorrentes, entre elas:
+      </p>
+      <ul>
+        <li>ausência de créditos que deveriam ter sido lançados;</li>
+        <li>aplicação inadequada de índices de correção e rendimento;</li>
+        <li>saques registrados sem comprovação adequada;</li>
+        <li>inconsistências entre o saldo histórico e os registros disponíveis.</li>
+      </ul>
+      <p>
+        O documento central para verificar essas hipóteses é a{' '}
+        <strong>microfilmagem da conta</strong> — o registro histórico
+        completo da movimentação, sem o qual não é possível afirmar se houve,
+        ou não, diferença a recompor. Por isso, desconfiar de uma diferença e
+        demonstrá-la são coisas distintas: a segunda depende de prova
+        documental.
+      </p>
+
+      <h2 id="tema-1150">O Tema 1.150 do STJ: <span className="s-it">as três definições</span></h2>
+      <p>
+        Durante muito tempo, discutiu-se quem deveria ser acionado e em que
+        prazo. O Superior Tribunal de Justiça encerrou boa parte dessa
+        controvérsia ao julgar o Tema Repetitivo nº 1.150, nos Recursos
+        Especiais nº 1.895.936/TO, 1.895.941/TO e 1.951.931/DF, sob relatoria
+        do Ministro Herman Benjamin, julgados pela Primeira Seção em 13 de
+        setembro de 2023.
+      </p>
+      <p>A tese firmada estabeleceu três pontos:</p>
+      <blockquote>
+        (i) O Banco do Brasil tem legitimidade passiva para responder à
+        demanda em que se discute falha na prestação do serviço quanto à conta
+        vinculada ao PASEP, saques indevidos e desfalques, além da ausência de
+        aplicação dos rendimentos;
+        <br /><br />
+        (ii) A pretensão de ressarcimento dos danos decorrentes desses
+        desfalques submete-se ao prazo prescricional decenal do art. 205 do
+        Código Civil;
+        <br /><br />
+        (iii) O termo inicial do prazo é o dia em que o titular comprovadamente
+        toma ciência dos desfalques realizados na conta.
+        <cite>
+          STJ, Tema 1.150, REsp 1.895.936/TO, Rel. Min. Herman Benjamin,
+          Primeira Seção, julgado em 13/09/2023.
+        </cite>
+      </blockquote>
+      <p>
+        O efeito prático é relevante: ao reconhecer a legitimidade do banco
+        administrador e adotar o prazo de dez anos contados da ciência do
+        problema — e não da data do último depósito, lá nos anos 1980 —, o STJ
+        afastou o principal argumento que inviabilizava essas ações.
+      </p>
+
+      <h2 id="prazo">Quem ainda está no prazo <span className="s-it">(e por que o marco mudou tudo)</span></h2>
+      <p>
+        A definição do termo inicial é o ponto mais sensível. A tese adota a
+        chamada <em>teoria da actio nata</em>: o prazo só começa quando o
+        titular toma ciência inequívoca do prejuízo. A questão que os
+        tribunais ainda debatem é quando, exatamente, essa ciência se
+        configura.
+      </p>
+      <p>
+        Parte da jurisprudência tem reconhecido o saque do saldo por ocasião
+        da aposentadoria como o momento em que o servidor passa a ter
+        condições reais de identificar diferenças. Outros julgados consideram
+        a obtenção do extrato completo como marco. Essa distinção não é
+        detalhe: dependendo do entendimento aplicado ao caso concreto, um
+        servidor que sacou recentemente pode estar plenamente dentro do
+        prazo.
+      </p>
+      <p>
+        Em termos gerais, costuma estar em melhor posição quem sacou os
+        valores há menos de dez anos ou quem só recentemente teve acesso às
+        informações da conta. Mas isso não substitui a análise da movimentação
+        real — é a microfilmagem que define a data de ciência aplicável a
+        cada situação.
+      </p>
+
+      <h2 id="tabela">União ou Banco do Brasil? <span className="s-it">A diferença que define o prazo</span></h2>
+      <p>
+        Antes do Tema 1.150, muitas ações eram propostas contra a União, e o
+        STJ já havia fixado, sob o rito dos repetitivos (REsp 1.205.277/PB), o
+        prazo de cinco anos para a cobrança contra o ente público. A virada
+        do Tema 1.150 está em direcionar a demanda ao administrador das
+        contas, com consequências diretas sobre o prazo:
+      </p>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Ação contra a União</th>
+              <th>Ação contra o Banco do Brasil (Tema 1.150)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Quem responde</td>
+              <td>Ente público (gestor do programa)</td>
+              <td>Instituição administradora das contas</td>
+            </tr>
+            <tr>
+              <td>Prazo prescricional</td>
+              <td>Quinquenal (Decreto 20.910/32)</td>
+              <td>Decenal (art. 205 do Código Civil)</td>
+            </tr>
+            <tr>
+              <td>Termo inicial discutido</td>
+              <td>Tendia ao último depósito</td>
+              <td>Ciência comprovada do desfalque</td>
+            </tr>
+            <tr>
+              <td>Efeito prático</td>
+              <td>Maioria das pretensões prescrita</td>
+              <td>Reabre a discussão para quem teve ciência recente</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A leitura correta dessa diferença é o que separa uma pretensão viável
+        de uma pretensão fadada à prescrição — e exige análise técnica antes
+        de qualquer iniciativa.
+      </p>
+
+      <h2 id="analise">O que se analisa <span className="s-it">antes de qualquer medida</span></h2>
+      <p>
+        Nenhuma diferença pode ser afirmada sem documentação. A análise séria
+        de um caso de PASEP parte da reconstrução histórica da conta e da
+        definição do termo inicial aplicável. Os documentos que costumam
+        viabilizar esse exame são:
+      </p>
+      <ul>
+        <li>
+          <strong>Identificação e dados funcionais:</strong> RG/CPF (ou CNH),
+          comprovante de residência, número de inscrição no PASEP e o ato de
+          aposentadoria.
+        </li>
+        <li>
+          <strong>Movimentação financeira:</strong> contracheques (um anterior
+          à aposentadoria e os mais recentes como aposentado), para situar
+          datas e valores.
+        </li>
+        <li>
+          <strong>Histórico da conta:</strong> extrato junto ao Banco do Brasil
+          e, sobretudo, a microfilmagem — o documento que revela toda a
+          movimentação e permite identificar eventuais diferenças.
+        </li>
+        <li>
+          <strong>Comprovantes de saque,</strong> quando existirem, para fixar
+          a data de ciência.
+        </li>
+      </ul>
+      <p>
+        A partir desse material, é possível verificar se há, de fato, valores
+        a recompor e qual a tese cabível. Em casos de servidores e
+        aposentados com dificuldade de arcar com custas, discute-se ainda o
+        pedido de gratuidade de justiça, mediante demonstração da
+        hipossuficiência.
+      </p>
+      <p>
+        A atuação consolidada do escritório na{' '}
+        <Link href="/atuacao/direito-do-servidor">defesa de servidores públicos</Link>{' '}
+        inclui justamente esse tipo de análise técnica de vida funcional — em
+        que o desfecho depende menos de afirmações genéricas e mais da
+        reconstrução documental do histórico.
+      </p>
+
+      <h2 id="conclusao">Considerações <span className="s-it">finais</span></h2>
+      <p>
+        O Tema 1.150 não criou um direito automático de receber valores: ele
+        esclareceu <em>quem responde</em> e <em>em quanto tempo</em> se pode
+        discutir. A diferença entre ter ou não algo a recompor está nos
+        registros da conta, e o prazo corre a partir da ciência do problema.
+        Para o servidor, isso significa que a inércia tem custo — mas que a
+        pressa sem análise também tem. O caminho prudente é o mesmo de sempre
+        no Direito do servidor: documento na mão antes de tese na petição.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>O PASEP é a mesma coisa que o PIS?</h3>
+      <p>
+        Não. O PIS é destinado a trabalhadores da iniciativa privada; o
+        PASEP, ao servidor público. Este artigo trata apenas do PASEP e das
+        contas individuais vinculadas anteriores a 1988.
+      </p>
+      <h3>Quem ingressou no serviço público depois de 1988 tem conta para revisar?</h3>
+      <p>
+        Em regra, não. A Constituição de 1988 redirecionou a arrecadação,
+        encerrando os depósitos em novas contas individuais. O tema interessa
+        sobretudo a quem contribuiu antes desse marco.
+      </p>
+      <h3>Já saquei o PASEP há anos. Ainda posso discutir diferenças?</h3>
+      <p>
+        Depende da data de ciência do eventual desfalque e do prazo de dez
+        anos definido pelo STJ. Quem sacou há menos de uma década, ou só
+        recentemente acessou as informações da conta, tende a estar em melhor
+        posição — mas só a análise da microfilmagem confirma.
+      </p>
+      <h3>Preciso da microfilmagem para tudo?</h3>
+      <p>
+        Ela é o documento central. Sem o histórico completo da movimentação,
+        não é possível demonstrar a existência e o montante de eventuais
+        diferenças.
+      </p>
+      <h3>Contra quem se ajuíza a ação?</h3>
+      <p>
+        Conforme o Tema 1.150, contra o Banco do Brasil, na qualidade de
+        administrador das contas vinculadas ao PASEP.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/direito-do-servidor">Direito do Servidor Público</Link>{' '}
+        reúne as frentes em que o escritório atua — PAD, sindicância, vida
+        funcional, aposentadoria e controle judicial. Ver também{' '}
+        <Link href="/blog/progressao-funcional-rj">os três caminhos antes da via judicial em progressão funcional</Link>{' '}
+        e <Link href="/blog/pad-controle-judicial">PAD e o limite do controle judicial sobre o mérito administrativo</Link>.
+      </p>
+    </>
+  ),
+
   // ───────────── Publicado em 2026-05-21 ─────────────
   'pad-controle-judicial': () => (
     <>
