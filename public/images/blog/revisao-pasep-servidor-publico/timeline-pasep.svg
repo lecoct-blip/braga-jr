@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Linha do tempo institucional do PIS/PASEP: 1970, 1988 e 2023">
   <title>PIS PASEP — Linha do tempo institucional</title>
-  <desc>Três marcos: 1970 instituição pela LC nº 8, 1988 redirecionamento pela CF/88 artigo 239, e 2023 tema 1.150 do STJ.</desc>
+  <desc>Tres marcos: 1970 instituicao pela LC no 8, 1988 redirecionamento pela CF/88 artigo 239, e 2023 tema 1.150 do STJ.</desc>
 
-  <!--
-    Estratégia de cores (dark/light friendly):
-    - Acentos (linha, nós, identificadores legais) -> #A57314 (bronze, fixo)
-    - Texto neutro (datas e descricoes) -> currentColor (flipa com o tema)
-    - Rotulo superior -> currentColor com opacity 0.55
-    - Descricoes -> currentColor com opacity 0.85
+  <defs>
+    <!-- Textura sutil de papel off-white -->
+    <filter id="paperGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="5"/>
+      <feColorMatrix values="0 0 0 0 0.45
+                             0 0 0 0 0.38
+                             0 0 0 0 0.30
+                             0 0 0 0.05 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
 
-    Tipografia:
-    - Display (datas, descricoes serifa) -> Cormorant Garamond
-    - Body (rotulo e identificadores legais) -> IBM Plex Sans
-  -->
+  <!-- FUNDO OFF-WHITE FIXO (papel de revista premium) -->
+  <rect x="40" y="40" width="1520" height="920" rx="6" ry="6" fill="#F8F4EC"/>
+
+  <!-- Textura sutil de papel -->
+  <rect x="40" y="40" width="1520" height="920" rx="6" ry="6" fill="#F8F4EC" filter="url(#paperGrain)" opacity="0.55"/>
+
+  <!-- Borda fina em bronze para definir o card -->
+  <rect x="40" y="40" width="1520" height="920" rx="6" ry="6"
+        fill="none" stroke="#A57314" stroke-opacity="0.25" stroke-width="1"/>
 
   <!-- ROTULO SUPERIOR -->
   <text x="800" y="160"
@@ -22,8 +32,7 @@
         font-weight="300"
         letter-spacing="6"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.55">PIS · PASEP · LINHA DO TEMPO INSTITUCIONAL</text>
+        fill="#6a6a6a">PIS · PASEP · LINHA DO TEMPO INSTITUCIONAL</text>
 
   <line x1="770" y1="195" x2="830" y2="195" stroke="#A57314" stroke-width="1.4"/>
 
@@ -40,39 +49,36 @@
         font-size="84"
         font-weight="500"
         text-anchor="middle"
-        fill="currentColor">1970</text>
+        fill="#1A1A1A">1970</text>
 
   <text x="320" y="430"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="18"
-        font-weight="400"
+        font-weight="500"
         letter-spacing="4"
         text-anchor="middle"
         fill="#A57314">LC Nº 8</text>
 
   <text x="320" y="590"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">Instituição do PASEP</text>
+        fill="#1A1A1A">Instituição do PASEP</text>
 
   <text x="320" y="624"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">Depósitos individuais</text>
+        fill="#1A1A1A">Depósitos individuais</text>
 
   <text x="320" y="658"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">começam</text>
+        fill="#1A1A1A">começam</text>
 
   <!-- NO 2 — 1988 -->
   <text x="800" y="380"
@@ -80,39 +86,36 @@
         font-size="84"
         font-weight="500"
         text-anchor="middle"
-        fill="currentColor">1988</text>
+        fill="#1A1A1A">1988</text>
 
   <text x="800" y="430"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="18"
-        font-weight="400"
+        font-weight="500"
         letter-spacing="4"
         text-anchor="middle"
         fill="#A57314">CF/88 · ART. 239</text>
 
   <text x="800" y="590"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">Redirecionamento</text>
+        fill="#1A1A1A">Redirecionamento</text>
 
   <text x="800" y="624"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">Contas individuais</text>
+        fill="#1A1A1A">Contas individuais</text>
 
   <text x="800" y="658"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">cessam</text>
+        fill="#1A1A1A">cessam</text>
 
   <!-- NO 3 — 2023 -->
   <text x="1280" y="380"
@@ -120,38 +123,35 @@
         font-size="84"
         font-weight="500"
         text-anchor="middle"
-        fill="currentColor">2023</text>
+        fill="#1A1A1A">2023</text>
 
   <text x="1280" y="430"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="18"
-        font-weight="400"
+        font-weight="500"
         letter-spacing="4"
         text-anchor="middle"
         fill="#A57314">STJ · TEMA 1.150</text>
 
   <text x="1280" y="590"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">BB responde</text>
+        fill="#1A1A1A">BB responde</text>
 
   <text x="1280" y="624"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">Prazo decenal</text>
+        fill="#1A1A1A">Prazo decenal</text>
 
   <text x="1280" y="658"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="24"
-        font-weight="400"
+        font-size="26"
+        font-weight="500"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.85">da ciência</text>
+        fill="#1A1A1A">da ciência</text>
 
 </svg>

@@ -1,156 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Os três pontos do Tema 1.150 do STJ: legitimidade, prazo e termo inicial.">
-  <title>STJ — Tema 1.150 — Três pontos</title>
-  <desc>Card I: Legitimidade, Banco do Brasil responde. Card II: Prazo, dez anos pelo art. 205 do Código Civil. Card III: Termo inicial, ciência comprovada do desfalque.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Os tres pontos do Tema 1.150 do STJ: legitimidade, prazo e termo inicial.">
+  <title>STJ — Tema 1.150 — Tres pontos</title>
+  <desc>Card I: Legitimidade, Banco do Brasil responde. Card II: Prazo, dez anos pelo art. 205 do Codigo Civil. Card III: Termo inicial, ciencia comprovada do desfalque.</desc>
 
-  <!--
-    Estrategia dark/light:
-    - Acentos (numerais romanos, linhas decorativas, bordas) -> #A57314 (bronze, fixo)
-    - Texto neutro (titulos e descricoes) -> currentColor (flipa com o tema)
-    - Cards sem fundo para preservar legibilidade em ambos os temas;
-      apenas borda em bronze opacity 0.3 (acento marca, fixo).
+  <defs>
+    <!-- Textura sutil de papel off-white -->
+    <filter id="paperGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.45
+                             0 0 0 0 0.38
+                             0 0 0 0 0.30
+                             0 0 0 0.05 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
 
-    Tipografia:
-    - Numerais romanos e titulos -> Cormorant Garamond (display)
-    - Descricoes e identificadores legais -> IBM Plex Sans (body)
-  -->
+  <!-- FUNDO OFF-WHITE FIXO (papel de revista premium) -->
+  <rect x="40" y="40" width="1520" height="920" rx="6" ry="6" fill="#F8F4EC"/>
+
+  <!-- Textura sutil de papel -->
+  <rect x="40" y="40" width="1520" height="920" rx="6" ry="6" fill="#F8F4EC" filter="url(#paperGrain)" opacity="0.55"/>
+
+  <!-- Borda externa fina em bronze -->
+  <rect x="40" y="40" width="1520" height="920" rx="6" ry="6"
+        fill="none" stroke="#A57314" stroke-opacity="0.25" stroke-width="1"/>
 
   <!-- ROTULO SUPERIOR -->
-  <text x="800" y="120"
+  <text x="800" y="130"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="22"
         font-weight="300"
         letter-spacing="6"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.55">STJ · TEMA 1.150 · TRÊS PONTOS</text>
+        fill="#6a6a6a">STJ · TEMA 1.150 · TRÊS PONTOS</text>
 
-  <line x1="770" y1="155" x2="830" y2="155" stroke="#A57314" stroke-width="1.4"/>
+  <line x1="770" y1="165" x2="830" y2="165" stroke="#A57314" stroke-width="1.4"/>
 
-  <!-- ====================================================== -->
   <!-- CARD I — LEGITIMIDADE -->
-  <!-- ====================================================== -->
-
-  <rect x="100" y="240" width="440" height="620" rx="4" ry="4"
+  <rect x="120" y="240" width="420" height="620" rx="4" ry="4"
         fill="none"
         stroke="#A57314"
-        stroke-opacity="0.3"
+        stroke-opacity="0.35"
         stroke-width="1"/>
 
-  <text x="320" y="430"
+  <text x="330" y="440"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="120"
+        font-size="130"
         font-weight="500"
         text-anchor="middle"
         fill="#A57314">I</text>
 
-  <line x1="290" y1="475" x2="350" y2="475" stroke="#A57314" stroke-width="1.2"/>
+  <line x1="300" y1="485" x2="360" y2="485" stroke="#A57314" stroke-width="1.4"/>
 
-  <text x="320" y="580"
+  <text x="330" y="595"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="52"
+        font-size="54"
         font-weight="500"
         text-anchor="middle"
-        fill="currentColor">Legitimidade</text>
+        fill="#1A1A1A">Legitimidade</text>
 
-  <text x="320" y="700"
+  <text x="330" y="710"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="24"
         font-weight="400"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.75">Banco do Brasil</text>
+        fill="#1A1A1A">Banco do Brasil</text>
 
-  <text x="320" y="734"
+  <text x="330" y="744"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="24"
         font-weight="400"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.75">responde</text>
+        fill="#1A1A1A">responde</text>
 
-  <!-- ====================================================== -->
   <!-- CARD II — PRAZO -->
-  <!-- ====================================================== -->
-
-  <rect x="580" y="240" width="440" height="620" rx="4" ry="4"
+  <rect x="590" y="240" width="420" height="620" rx="4" ry="4"
         fill="none"
         stroke="#A57314"
-        stroke-opacity="0.3"
+        stroke-opacity="0.35"
         stroke-width="1"/>
 
-  <text x="800" y="430"
+  <text x="800" y="440"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="120"
+        font-size="130"
         font-weight="500"
         text-anchor="middle"
         fill="#A57314">II</text>
 
-  <line x1="770" y1="475" x2="830" y2="475" stroke="#A57314" stroke-width="1.2"/>
+  <line x1="770" y1="485" x2="830" y2="485" stroke="#A57314" stroke-width="1.4"/>
 
-  <text x="800" y="580"
+  <text x="800" y="595"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="52"
+        font-size="54"
         font-weight="500"
         text-anchor="middle"
-        fill="currentColor">Prazo</text>
+        fill="#1A1A1A">Prazo</text>
 
-  <text x="800" y="700"
+  <text x="800" y="710"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="24"
         font-weight="400"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.75">Dez anos</text>
+        fill="#1A1A1A">Dez anos</text>
 
-  <text x="800" y="740"
+  <text x="800" y="750"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="18"
-        font-weight="400"
+        font-weight="500"
         letter-spacing="4"
         text-anchor="middle"
         fill="#A57314">CC · ART. 205</text>
 
-  <!-- ====================================================== -->
   <!-- CARD III — TERMO INICIAL -->
-  <!-- ====================================================== -->
-
-  <rect x="1060" y="240" width="440" height="620" rx="4" ry="4"
+  <rect x="1060" y="240" width="420" height="620" rx="4" ry="4"
         fill="none"
         stroke="#A57314"
-        stroke-opacity="0.3"
+        stroke-opacity="0.35"
         stroke-width="1"/>
 
-  <text x="1280" y="430"
+  <text x="1270" y="440"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="120"
+        font-size="130"
         font-weight="500"
         text-anchor="middle"
         fill="#A57314">III</text>
 
-  <line x1="1250" y1="475" x2="1310" y2="475" stroke="#A57314" stroke-width="1.2"/>
+  <line x1="1240" y1="485" x2="1300" y2="485" stroke="#A57314" stroke-width="1.4"/>
 
-  <text x="1280" y="580"
+  <text x="1270" y="595"
         font-family="'Cormorant Garamond', 'Times New Roman', serif"
-        font-size="52"
+        font-size="54"
         font-weight="500"
         text-anchor="middle"
-        fill="currentColor">Termo inicial</text>
+        fill="#1A1A1A">Termo inicial</text>
 
-  <text x="1280" y="700"
+  <text x="1270" y="710"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="24"
         font-weight="400"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.75">Ciência comprovada</text>
+        fill="#1A1A1A">Ciência comprovada</text>
 
-  <text x="1280" y="734"
+  <text x="1270" y="744"
         font-family="'IBM Plex Sans', system-ui, sans-serif"
         font-size="24"
         font-weight="400"
         text-anchor="middle"
-        fill="currentColor"
-        fill-opacity="0.75">do desfalque</text>
+        fill="#1A1A1A">do desfalque</text>
 
 </svg>
