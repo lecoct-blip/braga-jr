@@ -45,7 +45,7 @@ ajusto o código pra usar.
 | R-2 | Dra. Juliana Marinho Vasco de Oliveira (sócia) | Home, `/sobre` | **P0** |
 | R-3 | Dra. Mayara Fontana Chagas Santos | Home, `/sobre` (associados) | P2 |
 | R-4 | Dra. Vitória Fonseca | Home, `/sobre` | P2 |
-| R-5 | Dra. Clara Vitória Rocha Batista | Home, `/sobre` | P2 |
+| R-5 | Tatyane Rodrigues Leite de Oliveira (estagiária) | Home, `/sobre` | P2 |
 | R-6 | Davi dos Santos de Oliveira | Home, `/sobre` | P2 |
 
 > Pendência de conteúdo paralela (README §10): bio da Dra. Juliana e dos 4

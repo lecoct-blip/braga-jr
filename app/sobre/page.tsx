@@ -52,8 +52,8 @@ const TEAM = [
     bio: 'Formada pela Faculdade Nacional de Direito da UFRJ, especialista em Direito Público e Direitos da Diversidade Sexual e de Gênero. Experiência com entidades sindicais e conhecimento dos tribunais e órgãos públicos.' },
   { role: 'Advogada', name: 'Dra. Vitória Fonseca', img: 'images/equipe/vitoria-fonseca.jpg',
     bio: 'Experiência em mediação de conflitos, atendimento ao público, Direitos das Famílias, Direito Civil e recuperação de crédito.' },
-  { role: 'Advogada', name: 'Dra. Clara Vitória Rocha Batista', img: 'images/equipe/clara-vitoria.jpg',
-    bio: 'Especializada em Direito Público.' },
+  { role: 'Estagiária jurídica', name: 'Tatyane Rodrigues Leite de Oliveira', img: 'images/equipe/tatyane-rodrigues.webp',
+    bio: 'Estagiária jurídica do escritório.' },
   { role: 'Acadêmico de Direito', name: 'Davi dos Santos de Oliveira', img: 'images/equipe/davi-oliveira.jpg',
     bio: 'Estagiário inscrito na OAB/RJ, cursando o oitavo período em Direito pela UNESA-RJ. Atuação em Direito Público.' },
 ];
