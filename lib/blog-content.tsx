@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import { Figure } from '@/components/figure';
 import { Infographic } from '@/components/infographic';
 
 /**
@@ -80,6 +81,13 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
         individual vinculado, administrado pelo Banco do Brasil.
       </p>
 
+      <Infographic
+        src="images/blog/revisao-pasep-servidor-publico/timeline-pasep.svg"
+        alt="Linha do tempo institucional do PIS/PASEP com três marcos: 1970 (LC nº 8 — instituição), 1988 (CF/88 art. 239 — redirecionamento da arrecadação) e 2023 (Tema 1.150 do STJ)."
+        label="TIMELINE · PIS/PASEP · 1970 → 1988 → 2023 · 16:10"
+        caption="Três marcos que explicam por que a discussão alcança hoje apenas quem ingressou no serviço público antes de 1988."
+      />
+
       <h2 id="falhas">Onde estão as falhas <span className="s-it">que motivam as ações</span></h2>
       <p>
         A administração correta desses valores — manter as contas
@@ -101,6 +109,14 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
         demonstrá-la são coisas distintas: a segunda depende de prova
         documental.
       </p>
+
+      <Figure
+        src="images/blog/revisao-pasep-servidor-publico/microfilmagem.webp"
+        aspect="16/10"
+        label="FOTO editorial · microfilmagem da conta PASEP · registro histórico · 16:10"
+        alt="Microfilmagem de conta vinculada ao PASEP — o registro histórico completo da movimentação, base documental para qualquer pretensão de revisão. Braga Jr. Advogados, Rio de Janeiro."
+        sizes="(max-width: 880px) 100vw, 880px"
+      />
 
       <h2 id="tema-1150">O Tema 1.150 do STJ: <span className="s-it">as três definições</span></h2>
       <p>
@@ -129,6 +145,14 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
           Primeira Seção, julgado em 13/09/2023.
         </cite>
       </blockquote>
+
+      <Infographic
+        src="images/blog/revisao-pasep-servidor-publico/tema-1150-tres-pontos.svg"
+        alt="Os três pontos do Tema 1.150 do STJ: I — Legitimidade do Banco do Brasil; II — Prazo decenal do art. 205 do Código Civil; III — Termo inicial na ciência comprovada do desfalque."
+        label="INFOGRÁFICO · Tema 1.150 STJ · 3 pontos da tese · 16:10"
+        caption="Os três pontos da tese repetitiva — legitimidade, prazo e termo inicial."
+      />
+
       <p>
         O efeito prático é relevante: ao reconhecer a legitimidade do banco
         administrador e adotar o prazo de dez anos contados da ciência do
@@ -236,6 +260,15 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
           a data de ciência.
         </li>
       </ul>
+
+      <Figure
+        src="images/blog/revisao-pasep-servidor-publico/documentos-analise.webp"
+        aspect="16/10"
+        label="FOTO editorial · flat-lay · documentos para análise de PASEP · 16:10"
+        alt="Documentos típicos para análise de um caso de PASEP — identificação, contracheques, ato de aposentadoria e histórico da conta dispostos em mesa de trabalho. Braga Jr. Advogados, Rio de Janeiro."
+        sizes="(max-width: 880px) 100vw, 880px"
+      />
+
       <p>
         A partir desse material, é possível verificar se há, de fato, valores
         a recompor e qual a tese cabível. Em casos de servidores e

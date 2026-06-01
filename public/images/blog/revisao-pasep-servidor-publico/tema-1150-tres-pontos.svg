@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Os três pontos do Tema 1.150 do STJ: legitimidade, prazo e termo inicial.">
+  <title>STJ — Tema 1.150 — Três pontos</title>
+  <desc>Card I: Legitimidade, Banco do Brasil responde. Card II: Prazo, dez anos pelo art. 205 do Código Civil. Card III: Termo inicial, ciência comprovada do desfalque.</desc>
+
+  <!--
+    Estrategia dark/light:
+    - Acentos (numerais romanos, linhas decorativas, bordas) -> #A57314 (bronze, fixo)
+    - Texto neutro (titulos e descricoes) -> currentColor (flipa com o tema)
+    - Cards sem fundo para preservar legibilidade em ambos os temas;
+      apenas borda em bronze opacity 0.3 (acento marca, fixo).
+
+    Tipografia:
+    - Numerais romanos e titulos -> Cormorant Garamond (display)
+    - Descricoes e identificadores legais -> IBM Plex Sans (body)
+  -->
+
+  <!-- ROTULO SUPERIOR -->
+  <text x="800" y="120"
+        font-family="'IBM Plex Sans', system-ui, sans-serif"
+        font-size="22"
+        font-weight="300"
+        letter-spacing="6"
+        text-anchor="middle"
+        fill="currentColor"
+        fill-opacity="0.55">STJ · TEMA 1.150 · TRÊS PONTOS</text>
+
+  <line x1="770" y1="155" x2="830" y2="155" stroke="#A57314" stroke-width="1.4"/>
+
+  <!-- ====================================================== -->
+  <!-- CARD I — LEGITIMIDADE -->
+  <!-- ====================================================== -->
+
+  <rect x="100" y="240" width="440" height="620" rx="4" ry="4"
+        fill="none"
+        stroke="#A57314"
+        stroke-opacity="0.3"
+        stroke-width="1"/>
+
+  <text x="320" y="430"
+        font-family="'Cormorant Garamond', 'Times New Roman', serif"
+        font-size="120"
+        font-weight="500"
+        text-anchor="middle"
+        fill="#A57314">I</text>
+
+  <line x1="290" y1="475" x2="350" y2="475" stroke="#A57314" stroke-width="1.2"/>
+
+  <text x="320" y="580"
+        font-family="'Cormorant Garamond', 'Times New Roman', serif"
+        font-size="52"
+        font-weight="500"
+        text-anchor="middle"
+        fill="currentColor">Legitimidade</text>
+
+  <text x="320" y="700"
+        font-family="'IBM Plex Sans', system-ui, sans-serif"
+        font-size="24"
+        font-weight="400"
+        text-anchor="middle"
+        fill="currentColor"
+        fill-opacity="0.75">Banco do Brasil</text>
+
+  <text x="320" y="734"
+        font-family="'IBM Plex Sans', system-ui, sans-serif"
+        font-size="24"
+        font-weight="400"
+        text-anchor="middle"
+        fill="currentColor"
+        fill-opacity="0.75">responde</text>
+
+  <!-- ====================================================== -->
+  <!-- CARD II — PRAZO -->
+  <!-- ====================================================== -->
+
+  <rect x="580" y="240" width="440" height="620" rx="4" ry="4"
+        fill="none"
+        stroke="#A57314"
+        stroke-opacity="0.3"
+        stroke-width="1"/>
+
+  <text x="800" y="430"
+        font-family="'Cormorant Garamond', 'Times New Roman', serif"
+        font-size="120"
+        font-weight="500"
+        text-anchor="middle"
+        fill="#A57314">II</text>
+
+  <line x1="770" y1="475" x2="830" y2="475" stroke="#A57314" stroke-width="1.2"/>
+
+  <text x="800" y="580"
+        font-family="'Cormorant Garamond', 'Times New Roman', serif"
+        font-size="52"
+        font-weight="500"
+        text-anchor="middle"
+        fill="currentColor">Prazo</text>
+
+  <text x="800" y="700"
+        font-family="'IBM Plex Sans', system-ui, sans-serif"
+        font-size="24"
+        font-weight="400"
+        text-anchor="middle"
+        fill="currentColor"
+        fill-opacity="0.75">Dez anos</text>
+
+  <text x="800" y="740"
+        font-family="'IBM Plex Sans', system-ui, sans-serif"
+        font-size="18"
+        font-weight="400"
+        letter-spacing="4"
+        text-anchor="middle"
+        fill="#A57314">CC · ART. 205</text>
+
+  <!-- ====================================================== -->
+  <!-- CARD III — TERMO INICIAL -->
+  <!-- ====================================================== -->
+
+  <rect x="1060" y="240" width="440" height="620" rx="4" ry="4"
+        fill="none"
+        stroke="#A57314"
+        stroke-opacity="0.3"
+        stroke-width="1"/>
+
+  <text x="1280" y="430"
+        font-family="'Cormorant Garamond', 'Times New Roman', serif"
+        font-size="120"
+        font-weight="500"
+        text-anchor="middle"
+        fill="#A57314">III</text>
+
+  <line x1="1250" y1="475" x2="1310" y2="475" stroke="#A57314" stroke-width="1.2"/>
+
+  <text x="1280" y="580"
+        font-family="'Cormorant Garamond', 'Times New Roman', serif"
+        font-size="52"
+        font-weight="500"
+        text-anchor="middle"
+        fill="currentColor">Termo inicial</text>
+
+  <text x="1280" y="700"
+        font-family="'IBM Plex Sans', system-ui, sans-serif"
+        font-size="24"
+        font-weight="400"
+        text-anchor="middle"
+        fill="currentColor"
+        fill-opacity="0.75">Ciência comprovada</text>
+
+  <text x="1280" y="734"
+        font-family="'IBM Plex Sans', system-ui, sans-serif"
+        font-size="24"
+        font-weight="400"
+        text-anchor="middle"
+        fill="currentColor"
+        fill-opacity="0.75">do desfalque</text>
+
+</svg>
