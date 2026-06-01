@@ -5,9 +5,9 @@ advocacia; conformidade OAB Prov. 205/2021 + LGPD. Produção: bragajr.adv.br.
 
 ## Build & deploy
 - Static export: `npm run build` → `out/` (`output:'export'`). NÃO rode `next build` com `next dev` ativo (corrompe `.next`).
-- Deploy: push em `main` → Action `deploy-hostinger.yml` publica `out/` na branch `production` → Hostinger (Apache/LiteSpeed+PHP) serve essa branch. Ver DEPLOY-HOSTINGER.md.
-- Export IGNORA `redirects()` do Next → 301 vivem em `public/.htaccess`. Form de contato = `public/contato.php` (não há API route).
-- Credenciais SSH da Hostinger (pra migração planejada do publish via Git deployment → rsync direto): **`C:\Users\lecoc\.braga-jr\hostinger-ssh.env`** (fora do repo + fora do OneDrive sync). Os mesmos valores também ficam nos GitHub repo Secrets para o workflow consumir. Git deployment do hPanel está QUEBRADO (deploya em `/public_html/public_html/` aninhado independentemente do Install Path) — ver memória `hostinger-git-deployment`.
+- Deploy = **local** via `npm run deploy` (roda `scripts/deploy.ps1`): build → tar → scp → ssh untar em `public_html/`. SEM GitHub Actions, SEM Git deployment do hPanel (ambos quebrados/abandonados).
+- Credenciais SSH da Hostinger em **`C:\Users\lecoc\.braga-jr\hostinger-ssh.env`** (fora do repo + fora do OneDrive sync). O `deploy.ps1` lê dali. Chave privada em `~/.ssh/id_ed25519`.
+- Export IGNORA `redirects()` do Next → 301 vivem em `public/.htaccess`. Form de contato = `public/contato.php` (não há API route). O `deploy.ps1` força a cópia desses dois pro `out/` antes do tar.
 
 ## CSS / responsividade (app/globals.css)
 - Mobile = bloco `@media (max-width:768px)` com `!important`. `!important` NÃO vence inline → grid inline precisa de classe-gancho (ex.: `.card-split`, `.timeline-row`) p/ o media query alcançar.

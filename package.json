@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "pwsh -ExecutionPolicy Bypass -File scripts/deploy.ps1"
   },
   "dependencies": {
     "next": "14.2.18",
