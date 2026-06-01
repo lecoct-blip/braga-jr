@@ -38,7 +38,7 @@ const RAW: Omit<Post, 'status'>[] = [
     featured: true,
   },
   {
-    slug: 'dpo-terceirizado-pme', kicker: 'Compliance',
+    slug: 'dpo-terceirizado-pme', kicker: 'Compliance · LGPD',
     dateLabel: 'Mai · 2026', published: '2026-05-27', read: '9 min',
     title: 'Encarregado terceirizado: quando faz sentido para a PME',
     excerpt:
@@ -52,7 +52,7 @@ const RAW: Omit<Post, 'status'>[] = [
       'Quando o sindicato representa a categoria sem procuração, quando precisa, e o que muda diante de associações, federações e mandado de segurança coletivo.',
   },
   {
-    slug: 'progressao-funcional-rj', kicker: 'Servidor',
+    slug: 'progressao-funcional-rj', kicker: 'Direito do servidor',
     dateLabel: 'Fev · 2026', published: '2026-02-10', read: '12 min',
     title: 'Progressão funcional bloqueada: três caminhos antes da via judicial',
     excerpt:
@@ -105,15 +105,33 @@ export const POSTS: Post[] = RAW.map((p) => ({
       : 'placeholder',
 }));
 
-export const CATEGORIES = [
-  { name: 'Todos', count: 7, active: true },
-  { name: 'Direito do servidor', count: 2 },
-  { name: 'Compliance · LGPD', count: 1 },
-  { name: 'Sindical', count: 1 },
-  { name: 'Licitações', count: 1 },
-  { name: 'Tribunais', count: 1 },
-  { name: 'Família · Sucessões', count: 1 },
-];
+export type Category = { name: string; slug: string; count: number };
+
+/**
+ * Slugify pt-BR: remove diacríticos + chars não-alfanuméricos. Usado em URLs de
+ * filtro (?cat=direito-do-servidor) e como chave estável entre client/server.
+ */
+export function categorySlug(name: string): string {
+  return name
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+/**
+ * Categorias derivadas dos kickers dos posts publicados — fonte única (DRY).
+ * Ordem: mais posts primeiro, depois alfabética (estável quando empata).
+ */
+export const CATEGORIES: Category[] = (() => {
+  const counts = new Map<string, number>();
+  POSTS.filter(isPublic).forEach((p) => {
+    counts.set(p.kicker, (counts.get(p.kicker) ?? 0) + 1);
+  });
+  return Array.from(counts.entries())
+    .map(([name, count]) => ({ name, slug: categorySlug(name), count }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'pt-BR'));
+})();
 
 export function getPost(slug: string): Post | undefined {
   return POSTS.find((p) => p.slug === slug);
