@@ -49,7 +49,7 @@ export const NAP = {
   phoneSecondary: '+55 (21) 2292-7230', // fixo
   whatsapp: 'https://wa.me/552122929413',
   emailGeneral: 'bragajr@bragajr.adv.br',
-  emailTriagem: 'atendimento@bragajr.adv.br',
+  emailContato: 'contato@bragajr.adv.br', // destinatário do form (public/contato.php)
   emailDpo: 'dpo@bragajr.adv.br', // Encarregado/DPO — caixa ativa
   oab: 'OAB/RJ 72.994',
   partner: 'Dr. Jorge Álvaro da Silva Braga Jr.',

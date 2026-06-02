@@ -22,8 +22,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 }
 
 // Destinatário e remetente (do próprio domínio, p/ não ser barrado por SPF).
-$TO      = 'atendimento@bragajr.adv.br';
-$FROM    = 'no-reply@bragajr.adv.br';
+$TO      = 'contato@bragajr.adv.br';
+$FROM    = 'contato@bragajr.adv.br';
 $SUBJECT = 'Novo contato pelo site — Braga Jr. Advogados';
 
 // O ContactForm envia JSON (application/json). Fallback para form-encoded.

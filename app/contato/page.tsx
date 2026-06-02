@@ -188,8 +188,8 @@ export default function ContatoPage() {
                     <a href={`mailto:${NAP.emailGeneral}`} className="accent mono" style={{ fontSize: 13 }}>{NAP.emailGeneral}</a>
                   </div>
                   <div>
-                    <div style={{ color: 'var(--ink-faint)', fontSize: 12 }}>Triagem técnica</div>
-                    <a href={`mailto:${NAP.emailTriagem}`} className="accent mono" style={{ fontSize: 13 }}>{NAP.emailTriagem}</a>
+                    <div style={{ color: 'var(--ink-faint)', fontSize: 12 }}>Atendimento</div>
+                    <a href={`mailto:${NAP.emailContato}`} className="accent mono" style={{ fontSize: 13 }}>{NAP.emailContato}</a>
                   </div>
                   <div>
                     <div style={{ color: 'var(--ink-faint)', fontSize: 12 }}>Telefone fixo</div>
