@@ -31,7 +31,9 @@ export type AreaContent = {
   heroP2: ReactNode;
   atos: [Ato, Ato, Ato];
   subareas: { t: string; d: string }[];
-  related: { kicker: string; title: string }[];
+  // slug = post publicado no blog. Se omitido, card renderiza como texto
+  // estático (tema previsto, sem post ainda). Evita link quebrado.
+  related: { slug?: string; kicker: string; title: string }[];
   status: 'draft' | 'published';
   // metadados SEO (title/description ficam aqui p/ centralizar)
   seoTitle: string;
@@ -58,49 +60,18 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'I.',
         title: <>O interesse é coletivo, <span className="s-it">a porta é estreita.</span></>,
-        p: (
-          <>
-            A pretensão é da categoria, mas a legitimidade para deduzi-la em
-            juízo tem contornos próprios. Tratar a entidade como simples
-            mandatária, quando cabe atuação em nome próprio — ou o inverso —
-            compromete o resultado já na petição inicial{' '}
-            <Verify>
-              confirmar o alcance atual da substituição processual do sindicato
-              (art. 8º, III, da Constituição) e a posição do STF sobre a
-              extensão da legitimidade extraordinária e a (des)necessidade de
-              autorização/relação de filiados
-            </Verify>
-            .
-          </>
-        ),
+        p: 'A pretensão é da categoria, mas a legitimidade para deduzi-la em juízo tem contornos próprios. Tratar a entidade como simples mandatária, quando cabe atuação em nome próprio — ou o inverso — compromete o resultado já na petição inicial.',
         items: [
           'Pretensão coletiva da categoria a deduzir',
           'Dúvida sobre legitimidade ativa da entidade',
-          <>
-            Questionamento sobre custeio e contribuições{' '}
-            <Verify>
-              confirmar regime atual da contribuição assistencial após o
-              julgamento do STF (Tema 935) e seus limites
-            </Verify>
-          </>,
+          'Questionamento sobre custeio e contribuições',
           'Negociação coletiva ou data-base travada',
         ],
       },
       {
         n: 'II.',
         title: <>A abordagem <span className="s-it">começa pela representatividade.</span></>,
-        p: (
-          <>
-            Mapeamento de base territorial, enquadramento e representatividade;
-            definição da via — administrativa, negocial ou judicial — antes de
-            qualquer ajuizamento{' '}
-            <Verify>
-              confirmar regras de enquadramento, unicidade e base territorial
-              aplicáveis à entidade
-            </Verify>
-            . Só então, recomendação fundamentada com cenários.
-          </>
-        ),
+        p: 'Mapeamento de base territorial, enquadramento e representatividade; definição da via — administrativa, negocial ou judicial — antes de qualquer ajuizamento. Só então, recomendação fundamentada com cenários.',
         accent: true,
         items: [
           'Análise de representatividade e base',
@@ -131,9 +102,9 @@ export const AREAS_CONTENT: AreaContent[] = [
       { t: 'Sustentação nos tribunais', d: 'Sustentação oral e acompanhamento em STF e STJ na formação de jurisprudência.' },
     ],
     related: [
-      { kicker: 'Sindical', title: 'Legitimidade processual extraordinária de sindicato: o estado da questão no STF' },
-      { kicker: 'Sindical', title: 'Contribuição assistencial após o Tema 935: o que mudou na prática' },
-      { kicker: 'Categoria', title: 'Data-base travada: quando a via é o dissídio e quando é a negociação' },
+      { slug: 'sindicato-legitimidade-stf', kicker: 'Sindical', title: 'Legitimidade processual extraordinária do sindicato no STF' },
+      { slug: 'pad-controle-judicial', kicker: 'Direito do servidor', title: 'PAD e o limite do controle judicial sobre o mérito administrativo' },
+      { slug: 'sustentacao-virtual-tribunais', kicker: 'Tribunais', title: 'Sustentação oral em sessão virtual: o que mudou nos tribunais superiores' },
     ],
     status: 'published',
     seoTitle: 'Advogado de Sindicatos no Rio de Janeiro',
@@ -228,7 +199,7 @@ export const AREAS_CONTENT: AreaContent[] = [
     related: [
       { kicker: 'Societário', title: 'Acordo de sócios: as cláusulas que evitam o litígio que você não previu' },
       { kicker: 'M&A', title: 'Due diligence: o que o comprador descobre tarde demais' },
-      { kicker: 'Família · Sucessões', title: 'Holding familiar: três perguntas antes de estruturar' },
+      { slug: 'holding-familiar-3-perguntas', kicker: 'Família · Sucessões', title: 'Holding familiar: três perguntas antes de estruturar' },
     ],
     status: 'published',
     seoTitle: 'Advogado Empresarial no Rio de Janeiro',
@@ -503,7 +474,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       { t: 'Consultoria preventiva', d: 'Pareceres e estruturação para reduzir risco antes da contratação.' },
     ],
     related: [
-      { kicker: 'Licitações', title: 'O servidor que fiscaliza contrato sob a Lei 14.133: responsabilidades ampliadas' },
+      { slug: 'lei-licitacoes-fiscalizacao', kicker: 'Licitações', title: 'O servidor que fiscaliza contrato sob a Lei 14.133: responsabilidades ampliadas' },
       { kicker: 'Improbidade', title: 'A Lei 14.230 e o dolo específico: o que mudou na defesa' },
       { kicker: 'Controle', title: 'Tomada de contas no TCE-RJ: a defesa começa antes da citação' },
     ],

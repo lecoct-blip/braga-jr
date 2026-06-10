@@ -176,20 +176,32 @@ export function AreaTemplate({
             <div className="reveal" data-delay="2">
               <Eyebrow>Artigos relacionados</Eyebrow>
               <div style={{ marginTop: 24 }}>
-                {data.related.map((a) => (
-                  <Link
-                    key={a.title}
-                    href="/blog"
-                    style={{ display: 'block', padding: '20px 0', borderBottom: '1px solid var(--border-soft)' }}
-                  >
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                      <Eyebrow noRule>{a.kicker}</Eyebrow>
-                      <span className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)' }}>2026</span>
+                {data.related.map((a) => {
+                  const cardInner = (
+                    <>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                        <Eyebrow noRule>{a.kicker}</Eyebrow>
+                        <span className="mono" style={{ fontSize: 11, color: 'var(--ink-faint)' }}>2026</span>
+                      </div>
+                      <div className="serif" style={{ fontSize: 20, marginTop: 8, lineHeight: 1.25 }}>{a.title}</div>
+                      {a.slug ? (
+                        <div style={{ marginTop: 10, fontSize: 12, color: 'var(--accent)' }}>Ler &nbsp;<span className="arrow">→</span></div>
+                      ) : (
+                        <div style={{ marginTop: 10, fontSize: 11, color: 'var(--ink-faint)', fontFamily: 'var(--font-mono)', letterSpacing: '0.12em' }}>EM PRODUÇÃO</div>
+                      )}
+                    </>
+                  );
+                  const cardStyle = { display: 'block', padding: '20px 0', borderBottom: '1px solid var(--border-soft)' } as const;
+                  return a.slug ? (
+                    <Link key={a.title} href={`/blog/${a.slug}`} style={cardStyle}>
+                      {cardInner}
+                    </Link>
+                  ) : (
+                    <div key={a.title} style={cardStyle}>
+                      {cardInner}
                     </div>
-                    <div className="serif" style={{ fontSize: 20, marginTop: 8, lineHeight: 1.25 }}>{a.title}</div>
-                    <div style={{ marginTop: 10, fontSize: 12, color: 'var(--accent)' }}>Ler &nbsp;<span className="arrow">→</span></div>
-                  </Link>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
