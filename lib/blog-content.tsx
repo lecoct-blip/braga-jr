@@ -2,6 +2,97 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { Figure } from '@/components/figure';
 import { Infographic } from '@/components/infographic';
+import { JsonLd } from '@/lib/site';
+
+/**
+ * FAQ do post Due diligence — embutido em FAQPage JSON-LD para captura de
+ * rich result no Google. Conteúdo deve casar 1:1 com os <h3>/<p> do corpo.
+ */
+const FAQ_ACORDO_SOCIOS = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Acordo de sócios e contrato social são a mesma coisa?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não. O contrato social cria a sociedade e é registrado na Junta Comercial. O acordo de sócios é um contrato paralelo, geralmente reservado, que regula a relação entre os sócios — voto, saída, venda e resolução de conflitos.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Sociedade limitada pode ter acordo de sócios?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. Embora a previsão expressa esteja na Lei das S.A. (art. 118), o acordo é plenamente válido na limitada, com base no Código Civil e na aplicação supletiva da Lei das S.A. quando o contrato social a prevê.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'O acordo de sócios pode obrigar alguém a vender sua participação?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Pode, em situações pactuadas — como a cláusula de drag along, que obriga o minoritário a acompanhar a venda do controle, ou o buy-sell, que força uma definição em caso de impasse. São obrigações livremente assumidas pelos sócios.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'O que é apuração de haveres e por que gera tantos processos?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'É o cálculo do valor da participação de quem sai da sociedade. O Código Civil traz a regra geral (art. 1.031), mas o método de avaliação costuma não ser definido em contrato — e essa indefinição é uma das maiores fontes de litígio societário. Fixar o critério no acordo previne a disputa.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'É possível incluir arbitragem no acordo de sócios?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim. A cláusula compromissória submete os conflitos à arbitragem (Lei 9.307/96), em geral mais rápida, sigilosa e técnica do que o Judiciário. É comum combiná-la com mediação prévia, numa cláusula escalonada.',
+      },
+    },
+  ],
+};
+
+const FAQ_DUE_DILIGENCE = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'A cláusula que diz que o vendedor responde pelos passivos anteriores me protege do Fisco e da Justiça do Trabalho?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Entre as partes, sim — ela define quem arca com a conta no fim. Mas não é oponível ao Fisco nem ao empregado: a Receita e a Justiça do Trabalho cobram do sucessor, e o comprador depois precisa buscar o ressarcimento do vendedor, o que pressupõe que ele tenha patrimônio para responder.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Comprar só os ativos, e não as quotas, elimina o risco de sucessão?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Reduz, mas não zera. A aquisição de estabelecimento atrai a responsabilidade tributária do art. 133 do CTN e pode atrair sucessão trabalhista. A estrutura certa depende do diagnóstico de cada passivo — não existe formato universalmente seguro.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Due diligence é só para grandes operações?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não. O risco proporcional costuma ser maior em PMEs, onde a informalidade e a ausência de provisionamento são mais comuns. O escopo da auditoria se ajusta ao porte; a necessidade dela, não.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo antes da assinatura a due diligence deve começar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Idealmente, antes de fechar o preço — porque o que a auditoria revela é justamente o que se usa para negociar valor, garantias e condições. Iniciá-la depois do acordo de preço esvazia boa parte do seu propósito.',
+      },
+    },
+  ],
+};
 
 /**
  * Corpos dos posts de blog. Os primeiros foram escritos como SCAFFOLD no tom
@@ -2604,6 +2695,648 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
         <Link href="/blog/pad-controle-judicial">PAD e o limite do controle judicial</Link>{' '}
         e{' '}
         <Link href="/blog/sindicato-legitimidade-stf">a legitimidade processual do sindicato no STF</Link>.
+      </p>
+    </>
+  ),
+
+  // ───────────── Publicado em 2026-06-10 ─────────────
+  'due-diligence-passivos-ocultos-comprador': () => (
+    <>
+      <JsonLd data={FAQ_DUE_DILIGENCE} />
+
+      <p>
+        A planilha fechava. O EBITDA estava saudável, o contrato de compra e venda
+        revisado, o preço acordado. Quatro meses após a assinatura, chega a primeira
+        citação trabalhista de um terceirizado que o comprador nunca soube que
+        existia — seguida, semanas depois, de uma autuação fiscal por um período
+        anterior à operação. Nenhum desses valores estava no balanço. E, agora, são
+        problema do comprador.
+      </p>
+      <p>
+        Esse é o roteiro silencioso de boa parte das aquisições mal preparadas. O
+        que derruba uma operação de M&amp;A quase nunca é o que está nas
+        demonstrações financeiras — é o que não está. A due diligence existe
+        justamente para encontrar esses passivos antes que eles deixem de ser risco
+        e virem conta a pagar.
+      </p>
+      <p>
+        Este artigo é escrito sob a ótica de quem compra: o que tende a passar
+        despercebido, por que a lei transfere essas dívidas ao adquirente e como
+        estruturar a operação para não herdar o que não foi precificado.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#sucessao">Por que o comprador herda o que não comprou</a></li>
+          <li><a href="#trabalhista">Passivo trabalhista: o que não entra no balanço</a></li>
+          <li><a href="#tributario">Passivo tributário e a responsabilidade do sucessor</a></li>
+          <li><a href="#lgpd">LGPD: o passivo invisível dos dados</a></li>
+          <li><a href="#administracao">Contingências com a Administração Pública</a></li>
+          <li><a href="#blindagem">Como blindar a operação: garantias contratuais</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="sucessao">Por que o comprador herda <span className="s-it">o que não comprou</span></h2>
+      <p>
+        A intuição de muitos compradores é que, ao adquirir uma empresa, compram
+        apenas o que está descrito no contrato. O ordenamento brasileiro funciona
+        de outro modo: em diversas hipóteses, a dívida acompanha o patrimônio, e
+        não a pessoa do antigo titular.
+      </p>
+      <p>
+        A estrutura da operação altera radicalmente a exposição. Numa incorporação
+        ou fusão (Lei 6.404/76, arts. 227 a 229), a sociedade resultante sucede a
+        anterior em todos os direitos e obrigações. Já na compra de quotas ou
+        ações, a pessoa jurídica permanece a mesma — e com ela, todo o seu
+        histórico de contingências. Mesmo na aquisição de ativos isolados, há
+        regras de sucessão que alcançam o adquirente.
+      </p>
+      <blockquote>
+        A mudança na propriedade ou na estrutura jurídica da empresa não afeta os
+        contratos de trabalho dos respectivos empregados.
+        <cite>CLT, arts. 10 e 448.</cite>
+      </blockquote>
+      <p>
+        Em outras palavras: trocar o dono não apaga o passado. É por isso que a
+        due diligence não é formalidade burocrática — é o único momento em que o
+        comprador ainda tem poder de barganha. Depois da assinatura, o que sobra
+        é litígio.
+      </p>
+
+      <h2 id="trabalhista">Passivo trabalhista: <span className="s-it">o que não entra no balanço</span></h2>
+      <p>
+        O passivo trabalhista é o campeão das surpresas pós-fechamento, porque
+        grande parte dele não está provisionado. São contingências que ainda não
+        viraram processo — mas virarão.
+      </p>
+      <p>Três focos merecem atenção redobrada na auditoria:</p>
+      <p>
+        <strong>Terceirização e pejotização.</strong> Contratos de prestação de
+        serviço que, na prática, escondem vínculo empregatício. Quando a Justiça
+        do Trabalho reconhece a subordinação, a empresa responde por todo o
+        período como se houvesse contrato direto. O TST consolidou, na Súmula
+        331, parâmetros de responsabilidade na terceirização que o comprador
+        precisa mapear caso a caso.
+      </p>
+      <p>
+        <strong>Verbas não provisionadas.</strong> Horas extras habituais,
+        adicionais não pagos, diferenças de enquadramento. Individualmente
+        parecem pequenas; multiplicadas pelo quadro e pela prescrição
+        quinquenal, tornam-se um número relevante.
+      </p>
+      <p>
+        <strong>Passivo de saúde e segurança.</strong> Ações de adicional de
+        insalubridade, periculosidade e, sobretudo, pleitos por doença
+        ocupacional, que costumam ter valor elevado e prazo prescricional
+        próprio.
+      </p>
+      <p>
+        A due diligence trabalhista séria não se contenta com a lista de
+        processos ativos. Ela cruza a folha, os contratos de terceiros, o
+        histórico de rescisões e o passivo potencial — aquele que ainda dorme,
+        mas que a sucessão (CLT, art. 448) entregará ao comprador.
+      </p>
+
+      <h2 id="tributario">Passivo tributário <span className="s-it">e a responsabilidade do sucessor</span></h2>
+      <p>
+        Aqui a lei é particularmente direta. O Código Tributário Nacional
+        estabelece que quem adquire fundo de comércio ou estabelecimento e segue
+        na mesma atividade responde pelos tributos devidos até a data do negócio.
+      </p>
+      <blockquote>
+        A pessoa que adquirir de outra estabelecimento comercial, industrial ou
+        profissional e continuar a respectiva exploração responde pelos tributos
+        relativos ao estabelecimento adquirido, devidos até a data do ato.
+        <cite>CTN, art. 133.</cite>
+      </blockquote>
+      <p>
+        A responsabilidade é integral se o vendedor cessar a exploração, e
+        subsidiária se o vendedor seguir em atividade. O detalhe decisivo: essa
+        dívida segue o adquirente independentemente do que o contrato de compra
+        e venda disser entre as partes — a cláusula privada não é oponível ao
+        Fisco.
+      </p>
+      <p>
+        A auditoria fiscal precisa ir além das certidões negativas. Débitos
+        parcelados, teses tributárias arriscadas adotadas pela empresa, créditos
+        de duvidosa liquidez no ativo e autuações em discussão administrativa
+        são contingências que uma certidão limpa não revela. O que protege o
+        comprador não é a certidão; é a leitura técnica do que está por trás
+        dela.
+      </p>
+
+      <h2 id="lgpd">LGPD: <span className="s-it">o passivo invisível dos dados</span></h2>
+      <p>
+        Até pouco tempo, a base de dados de uma empresa era tratada como ativo.
+        Hoje, mal estruturada, é passivo. A Lei Geral de Proteção de Dados (Lei
+        13.709/18) tornou a conformidade no tratamento de dados um item de
+        auditoria tão relevante quanto o balanço.
+      </p>
+      <p>
+        O comprador que adquire a empresa adquire também o modo como ela coleta,
+        armazena e compartilha dados — com todos os riscos embutidos. Os pontos
+        críticos da due diligence de dados:
+      </p>
+      <ul>
+        <li>Ausência de base legal para tratamentos em curso (marketing, perfilamento, compartilhamento com terceiros);</li>
+        <li>Inexistência de programa de adequação, registro de operações ou encarregado designado;</li>
+        <li>Incidentes de segurança não comunicados à ANPD e aos titulares;</li>
+        <li>Contratos com fornecedores sem cláusulas de proteção de dados, transferindo risco sem controle.</li>
+      </ul>
+      <p>
+        A Autoridade Nacional de Proteção de Dados já exerce seu poder
+        sancionatório, que inclui advertência e multa de até 2% do faturamento
+        (LGPD, art. 52). Comprar uma empresa sem mapear sua exposição de dados é
+        assumir, às cegas, uma contingência regulatória que pode se materializar
+        a qualquer momento.
+      </p>
+
+      <h2 id="administracao">Contingências <span className="s-it">com a Administração Pública</span></h2>
+      <p>
+        Esse é o passivo que escapa de auditorias generalistas — e que merece
+        atenção específica quando a empresa-alvo contrata com o poder público,
+        participa de licitações ou opera em setor regulado.
+      </p>
+      <p>
+        Empresas que fornecem ao Estado carregam riscos próprios: contratos
+        administrativos com cláusulas de reequilíbrio mal resolvidas, processos
+        sancionatórios em curso em tribunais de contas, e — o mais grave —
+        penalidades de suspensão ou declaração de inidoneidade que podem
+        inviabilizar a atividade adquirida da noite para o dia.
+      </p>
+      <p>
+        Há ainda a frente anticorrupção. A Lei 12.846/13 prevê que, em caso de
+        fusão ou incorporação, a responsabilidade da sucessora alcança a
+        obrigação de pagamento de multa e reparação do dano, até o limite do
+        patrimônio transferido (art. 4º). Um processo de responsabilização em
+        andamento, ou fatos ainda não apurados, atravessam a operação.
+      </p>
+      <p>
+        Avaliar esse tipo de passivo exige ler o contrato administrativo, o
+        procedimento sancionador e a lógica do regulador a partir de dentro —
+        não apenas pela ótica privada. É precisamente no cruzamento entre
+        Direito Corporativo e Direito Público que esse risco se torna visível,
+        e é nesse cruzamento que o escritório atua, com trajetória consolidada
+        em ambas as frentes.
+      </p>
+
+      <h2 id="blindagem">Como blindar a operação: <span className="s-it">garantias contratuais</span></h2>
+      <p>
+        Mapear o passivo é metade do trabalho. A outra metade é traduzir o que
+        foi encontrado em proteção contratual. Os instrumentos clássicos:
+      </p>
+
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Mecanismo</th>
+              <th>O que faz</th>
+              <th>Quando usar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Declarações e garantias (<em>reps &amp; warranties</em>)</td>
+              <td>Vendedor afirma formalmente a inexistência de passivos; mentira gera dever de indenizar</td>
+              <td>Sempre — é a espinha dorsal do contrato</td>
+            </tr>
+            <tr>
+              <td>Cláusula de indenização</td>
+              <td>Define quem paga cada contingência que se materialize após o fechamento</td>
+              <td>Para passivos identificados e para os ocultos</td>
+            </tr>
+            <tr>
+              <td><em>Escrow</em> (conta-garantia)</td>
+              <td>Retém parte do preço com terceiro até decair o risco</td>
+              <td>Quando há contingência relevante de desfecho incerto</td>
+            </tr>
+            <tr>
+              <td>Ajuste de preço / <em>earn-out</em></td>
+              <td>Vincula parcela do preço ao desempenho ou à não materialização de risco</td>
+              <td>Quando o passivo é provável mas indeterminado</td>
+            </tr>
+            <tr>
+              <td>Condições precedentes</td>
+              <td>Exige a regularização de pendências antes do fechamento</td>
+              <td>Para vícios sanáveis identificados na auditoria</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        A escolha do mecanismo depende do que a due diligence encontrou. Passivo
+        identificado e quantificado pede retenção ou ajuste de preço. Passivo
+        de existência incerta pede declaração robusta somada a indenização.
+        Vício sanável pede condição precedente. A engenharia contratual é a
+        tradução jurídica do diagnóstico — e por isso a auditoria e a redação
+        do contrato não podem caminhar separadas.
+      </p>
+
+      <h2 id="checklist">Checklist do comprador <span className="s-it">antes de assinar</span></h2>
+      <ol>
+        <li>A estrutura da operação (quotas, ativos, incorporação) foi escolhida considerando o regime de sucessão de cada passivo?</li>
+        <li>A auditoria trabalhista mapeou o passivo potencial — terceirizados, pejotização, verbas não provisionadas — e não só os processos ativos?</li>
+        <li>As certidões fiscais foram complementadas por análise de parcelamentos, teses de risco e autuações em discussão?</li>
+        <li>A exposição de LGPD foi avaliada (base legal, incidentes, contratos com operadores)?</li>
+        <li>Há contingências com a Administração Pública, sanções ou processos anticorrupção em curso?</li>
+        <li>Cada risco encontrado tem um mecanismo contratual correspondente (declaração, indenização, <em>escrow</em>, ajuste de preço)?</li>
+      </ol>
+
+      <h2 id="conclusao">Considerações finais: <span className="s-it">o que custa caro é o que não se vê</span></h2>
+      <p>
+        Numa aquisição, o preço se negocia sobre o que está à mesa. O prejuízo
+        nasce do que ficou debaixo dela. A due diligence não é uma etapa para
+        cumprir tabela antes da assinatura — é o instrumento que transforma o
+        invisível em visível enquanto ainda há margem para renegociar,
+        condicionar ou desistir.
+      </p>
+      <p>
+        Comprar bem não é pagar menos. É saber exatamente o que se está
+        comprando — inclusive as dívidas que não constam de nenhuma planilha.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>A cláusula que diz que o vendedor responde pelos passivos anteriores me protege do Fisco e da Justiça do Trabalho?</h3>
+      <p>
+        Entre as partes, sim — ela define quem arca com a conta no fim. Mas não
+        é oponível ao Fisco nem ao empregado: a Receita e a Justiça do Trabalho
+        cobram do sucessor, e o comprador depois precisa buscar o ressarcimento
+        do vendedor, o que pressupõe que ele tenha patrimônio para responder.
+      </p>
+      <h3>Comprar só os ativos, e não as quotas, elimina o risco de sucessão?</h3>
+      <p>
+        Reduz, mas não zera. A aquisição de estabelecimento atrai a
+        responsabilidade tributária do art. 133 do CTN e pode atrair sucessão
+        trabalhista. A estrutura certa depende do diagnóstico de cada passivo
+        — não existe formato universalmente seguro.
+      </p>
+      <h3>Due diligence é só para grandes operações?</h3>
+      <p>
+        Não. O risco proporcional costuma ser maior em PMEs, onde a
+        informalidade e a ausência de provisionamento são mais comuns. O escopo
+        da auditoria se ajusta ao porte; a necessidade dela, não.
+      </p>
+      <h3>Quanto tempo antes da assinatura a due diligence deve começar?</h3>
+      <p>
+        Idealmente, antes de fechar o preço — porque o que a auditoria revela é
+        justamente o que se usa para negociar valor, garantias e condições.
+        Iniciá-la depois do acordo de preço esvazia boa parte do seu propósito.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/corporativo">Direito Empresarial e Corporativo</Link>{' '}
+        reúne a atuação em M&amp;A, planejamento societário, governança e
+        contratos empresariais; ver também{' '}
+        <Link href="/blog/holding-familiar-3-perguntas">Holding familiar: três perguntas antes de estruturar</Link>{' '}
+        e{' '}
+        <Link href="/blog/dpo-terceirizado-pme">Encarregado terceirizado: quando faz sentido para a PME</Link>.
+      </p>
+    </>
+  ),
+
+  // ───────────── Publicado em 2026-06-10 ─────────────
+  'acordo-de-socios-clausulas-litigio': () => (
+    <>
+      <JsonLd data={FAQ_ACORDO_SOCIOS} />
+
+      <p>
+        Dois sócios fundam uma empresa no melhor momento da relação. Dividem o
+        capital, dividem a confiança e, quase sempre, dividem também a pressa
+        de começar a operar. O contrato social é registrado às pressas na Junta
+        Comercial, com cláusulas de prateleira, e a pergunta &ldquo;e se um dia
+        a gente discordar?&rdquo; fica para depois. O problema é que esse
+        &ldquo;depois&rdquo; costuma chegar no pior momento possível: quando os
+        sócios já não se entendem e cada frase do contrato passa a ser lida
+        contra o outro.
+      </p>
+      <p>
+        O acordo de sócios é o documento que responde a essa pergunta antes de
+        ela virar processo. Ele não nasce da desconfiança — nasce da
+        consciência de que sociedades mudam, pessoas mudam, e interesses que
+        hoje coincidem podem divergir amanhã. Este artigo percorre as cláusulas
+        que, na prática, separam a sociedade que resolve seus impasses na mesa
+        daquela que os resolve no Judiciário.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#nao-desconfianca">O acordo de sócios não é sinal de desconfiança</a></li>
+          <li><a href="#entrada-saida">Entrada e saída: quem pode ser sócio</a></li>
+          <li><a href="#impasse">O impasse: o litígio que você não previu</a></li>
+          <li><a href="#saida-morte">Saída, morte e divórcio: os eventos que ninguém agenda</a></li>
+          <li><a href="#arbitragem">Como o conflito será resolvido: arbitragem e escalonamento</a></li>
+          <li><a href="#checklist">Checklist do acordo de sócios</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="nao-desconfianca">O acordo de sócios <span className="s-it">não é sinal de desconfiança</span></h2>
+      <p>
+        Há uma confusão frequente entre dois documentos diferentes. O contrato
+        social (ou estatuto, na sociedade anônima) é o documento público,
+        arquivado na Junta Comercial, que cria a sociedade e define o
+        essencial: capital, objeto, administração. O acordo de sócios é um
+        contrato paralelo, geralmente reservado, que regula a relação entre os
+        sócios — como votam, como vendem, como saem e como decidem quando
+        discordam.
+      </p>
+      <p>
+        Na sociedade anônima, esse instrumento tem base legal expressa no
+        artigo 118 da Lei das S.A. (Lei 6.404/76), que reconhece o acordo de
+        acionistas sobre compra e venda de ações, preferência, exercício do
+        direito de voto e poder de controle. Na sociedade limitada — formato
+        da imensa maioria das empresas brasileiras —, o acordo encontra amparo
+        no Código Civil (Lei 10.406/2002) e na aplicação supletiva da Lei das
+        S.A., quando o contrato social assim o prevê.
+      </p>
+      <p>
+        O ponto que mais surpreende empresários é a força executória desses
+        acordos. Quando arquivado na sede da companhia, o acordo de acionistas
+        deve ser observado por ela, e suas obrigações admitem execução
+        específica — ou seja, o sócio pode ser compelido a cumprir o que
+        pactuou, e não apenas a pagar perdas e danos depois.
+      </p>
+
+      <p style={{ marginTop: 24, padding: '18px 22px', borderLeft: '3px solid var(--accent)', background: 'var(--bg-deep)', fontSize: 15, lineHeight: 1.65 }}>
+        <strong>Em termos práticos:</strong> o acordo de sócios bem redigido
+        transforma a palavra dada na fundação da empresa em obrigação
+        exigível. É a diferença entre &ldquo;combinamos isso&rdquo; e
+        &ldquo;isso é executável&rdquo;.
+      </p>
+
+      <h2 id="entrada-saida">Entrada e saída: <span className="s-it">quem pode ser sócio</span></h2>
+      <p>
+        A maior parte dos litígios societários começa numa pergunta simples:
+        quem pode entrar e como alguém sai? As cláusulas abaixo respondem a
+        isso antes do conflito.
+      </p>
+      <p>
+        <strong>Direito de preferência.</strong> Impede que um sócio venda sua
+        participação a um terceiro sem antes oferecê-la aos demais, nas mesmas
+        condições. É a cláusula que evita que você acorde, um dia, dividindo a
+        empresa com um desconhecido — ou com um concorrente.
+      </p>
+      <p>
+        <strong>Lock-up.</strong> Define um período inicial em que nenhum sócio
+        pode vender sua participação. Protege a sociedade na fase mais
+        sensível, quando a saída de um fundador pode desestabilizar a operação.
+      </p>
+      <p>
+        <strong>Tag along (direito de venda conjunta).</strong> Garante ao
+        sócio minoritário o direito de vender sua participação nas mesmas
+        condições obtidas pelo majoritário que decidir sair. Protege quem fica
+        em desvantagem numa negociação que não conduziu.
+      </p>
+      <p>
+        <strong>Drag along (obrigação de venda conjunta).</strong> O espelho do
+        anterior: permite que o majoritário, ao vender o controle, obrigue os
+        minoritários a vender também. Sem essa cláusula, um sócio com fração
+        pequena pode inviabilizar uma operação inteira de venda da empresa.
+      </p>
+      <p>
+        <strong>Vesting.</strong> Comum em startups e em sociedades onde
+        alguém entra pelo trabalho e não pelo capital, condiciona a aquisição
+        definitiva da participação ao cumprimento de tempo ou de metas. Evita
+        que um sócio que saiu no sexto mês leve consigo a fatia integral
+        prometida para cinco anos de dedicação.
+      </p>
+
+      <h2 id="impasse">O impasse: <span className="s-it">o litígio que você não previu</span></h2>
+      <p>
+        O conflito societário mais perigoso não é o de má-fé. É o empate
+        honesto — dois sócios 50/50 que, agindo de boa-fé, simplesmente
+        discordam sobre reinvestir ou distribuir, expandir ou consolidar,
+        demitir ou manter. Sem mecanismo de desempate, a empresa trava. E uma
+        empresa travada tende ao único desfecho que ninguém quer: a dissolução
+        judicial.
+      </p>
+      <p>
+        As cláusulas de impasse (<em>deadlock</em>) existem para que a
+        sociedade resolva sozinha o que, de outro modo, um juiz resolveria por
+        ela:
+      </p>
+      <p>
+        <strong>Voto de qualidade ou critério de desempate.</strong> Atribui a
+        um sócio, ao presidente do conselho ou a um terceiro independente o
+        poder de decidir em caso de empate em matérias específicas.
+      </p>
+      <p>
+        <strong>Mediação prévia obrigatória.</strong> Exige que, antes de
+        qualquer medida drástica, os sócios submetam o impasse a um mediador.
+        Muitos conflitos morrem nessa etapa, antes de escalarem.
+      </p>
+      <p>
+        <strong>Cláusula de compra e venda recíproca (buy-sell).</strong> Em
+        sua versão mais conhecida — informalmente chamada de
+        &ldquo;roleta-russa&rdquo; —, um sócio oferece comprar a parte do
+        outro por um preço; o outro tem de aceitar vender por esse valor ou
+        comprar a parte de quem ofereceu pelo mesmo preço. O mecanismo força
+        um preço justo (quem propõe não sabe de que lado ficará) e desfaz o
+        impasse sem destruir a empresa.
+      </p>
+      <p>
+        A ausência dessas cláusulas é, na experiência prática, a origem mais
+        comum do litígio que ninguém previu na fundação — porque ninguém
+        imaginava discordar.
+      </p>
+
+      <h2 id="saida-morte">Saída, morte e divórcio: <span className="s-it">os eventos que ninguém agenda</span></h2>
+      <p>
+        Sociedades não terminam só por brigas. Terminam por vida: alguém quer
+        sair, alguém adoece, alguém falece, alguém se divorcia. O Código Civil
+        oferece regras padrão para esses eventos — e o problema é justamente
+        que elas são padrão, frequentemente inadequadas à realidade de cada
+        empresa.
+      </p>
+      <p>
+        <strong>Saída voluntária (recesso).</strong> O artigo 1.077 do Código
+        Civil assegura ao sócio de limitada o direito de retirar-se em
+        hipóteses como a modificação do contrato. O acordo pode disciplinar
+        prazos, aviso prévio e — sobretudo — a forma de pagamento da
+        participação, evitando que a saída de um sócio drene o caixa da
+        empresa de uma vez.
+      </p>
+      <p>
+        <strong>Exclusão de sócio.</strong> O artigo 1.085 admite a exclusão
+        extrajudicial de sócio por falta grave, desde que prevista no contrato
+        e deliberada pela maioria; o artigo 1.030 trata da exclusão judicial.
+        Definir, no acordo, o que se considera falta grave e qual o rito de
+        exclusão evita anos de discussão sobre se a saída foi legítima.
+      </p>
+      <p>
+        <strong>Morte do sócio.</strong> Pelo artigo 1.028, em regra a quota
+        do sócio falecido é liquidada — salvo disposição contratual diversa
+        ou acordo com os herdeiros. Sem cláusula clara, a empresa pode se ver,
+        da noite para o dia, com herdeiros que não conhecem o negócio sentados
+        à mesa de decisões. O acordo pode prever a liquidação da participação
+        em condições previsíveis ou as regras de eventual ingresso.
+      </p>
+      <p>
+        <strong>Divórcio do sócio.</strong> Dependendo do regime de bens, a
+        participação societária integra a partilha — e o ex-cônjuge pode
+        passar a ter direitos econômicos sobre as quotas. Cláusulas que
+        limitam esse ingresso à esfera patrimonial (sem direito de voto ou
+        gestão) protegem a continuidade do negócio.
+      </p>
+      <p>
+        Há um denominador comum a todos esses eventos: a apuração de haveres,
+        o cálculo de quanto vale a participação de quem sai. O artigo 1.031 do
+        Código Civil estabelece a regra geral, mas o método de avaliação —
+        balanço de determinação, fluxo de caixa descontado, múltiplo de
+        faturamento — é o ponto que mais gera disputa. O Superior Tribunal de
+        Justiça tem enfrentado reiteradamente a controvérsia sobre o critério
+        adequado, justamente porque os contratos costumam silenciar a
+        respeito. Definir o método de apuração no acordo de sócios elimina, de
+        antemão, um dos litígios societários mais longos e custosos.
+      </p>
+      <p>
+        A combinação entre prática consolidada em Direito Empresarial — área
+        de pós-graduação do Dr. Jorge no IBMEC — e décadas de atuação em
+        Direito Público dá ao escritório uma leitura que cruza a governança
+        privada com a lógica do regulador, útil sobretudo para empresas que
+        também negociam com a Administração.
+      </p>
+
+      <h2 id="arbitragem">Como o conflito será resolvido: <span className="s-it">arbitragem e escalonamento</span></h2>
+      <p>
+        Mesmo o melhor acordo não elimina todo conflito — ele organiza onde e
+        como o conflito será resolvido. E o foro escolhido faz enorme
+        diferença em tempo, custo e confidencialidade.
+      </p>
+      <p>
+        A solução mais usada em sociedades de porte é a cláusula
+        compromissória, que submete os litígios à arbitragem (Lei 9.307/96),
+        em vez do Judiciário. A arbitragem tende a ser mais rápida, sigilosa e
+        conduzida por árbitros com conhecimento técnico do tema societário — o
+        que importa quando o conflito envolve <em>valuation</em>,
+        contabilidade e estrutura de capital.
+      </p>
+      <p>
+        Mais eficiente ainda é a cláusula escalonada: negociação direta entre
+        os sócios, seguida de mediação (Lei 13.140/2015) e, só então,
+        arbitragem. Cada degrau filtra parte dos conflitos antes de chegar ao
+        seguinte. Quando a opção for pelo Judiciário, define-se o foro — mas,
+        nesse caso, perdem-se a confidencialidade e a especialização.
+      </p>
+
+      <h3>Com e sem acordo de sócios: o que muda</h3>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Evento</th>
+              <th>Sem acordo de sócios</th>
+              <th>Com acordo bem redigido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Saída de um sócio</td>
+              <td>Negociação do zero, sob tensão; risco de impasse</td>
+              <td>Regras de saída, prazo e forma de pagamento já definidos</td>
+            </tr>
+            <tr>
+              <td>Empate em decisão (<em>deadlock</em>)</td>
+              <td>Empresa trava; risco de dissolução judicial</td>
+              <td>Mecanismo de desempate ou buy-sell resolve internamente</td>
+            </tr>
+            <tr>
+              <td>Morte de sócio</td>
+              <td>Herdeiros podem ingressar e participar da gestão</td>
+              <td>Liquidação ou ingresso disciplinados previamente</td>
+            </tr>
+            <tr>
+              <td>Venda da participação</td>
+              <td>Terceiro desconhecido pode entrar na sociedade</td>
+              <td>Direito de preferência, tag along e drag along protegem</td>
+            </tr>
+            <tr>
+              <td>Conflito</td>
+              <td>Processo público, longo, no Judiciário</td>
+              <td>Mediação e arbitragem, com sigilo e técnica</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="checklist">Checklist <span className="s-it">do acordo de sócios</span></h2>
+      <p>Um acordo de sócios robusto costuma endereçar, no mínimo:</p>
+      <ul>
+        <li>Direito de preferência na cessão de quotas ou ações.</li>
+        <li>Tag along e drag along, calibrados conforme a posição de cada sócio.</li>
+        <li>Lock-up e, quando houver sócio operacional, vesting.</li>
+        <li>Mecanismo de desempate / buy-sell para situações de impasse.</li>
+        <li>Regras de exclusão e de recesso, com definição do que é falta grave.</li>
+        <li>Tratamento da morte e do divórcio do sócio, incluindo ingresso de herdeiros e ex-cônjuge.</li>
+        <li>Método de apuração de haveres definido com clareza.</li>
+        <li>Cláusula de resolução de conflitos (mediação e arbitragem), de preferência escalonada.</li>
+        <li>Confidencialidade e não concorrência, quando o negócio justificar.</li>
+      </ul>
+
+      <h2 id="conclusao">Considerações finais: <span className="s-it">o acordo que você assina hoje é a defesa que você não precisará amanhã</span></h2>
+      <p>
+        O litígio societário raramente surge de quem agiu de má-fé. Surge da
+        lacuna — do que ninguém combinou porque, no dia da fundação, parecia
+        desnecessário combinar. O acordo de sócios é, no fundo, um exercício
+        de prudência: registrar, enquanto há consenso, as regras que serão
+        aplicadas quando o consenso faltar.
+      </p>
+      <p>
+        Estruturar esse documento não é prever o pior. É garantir que, se o
+        pior chegar, a empresa tenha um mapa em vez de um campo de batalha.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>Acordo de sócios e contrato social são a mesma coisa?</h3>
+      <p>
+        Não. O contrato social cria a sociedade e é registrado na Junta
+        Comercial. O acordo de sócios é um contrato paralelo, geralmente
+        reservado, que regula a relação entre os sócios — voto, saída, venda
+        e resolução de conflitos.
+      </p>
+      <h3>Sociedade limitada pode ter acordo de sócios?</h3>
+      <p>
+        Sim. Embora a previsão expressa esteja na Lei das S.A. (art. 118), o
+        acordo é plenamente válido na limitada, com base no Código Civil e na
+        aplicação supletiva da Lei das S.A. quando o contrato social a prevê.
+      </p>
+      <h3>O acordo de sócios pode obrigar alguém a vender sua participação?</h3>
+      <p>
+        Pode, em situações pactuadas — como a cláusula de drag along, que
+        obriga o minoritário a acompanhar a venda do controle, ou o buy-sell,
+        que força uma definição em caso de impasse. São obrigações livremente
+        assumidas pelos sócios.
+      </p>
+      <h3>O que é apuração de haveres e por que gera tantos processos?</h3>
+      <p>
+        É o cálculo do valor da participação de quem sai da sociedade. O
+        Código Civil traz a regra geral (art. 1.031), mas o método de
+        avaliação costuma não ser definido em contrato — e essa indefinição é
+        uma das maiores fontes de litígio societário. Fixar o critério no
+        acordo previne a disputa.
+      </p>
+      <h3>É possível incluir arbitragem no acordo de sócios?</h3>
+      <p>
+        Sim. A cláusula compromissória submete os conflitos à arbitragem (Lei
+        9.307/96), em geral mais rápida, sigilosa e técnica do que o
+        Judiciário. É comum combiná-la com mediação prévia, numa cláusula
+        escalonada.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/corporativo">Direito Empresarial e Corporativo</Link>{' '}
+        reúne a atuação em societário, governança e contratos empresariais;
+        ver também{' '}
+        <Link href="/blog/due-diligence-passivos-ocultos-comprador">Due diligence: o que o comprador descobre tarde demais</Link>{' '}
+        e{' '}
+        <Link href="/blog/holding-familiar-3-perguntas">Holding familiar: três perguntas antes de estruturar</Link>.
       </p>
     </>
   ),

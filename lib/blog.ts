@@ -90,6 +90,26 @@ const RAW: Omit<Post, 'status'>[] = [
     excerpt:
       'A holding familiar não é vestido sob medida que serve a todo patrimônio. Três perguntas que separam o instrumento útil do erro caro.',
   },
+  {
+    slug: 'due-diligence-passivos-ocultos-comprador', kicker: 'Compliance',
+    dateLabel: 'Jun · 2026', published: '2026-06-10', read: '9 min',
+    title: 'Due diligence: o que o comprador descobre tarde demais',
+    excerpt:
+      'Passivo trabalhista, fiscal e de dados raramente aparecem no balanço — mas passam ao comprador por sucessão. O que a due diligence revela antes da assinatura.',
+    seoTitle: 'Due diligence em M&A: os passivos que o comprador herda',
+    seoDescription:
+      'Passivo trabalhista, fiscal e de LGPD não aparecem no balanço, mas passam ao comprador. O que a due diligence revela antes que seja tarde.',
+  },
+  {
+    slug: 'acordo-de-socios-clausulas-litigio', kicker: 'Compliance',
+    dateLabel: 'Jun · 2026', published: '2026-06-10', read: '9 min',
+    title: 'Acordo de sócios: as cláusulas que evitam o litígio que você não previu',
+    excerpt:
+      'Direito de preferência, drag along, apuração de haveres e arbitragem. As cláusulas que separam a sociedade que resolve impasses na mesa da que resolve no Judiciário.',
+    seoTitle: 'Acordo de sócios: cláusulas que evitam litígio | Braga Jr.',
+    seoDescription:
+      'As cláusulas de um acordo de sócios que evitam o litígio societário: preferência, drag along, apuração de haveres e arbitragem. Entenda como blindar a sociedade.',
+  },
 ];
 
 /**
@@ -105,6 +125,8 @@ const PUBLISHED = new Set<string>([
   'lei-licitacoes-fiscalizacao',
   'holding-familiar-3-perguntas',
   'sustentacao-virtual-tribunais',
+  'due-diligence-passivos-ocultos-comprador',
+  'acordo-de-socios-clausulas-litigio',
 ]);
 const DRAFT = new Set<string>([]);
 

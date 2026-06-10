@@ -172,8 +172,8 @@ export const AREAS_CONTENT: AreaContent[] = [
       { t: 'Contencioso societário', d: 'Conflitos entre sócios e responsabilização de administradores.' },
     ],
     related: [
-      { kicker: 'Societário', title: 'Acordo de sócios: as cláusulas que evitam o litígio que você não previu' },
-      { kicker: 'M&A', title: 'Due diligence: o que o comprador descobre tarde demais' },
+      { slug: 'acordo-de-socios-clausulas-litigio', kicker: 'Societário', title: 'Acordo de sócios: as cláusulas que evitam o litígio que você não previu' },
+      { slug: 'due-diligence-passivos-ocultos-comprador', kicker: 'M&A', title: 'Due diligence: o que o comprador descobre tarde demais' },
       { slug: 'holding-familiar-3-perguntas', kicker: 'Família · Sucessões', title: 'Holding familiar: três perguntas antes de estruturar' },
     ],
     status: 'published',
