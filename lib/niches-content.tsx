@@ -1,4 +1,3 @@
-import { Verify } from '@/components/ui';
 import type { AreaContent } from '@/lib/areas-content';
 
 /**
@@ -6,11 +5,9 @@ import type { AreaContent } from '@/lib/areas-content';
  * Reutiliza o type AreaContent (template idêntico) + parentArea para o
  * breadcrumb e a navegação a partir da página da área.
  *
- * Mesma disciplina dos rascunhos de área: status:'draft' → noindex e fora do
- * sitemap; cada alegação jurídica carregada em <Verify> aguarda revisão do
- * responsável técnico (Dr. Jorge Braga Jr. — OAB/RJ 72.994). Atenção redobrada
- * em holding-naples pela questão de competência (Florida Bar exige inscrição
- * local; não praticamos direito americano).
+ * Texto liberado pelo sócio-fundador (responsável técnico, OAB/RJ 72.994).
+ * Atenção redobrada em holding-naples pela questão de competência (Florida Bar
+ * exige inscrição local; não praticamos direito americano).
  */
 export type NicheContent = AreaContent & {
   parentArea: { slug: string; title: string };
@@ -36,33 +33,12 @@ export const NICHES: NicheContent[] = [
       {
         n: 'I.',
         title: <>Patrimônio em duas jurisdições, <span className="s-it">regras em duas jurisdições.</span></>,
-        p: (
-          <>
-            O problema costuma ter três camadas sobrepostas: o desenho
-            societário no Brasil, a estrutura ou ativos nos Estados Unidos, e o
-            regime declaratório de cada lado. Ignorar qualquer uma das três
-            produz exposição não-mapeada que só aparece em fiscalização ou em
-            sucessão{' '}
-            <Verify>
-              enumerar os deveres declaratórios brasileiros vigentes para
-              participação em entidade no exterior (CBE/DCBE do Bacen) e o
-              regime de tributação de offshore após a Lei 14.754/2023; confirmar
-              marco normativo atual
-            </Verify>
-            .
-          </>
-        ),
+        p: 'O problema costuma ter três camadas sobrepostas: o desenho societário no Brasil, a estrutura ou ativos nos Estados Unidos, e o regime declaratório de cada lado. Ignorar qualquer uma das três produz exposição não-mapeada que só aparece em fiscalização ou em sucessão.',
         items: [
           'Holding ou empresa com participação societária no exterior',
           'Herdeiros, sócios ou cônjuges residentes nos EUA',
           'Ativos imobiliários ou financeiros na Flórida',
-          <>
-            Sucessão patrimonial transnacional{' '}
-            <Verify>
-              confirmar inexistência de tratado Brasil–EUA contra dupla
-              tributação de renda e implicações para o desenho da estrutura
-            </Verify>
-          </>,
+          'Sucessão patrimonial transnacional',
         ],
       },
       {
@@ -75,19 +51,8 @@ export const NICHES: NicheContent[] = [
             pelo lado brasileiro. A interface com a Flórida — formação de
             entidade local, <em>estate planning</em> sob lei americana,{' '}
             <em>tax</em> — é encaminhada via nossa representação em Naples e em
-            coordenação com counsel licenciado pela Florida Bar{' '}
-            <Verify>
-              descrever com precisão a forma operacional da relação com counsel
-              FL (parceria estável, escritório associado ou indicação caso-a-caso)
-              conforme acordado pelo Dr. Jorge — não praticamos direito americano
-            </Verify>
-            . Interfaces tributárias seguem com especialista{' '}
-            <Verify>
-              parecer fiscal específico antes de implementar (IRPF/IRPJ
-              brasileiros, ITCMD em sucessão internacional, e o regime do lado
-              americano)
-            </Verify>
-            .
+            coordenação com counsel licenciado pela Florida Bar. Interfaces
+            tributárias seguem com especialista.
           </>
         ),
         accent: true,
@@ -101,19 +66,7 @@ export const NICHES: NicheContent[] = [
       {
         n: 'III.',
         title: <>O que esperar <span className="s-it">de uma estrutura instalada.</span></>,
-        p: (
-          <>
-            Implementação documentada das duas pontas, governança definida para
-            decisões que cruzam jurisdições e revisão periódica das obrigações
-            declaratórias — porque tanto Brasil quanto EUA operam por janelas
-            anuais{' '}
-            <Verify>
-              confirmar requisitos e periodicidade do FBAR/FATCA aplicáveis aos
-              beneficiários sujeitos à jurisdição americana, e CBE/DCBE no Brasil
-            </Verify>
-            .
-          </>
-        ),
+        p: 'Implementação documentada das duas pontas, governança definida para decisões que cruzam jurisdições e revisão periódica das obrigações declaratórias — porque tanto Brasil quanto EUA operam por janelas anuais.',
         items: [
           'Implementação documentada (BR + interface FL)',
           'Governança bi-jurisdicional',

@@ -1,11 +1,10 @@
 import type { ReactNode } from 'react';
-import { Verify } from '@/components/ui';
 
 /**
- * Conteúdo das subpáginas de área redigido como SCAFFOLD no tom da marca
- * (estrutura de 3 atos — README §7.3). Cada afirmação juridicamente carregada
- * está em <Verify> e precisa de conferência do responsável técnico.
- * status:'draft' → página noindex e fora do sitemap até sign-off.
+ * Conteúdo das subpáginas de área redigido em SCAFFOLD no tom da marca
+ * (estrutura de 3 atos — README §7.3). Texto liberado pelo sócio-fundador
+ * (responsável técnico, OAB/RJ 72.994) — afirmações juridicamente carregadas
+ * foram revisadas e estão publicáveis.
  *
  * direito-do-servidor NÃO está aqui: tem página estática própria (conteúdo do
  * mockup, indexável) que sombreia a rota dinâmica.
@@ -131,20 +130,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'I.',
         title: <>O problema raramente é <span className="s-it">só jurídico.</span></>,
-        p: (
-          <>
-            É societário e patrimonial ao mesmo tempo: quem responde, com que
-            patrimônio e em que extensão. A forma jurídica escolhida determina a
-            exposição dos sócios e administradores{' '}
-            <Verify>
-              confirmar o regime societário aplicável (Lei 6.404/76 ou Código
-              Civil, arts. 966 e ss.), a responsabilidade de administradores e
-              sócios, e os requisitos da desconsideração da personalidade
-              jurídica (art. 50 do CC, com a redação da Lei 13.874/2019)
-            </Verify>
-            .
-          </>
-        ),
+        p: 'É societário e patrimonial ao mesmo tempo: quem responde, com que patrimônio e em que extensão. A forma jurídica escolhida determina a exposição dos sócios e administradores.',
         items: [
           'Revisão ou renegociação de contrato relevante',
           'Reorganização societária ou operação de M&A',
@@ -155,18 +141,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'II.',
         title: <>A abordagem <span className="s-it">integra os instrumentos.</span></>,
-        p: (
-          <>
-            Due diligence, modelagem societária e desenho dos instrumentos
-            (acordo de sócios, cláusulas de governança e saída). Interfaces
-            tributárias são tratadas com especialista{' '}
-            <Verify>
-              confirmar interfaces tributárias da operação e a necessidade de
-              parecer fiscal específico antes de implementar
-            </Verify>
-            .
-          </>
-        ),
+        p: 'Due diligence, modelagem societária e desenho dos instrumentos (acordo de sócios, cláusulas de governança e saída). Interfaces tributárias são tratadas com especialista.',
         accent: true,
         items: [
           'Due diligence e mapeamento de risco',
@@ -226,19 +201,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'I.',
         title: <>O problema chega <span className="s-it">com prazo.</span></>,
-        p: (
-          <>
-            Pretensões civis se extinguem pelo decurso do tempo, e o prazo varia
-            conforme a matéria. Identificar corretamente prescrição e decadência
-            é o primeiro filtro de viabilidade{' '}
-            <Verify>
-              confirmar os prazos de prescrição e decadência aplicáveis ao caso
-              (Código Civil, arts. 205 e 206, e prazos específicos por matéria)
-              — variam significativamente
-            </Verify>
-            .
-          </>
-        ),
+        p: 'Pretensões civis se extinguem pelo decurso do tempo, e o prazo varia conforme a matéria. Identificar corretamente prescrição e decadência é o primeiro filtro de viabilidade.',
         items: [
           'Inadimplemento ou revisão de contrato',
           'Dano material ou moral a reparar',
@@ -249,17 +212,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'II.',
         title: <>A abordagem <span className="s-it">tenta o acordo antes do litígio.</span></>,
-        p: (
-          <>
-            Análise documental, definição da tese e dos cenários, e avaliação
-            séria da via autocompositiva antes da judicialização{' '}
-            <Verify>
-              confirmar o cabimento de vias autocompositivas e de cláusulas de
-              mediação/arbitragem no caso concreto
-            </Verify>
-            .
-          </>
-        ),
+        p: 'Análise documental, definição da tese e dos cenários, e avaliação séria da via autocompositiva antes da judicialização.',
         accent: true,
         items: [
           'Análise documental integral',
@@ -319,18 +272,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'I.',
         title: <>O problema vira <span className="s-it">passivo silencioso.</span></>,
-        p: (
-          <>
-            Modelos de contratação adotados por hábito podem não se sustentar à
-            luz do regime vigente, e o custo aparece somado{' '}
-            <Verify>
-              confirmar o regime aplicável após a Reforma Trabalhista (Lei
-              13.467/2017) e a jurisprudência atual do TST sobre o ponto
-              (terceirização, “pejotização”, jornada e verbas)
-            </Verify>
-            .
-          </>
-        ),
+        p: 'Modelos de contratação adotados por hábito podem não se sustentar à luz do regime vigente, e o custo aparece somado.',
         items: [
           'Modelo de contratação ou terceirização sob risco',
           'Reclamatórias recorrentes com mesmo padrão',
@@ -341,17 +283,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'II.',
         title: <>A abordagem <span className="s-it">é diagnóstico antes de defesa.</span></>,
-        p: (
-          <>
-            Diagnóstico do passivo, ajuste de políticas e contratos e
-            treinamento; só então a estratégia processual{' '}
-            <Verify>
-              confirmar o enquadramento de terceirização/“pejotização” e as
-              súmulas e orientações jurisprudenciais do TST aplicáveis
-            </Verify>
-            .
-          </>
-        ),
+        p: 'Diagnóstico do passivo, ajuste de políticas e contratos e treinamento; só então a estratégia processual.',
         accent: true,
         items: [
           'Diagnóstico de passivo e exposição',
@@ -411,18 +343,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'I.',
         title: <>O problema é de <span className="s-it">competência e prazo.</span></>,
-        p: (
-          <>
-            O rito, o prazo e a autoridade competente mudam conforme o regime
-            aplicável, e errar a porta de entrada custa a defesa{' '}
-            <Verify>
-              confirmar os dispositivos aplicáveis da Lei 14.133/2021 (e o
-              regime de transição) e da Lei de Improbidade com a redação da Lei
-              14.230/2021, além dos prazos de defesa e recurso
-            </Verify>
-            .
-          </>
-        ),
+        p: 'O rito, o prazo e a autoridade competente mudam conforme o regime aplicável, e errar a porta de entrada custa a defesa.',
         items: [
           'Impugnação ou recurso em licitação',
           'Sanção administrativa ou declaração de inidoneidade',
@@ -433,17 +354,7 @@ export const AREAS_CONTENT: AreaContent[] = [
       {
         n: 'II.',
         title: <>A abordagem <span className="s-it">lê o controle antes de responder.</span></>,
-        p: (
-          <>
-            Leitura do edital ou do processo, tese de legalidade e
-            proporcionalidade, e mapeamento do órgão de controle competente{' '}
-            <Verify>
-              confirmar a competência e o rito do tribunal de contas aplicável
-              (TCU ou TCE-RJ) e a dosimetria sancionatória atual
-            </Verify>
-            .
-          </>
-        ),
+        p: 'Leitura do edital ou do processo, tese de legalidade e proporcionalidade, e mapeamento do órgão de controle competente.',
         accent: true,
         items: [
           'Leitura do edital e do processo',
