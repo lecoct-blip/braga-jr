@@ -19,9 +19,11 @@ export function generateMetadata({ params }: Params): Metadata {
   if (!post) return { title: 'Artigo não encontrado' };
   const url = `${SITE_URL}/blog/${post.slug}`;
   return {
-    // absolute: manchete editorial é o próprio title SEO (sem sufixo de marca).
-    title: { absolute: post.title },
-    description: post.excerpt,
+    // absolute: sem sufixo de marca. SEO override (post.seoTitle/seoDescription)
+    // tem precedência sobre o título/excerpt editorial — útil quando a manchete
+    // do h1 não bate com a intenção de busca pretendida.
+    title: { absolute: post.seoTitle ?? post.title },
+    description: post.seoDescription ?? post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
     // Só conteúdo revisado e liberado é indexável. Rascunho/placeholder =
     // noindex (segue links, mas não entra no índice nem é citável).

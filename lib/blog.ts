@@ -20,10 +20,14 @@ export type Post = {
   dateLabel: string; // rótulo editorial exibido (ex.: "Mai · 2026")
   published: string; // ISO p/ <time> e JSON-LD
   read: string;
-  title: string;
-  excerpt: string;
+  title: string;     // manchete editorial (h1)
+  excerpt: string;   // lead exibido após capa (também usado como meta se sem override)
   status: PostStatus;
   featured?: boolean;
+  // SEO override: quando o título editorial não bate com a intenção de busca,
+  // declarar aqui sem mexer no h1. Idem para a meta description.
+  seoTitle?: string;
+  seoDescription?: string;
 };
 
 export const isPublic = (p: Post) => p.status === 'published';
