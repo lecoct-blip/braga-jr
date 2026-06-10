@@ -43,7 +43,7 @@ const FIRM_TIMELINE = [
 // do próprio mockup (honesto e sem link quebrado).
 const TEAM = [
   { role: 'Sócio-fundador', name: 'Dr. Jorge Braga Jr.', img: 'images/equipe/jorge-braga-jr.jpg',
-    bio: 'Especialista em Direito Público e Corporativo. Formação pela PUC-Rio com certificação em IA aplicada ao Direito. Fundou o Departamento Jurídico do Sisejufe/RJ e assessorou mais de 30 entidades sindicais, com sustentações no STF e STJ.',
+    bio: 'Especialista em Direito Público e Corporativo. Formação pela PUC-Rio com certificação em IA aplicada ao Direito. Fundou o Departamento Jurídico do SINDJUSTIÇA/RJ e assessorou mais de 30 entidades sindicais, com sustentações no STF e STJ.',
     feature: true, oab: 'OAB/RJ 72.994', available: false },
   { role: 'Sócia-advogada', name: 'Dra. Juliana Marinho Vasco de Oliveira', img: 'images/equipe/juliana-marinho.jpg',
     bio: 'Formada pela Faculdade Cândido Mendes, especialista em Direito Público e Direito de Família. Atuação em diversas entidades sindicais; chefiou o Departamento Jurídico da TurisRio, entidade de economia mista.',
@@ -295,9 +295,11 @@ export default function SobrePage() {
             <p style={{ marginTop: 28, fontSize: 19, lineHeight: 1.65, color: 'var(--ink)' }}>
               Com 35 anos de experiência, construí minha carreira sobre a
               excelência técnica e o atendimento humanizado que define uma
-              banca boutique. Com formação pela PUC-Rio e certificação em IA
-              aplicada ao Direito, fundei o Departamento Jurídico do
-              Sisejufe/RJ e assessorei mais de 30 entidades sindicais.
+              banca boutique. Formação pela PUC-Rio, com pós-graduações em
+              Direito Público e Privado (EMERJ), Advocacia Pública (UERJ/IPGE,
+              convênio com a PGE-RJ) e Direito Empresarial (IBMEC), além de
+              certificação em IA aplicada ao Direito. Fundei o Departamento
+              Jurídico do SINDJUSTIÇA/RJ e assessorei mais de 30 entidades sindicais.
             </p>
             <p style={{ marginTop: 18, fontSize: 17, lineHeight: 1.65, color: 'var(--ink-muted)' }}>
               Ao longo de três décadas, conduzi casos que moldaram a

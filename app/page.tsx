@@ -88,7 +88,7 @@ const PEOPLE = [
   // entrega → aponta p/ /sobre (seção de sócios) até o perfil existir.
   { role: 'Sócio-fundador', name: 'Dr. Jorge Braga Jr.', href: '/sobre',
     img: 'images/equipe/jorge-braga-jr.jpg',
-    bio: 'Especialista em Direito Público e Corporativo. Formação pela PUC-Rio com certificação em IA aplicada ao Direito. Fundou o Departamento Jurídico do Sisejufe/RJ e assessorou mais de 30 entidades sindicais, com sustentações no STF e STJ.',
+    bio: 'Especialista em Direito Público e Corporativo. Formação pela PUC-Rio com certificação em IA aplicada ao Direito. Fundou o Departamento Jurídico do SINDJUSTIÇA/RJ e assessorou mais de 30 entidades sindicais, com sustentações no STF e STJ.',
     feature: true, oab: 'OAB/RJ 72.994' },
   { role: 'Sócia-advogada', name: 'Dra. Juliana Marinho Vasco de Oliveira', href: '/sobre',
     img: 'images/equipe/juliana-marinho.jpg',
@@ -129,6 +129,9 @@ const RECOG: { name: string; stem: string }[] = [
   { name: 'SINDJUSTIÇA', stem: 'sindjustica' },
   { name: 'SINFAZERJ', stem: 'sinfazerj' },
   { name: 'Clube Olímpico de Jacarepaguá', stem: 'clube-olimpico-jacarepagua' },
+  { name: 'Fusion', stem: 'fusion' },
+  { name: 'Costa Porto', stem: 'costa-porto' },
+  { name: 'Mundo Verde', stem: 'mundo-verde' },
 ];
 const RECOG_ITEMS = RECOG.map((r) => ({ ...r, logo: resolveLogo(r.stem) }));
 

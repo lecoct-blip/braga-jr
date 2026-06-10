@@ -45,7 +45,7 @@ const service = {
 const ATOS = [
   {
     n: 'I.', title: <>O problema chega <span className="s-it">com prazo.</span></>,
-    p: 'Uma portaria abre PAD com prazo de defesa. Uma pensão é negada administrativamente. Uma progressão fica retida na CGU. Quase sempre o que parece administrativo é também litígio em formação — e a forma como você responde no primeiro ato define o tabuleiro.',
+    p: 'Uma portaria abre PAD com prazo de defesa. Uma pensão é negada administrativamente. Uma progressão fica retida. Quase sempre o que parece administrativo é também litígio em formação — e a forma como você responde no primeiro ato define o tabuleiro.',
     border: 'var(--border)',
     items: ['Notificação de PAD ou sindicância', 'Negativa de benefício funcional', 'Bloqueio de progressão ou enquadramento', 'Aposentadoria especial / contagem de tempo'],
   },
