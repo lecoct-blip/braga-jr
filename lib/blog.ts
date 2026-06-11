@@ -110,6 +110,36 @@ const RAW: Omit<Post, 'status'>[] = [
     seoDescription:
       'As cláusulas de um acordo de sócios que evitam o litígio societário: preferência, drag along, apuração de haveres e arbitragem. Entenda como blindar a sociedade.',
   },
+  {
+    slug: 'revisao-contratual-desequilibrio-contrato', kicker: 'Direito Civil',
+    dateLabel: 'Jun · 2026', published: '2026-06-10', read: '8 min',
+    title: 'Revisão contratual: quando o desequilíbrio autoriza rever o que foi assinado',
+    excerpt:
+      'O contrato faz lei entre as partes — mas a lei abre exceções quando um fato superveniente rompe o equilíbrio. Entenda quando é possível rever, e não apenas cumprir, o que foi assinado.',
+    seoTitle: 'Revisão contratual: quando rever o contrato | Braga Jr.',
+    seoDescription:
+      'A revisão contratual permite rever cláusulas quando um fato superveniente gera desequilíbrio. Entenda quando a lei autoriza alterar o que foi assinado.',
+  },
+  {
+    slug: 'inventario-extrajudicial-ou-judicial-criterio', kicker: 'Família · Sucessões',
+    dateLabel: 'Jun · 2026', published: '2026-06-10', read: '11 min',
+    title: 'Inventário: extrajudicial ou judicial — o critério que pouca gente aplica',
+    excerpt:
+      'A escolha entre cartório e fórum não se decide por uma checklist de "tem testamento?" ou "tem menor?". Desde a Resolução CNJ 571/2024, o critério que realmente importa é outro — e quase ninguém aplica antes de decidir.',
+    seoTitle: 'Inventário: extrajudicial ou judicial? | Braga Jr.',
+    seoDescription:
+      'Quando o inventário pode ser feito em cartório e quando precisa ir ao fórum? Veja o critério que realmente decide entre a via extrajudicial e a judicial.',
+  },
+  {
+    slug: 'dano-moral-valor-alem-alegacao', kicker: 'Direito Civil',
+    dateLabel: 'Jun · 2026', published: '2026-06-10', read: '9 min',
+    title: 'Dano moral: o que sustenta o valor além da alegação',
+    excerpt:
+      'O valor do dano moral não nasce da intensidade do relato. O STJ adotou um método bifásico que ancora o quantum em precedentes e prova. Entenda o que sustenta o pedido.',
+    seoTitle: 'Dano moral: como o STJ calcula o valor | Braga Jr.',
+    seoDescription:
+      'O valor do dano moral não vem da alegação de sofrimento, mas da prova do dano e do método bifásico do STJ. Entenda o que sustenta o quantum.',
+  },
 ];
 
 /**
@@ -127,6 +157,9 @@ const PUBLISHED = new Set<string>([
   'sustentacao-virtual-tribunais',
   'due-diligence-passivos-ocultos-comprador',
   'acordo-de-socios-clausulas-litigio',
+  'revisao-contratual-desequilibrio-contrato',
+  'inventario-extrajudicial-ou-judicial-criterio',
+  'dano-moral-valor-alem-alegacao',
 ]);
 const DRAFT = new Set<string>([]);
 

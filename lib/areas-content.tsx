@@ -243,9 +243,9 @@ export const AREAS_CONTENT: AreaContent[] = [
       { t: 'Mediação e acordos', d: 'Solução autocompositiva estruturada, quando é o melhor caminho.' },
     ],
     related: [
-      { kicker: 'Contratos', title: 'Revisão contratual: quando o desequilíbrio autoriza rever o que foi assinado' },
-      { kicker: 'Sucessões', title: 'Inventário: extrajudicial ou judicial — o critério que pouca gente aplica' },
-      { kicker: 'Responsabilidade', title: 'Dano moral: o que sustenta o valor além da alegação' },
+      { slug: 'revisao-contratual-desequilibrio-contrato', kicker: 'Contratos', title: 'Revisão contratual: quando o desequilíbrio autoriza rever o que foi assinado' },
+      { slug: 'inventario-extrajudicial-ou-judicial-criterio', kicker: 'Sucessões', title: 'Inventário: extrajudicial ou judicial — o critério que pouca gente aplica' },
+      { slug: 'dano-moral-valor-alem-alegacao', kicker: 'Responsabilidade', title: 'Dano moral: o que sustenta o valor além da alegação' },
     ],
     status: 'published',
     seoTitle: 'Advogado de Direito Civil no Rio de Janeiro',

@@ -8,6 +8,139 @@ import { JsonLd } from '@/lib/site';
  * FAQ do post Due diligence — embutido em FAQPage JSON-LD para captura de
  * rich result no Google. Conteúdo deve casar 1:1 com os <h3>/<p> do corpo.
  */
+const FAQ_DANO_MORAL = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Existe um valor "tabelado" para dano moral?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não há tarifação geral. O STJ rejeita o tabelamento e adota o método bifásico, que parte de precedentes (valor-base) e ajusta às circunstâncias do caso. Há parâmetros de referência, não tabelas fixas obrigatórias.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Preciso provar que sofri para receber?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Nem sempre. Em casos de dano in re ipsa (presumido), basta demonstrar o fato gerador. Nos demais, prova-se a violação ao direito — não necessariamente a emoção, conforme o Enunciado 445 da V Jornada de Direito Civil.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quanto tempo tenho para entrar com a ação?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A pretensão de reparação civil prescreve, em regra, em três anos (art. 206, §3º, V, do Código Civil), contados da ciência da lesão. Prazos específicos podem variar conforme a relação jurídica (consumo, Administração Pública), o que recomenda análise do caso concreto.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Pedir um valor alto ajuda a receber mais?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não diretamente. O valor segue a extensão do dano (art. 944) e o método bifásico, não o tamanho do pedido. Um valor exorbitante pode ser reduzido em recurso; um valor bem fundamentado, com precedentes e prova, é mais difícil de derrubar.',
+      },
+    },
+  ],
+};
+
+const FAQ_INVENTARIO = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Inventário com testamento pode ser feito em cartório?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Pode, desde que todos os herdeiros sejam maiores, capazes e concordes, assistidos por advogado, e o testamento já tenha sido aberto e registrado em juízo ou haja autorização expressa do juízo competente. Cumpridas essas condições, a partilha é lavrada por escritura pública (STJ, REsp 1.808.767/RJ; Resolução CNJ 571/2024).',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'E se houver herdeiro menor de idade ou incapaz?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Desde a Resolução CNJ 571/2024, é possível fazer em cartório, cumpridos dois requisitos cumulativos: manifestação favorável do Ministério Público e partilha em quinhões iguais, sem prejuízo ao incapaz. Se houver conflito de interesses ou partilha desigual, volta a ser judicial.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual via é mais rápida e mais barata?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Em regra, a extrajudicial, porque dispensa o processo. Mas ela só é possível quando há consenso entre os herdeiros capazes e nenhum conflito de interesses. Onde existe litígio, a via judicial não é uma opção mais lenta — é a única cabível.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'O imposto (ITCMD) muda se eu fizer em cartório?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não. O ITCMD é estadual e incide igual nas duas vias. O que muda é a forma do procedimento, não o valor do imposto.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Comecei o inventário na Justiça. Posso transferir para o cartório?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sim, se as condições passarem a estar presentes — capacidade, consenso e os requisitos próprios de testamento ou de herdeiro incapaz. A via não é definitiva: ela acompanha a existência ou não de litígio.',
+      },
+    },
+  ],
+};
+
+const FAQ_REVISAO_CONTRATUAL = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Posso pedir revisão só porque o contrato ficou desvantajoso para mim?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não. Mau negócio, arrependimento e desvantagem decorrente da álea normal do contrato não autorizam revisão. É preciso um fato superveniente qualificado que rompa o equilíbrio — e, no regime civil, que esse fato seja extraordinário e imprevisível.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Inflação alta dá direito a rever o contrato?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Em regra, não. Inflação e variação de mercado dentro do esperado integram o risco assumido por quem contrata a longo prazo. A revisão pressupõe um acontecimento fora da normalidade contratual, com nexo claro entre o evento e o desequilíbrio.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Qual a diferença entre revisar e rescindir o contrato?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Revisar preserva o contrato e corrige a cláusula que se tornou desproporcional. Rescindir (ou resolver) extingue o vínculo. A própria lei, em vários pontos, prefere a revisão à extinção quando isso restaura o equilíbrio.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Preciso ir à Justiça para revisar um contrato?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Não necessariamente. A via mais rápida costuma ser a repactuação consensual, formalizada em aditivo contratual. A ação revisional entra quando não há acordo e o desequilíbrio é demonstrável.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Em quanto tempo posso pedir revisão de aluguel?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Na locação regida pela Lei 8.245/91, a ação revisional de aluguel pode ser proposta após três anos de vigência do contrato ou do último acordo de valor, para ajustar o aluguel ao preço de mercado.',
+      },
+    },
+  ],
+};
+
 const FAQ_ACORDO_SOCIOS = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -3337,6 +3470,837 @@ export const POST_BODIES: Record<string, () => ReactNode> = {
         <Link href="/blog/due-diligence-passivos-ocultos-comprador">Due diligence: o que o comprador descobre tarde demais</Link>{' '}
         e{' '}
         <Link href="/blog/holding-familiar-3-perguntas">Holding familiar: três perguntas antes de estruturar</Link>.
+      </p>
+    </>
+  ),
+
+  // ───────────── Publicado em 2026-06-10 ─────────────
+  'revisao-contratual-desequilibrio-contrato': () => (
+    <>
+      <JsonLd data={FAQ_REVISAO_CONTRATUAL} />
+
+      <p>
+        Todo contrato nasce dentro de uma fotografia: a do momento em que foi
+        assinado. As partes calculam preços, prazos e riscos com base na
+        realidade daquele dia. O problema é que contratos de trato sucessivo —
+        um aluguel de cinco anos, um financiamento de dez, um fornecimento de
+        longo prazo — atravessam realidades que ninguém fotografou. E quando a
+        realidade muda a ponto de transformar o que era equilibrado em algo
+        desproporcional, surge a pergunta que move este artigo: dá para rever o
+        que foi assinado, ou o contrato é mesmo intocável?
+      </p>
+      <p>
+        A resposta curta é que o contrato continua sendo, em regra, obrigatório
+        — mas essa obrigatoriedade não é absoluta. O direito brasileiro tem
+        válvulas de escape pensadas exatamente para o desequilíbrio
+        superveniente. Conhecê-las é o que separa quem renegocia com fundamento
+        de quem apenas reclama que &ldquo;o negócio ficou ruim&rdquo;.
+      </p>
+
+      <p style={{ marginTop: 24, padding: '18px 22px', borderLeft: '3px solid var(--accent)', background: 'var(--bg-deep)', fontSize: 15, lineHeight: 1.65 }}>
+        <strong>Resposta direta:</strong> A revisão contratual é a alteração —
+        judicial ou consensual — das cláusulas de um contrato válido quando um
+        fato superveniente e imprevisível torna a prestação de uma das partes
+        excessivamente onerosa, rompendo o equilíbrio original. Diferente da
+        rescisão, ela preserva o contrato: apenas reajusta o que se tornou
+        desproporcional, com base na boa-fé e no Código Civil.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#forca-obrigatoria">Se o contrato é lei entre as partes, como pode ser revisto?</a></li>
+          <li><a href="#o-que-e">O que é revisão contratual — e o que ela não é</a></li>
+          <li><a href="#quando-cabe">Quando o desequilíbrio autoriza rever o contrato?</a></li>
+          <li><a href="#regimes-especiais">Locação, financiamento e consumo seguem a mesma regra?</a></li>
+          <li><a href="#variacao-normal">Inflação e variação normal de mercado dão direito à revisão?</a></li>
+          <li><a href="#comparativo">Quadro comparativo</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="forca-obrigatoria">Se o contrato é lei entre as partes, <span className="s-it">como pode ser revisto?</span></h2>
+      <p>
+        A força obrigatória dos contratos — a ideia de que o pactuado deve ser
+        cumprido (<em>pacta sunt servanda</em>) — é um dos pilares da segurança
+        jurídica. Sem ela, nenhum negócio de longo prazo seria confiável. Por
+        isso o Código Civil reforça, desde a Lei da Liberdade Econômica (Lei
+        13.874/2019), no art. 421-A, que os contratos civis e empresariais são
+        presumidos paritários e simétricos, e que a revisão deve ser
+        excepcional e limitada. A regra, portanto, é cumprir.
+      </p>
+      <p>
+        Mas ao lado da obrigatoriedade convive um princípio mais antigo: a
+        cláusula <em>rebus sic stantibus</em> — a noção implícita de que as
+        partes se obrigam enquanto as circunstâncias de base permanecerem
+        essencialmente as mesmas. Quando um acontecimento extraordinário rompe
+        essas circunstâncias, o cumprimento literal pode deixar de ser justiça
+        contratual e passar a ser sacrifício de uma parte em proveito
+        desproporcional da outra. É aí que o ordenamento autoriza intervir —
+        não para premiar quem fez mau negócio, mas para restaurar o equilíbrio
+        que o contrato pressupunha.
+      </p>
+
+      <h2 id="o-que-e">O que é revisão contratual — <span className="s-it">e o que ela não é</span></h2>
+      <p>
+        Revisar não é desfazer. A revisão preserva o vínculo e corrige a
+        cláusula que se tornou desproporcional — por exemplo, ajustando um
+        valor, um índice ou um prazo. É diferente da resolução (extinção do
+        contrato por descumprimento ou por onerosidade excessiva) e da
+        anulação (desfazimento por vício na formação).
+      </p>
+      <p>Também é importante o que a revisão não é:</p>
+      <ul>
+        <li><strong>Não é arrependimento.</strong> Mudar de ideia, ou perceber que outro fornecedor cobraria menos, não é causa de revisão.</li>
+        <li><strong>Não cobre a álea normal do contrato.</strong> Todo negócio embute riscos previsíveis — oscilação de demanda, variação ordinária de preço. Quem assina assume esse risco.</li>
+        <li><strong>Não é instrumento para reescrever um mau negócio.</strong> A desvantagem precisa decorrer de um evento superveniente e qualificado, não da própria avaliação equivocada de quem contratou.</li>
+      </ul>
+
+      <h2 id="quando-cabe">Quando o desequilíbrio <span className="s-it">autoriza rever o contrato?</span></h2>
+      <p>
+        O Código Civil oferece mais de uma porta, e elas não se confundem.
+      </p>
+      <p>
+        <strong>Onerosidade excessiva superveniente (arts. 478 a 480).</strong>{' '}
+        Segundo o art. 478 do Código Civil, nos contratos de execução
+        continuada ou diferida, se a prestação de uma parte se tornar
+        excessivamente onerosa, com extrema vantagem para a outra, em virtude
+        de acontecimentos extraordinários e imprevisíveis, a parte prejudicada
+        pode pedir a resolução. O art. 479 permite que o réu evite a extinção
+        oferecendo a modificação equitativa das condições — ou seja, abre
+        caminho para a revisão em vez do fim do contrato. O art. 480 trata dos
+        contratos unilaterais, autorizando a redução da prestação.
+      </p>
+      <p>
+        <strong>Revisão por desproporção manifesta (art. 317).</strong> Quando,
+        por motivos imprevisíveis, sobrevém desproporção manifesta entre o
+        valor da prestação devida e o do momento de sua execução, o juiz pode
+        corrigir esse valor para assegurar, na medida do possível, o
+        equilíbrio. É a via revisional propriamente dita: não extingue,
+        recalibra.
+      </p>
+      <p>
+        <strong>Vícios na formação (arts. 156 e 157).</strong> Aqui o
+        desequilíbrio é de origem, não superveniente. O estado de perigo (art.
+        156) e a lesão (art. 157) atacam contratos em que uma parte assumiu
+        obrigação desproporcional sob necessidade ou inexperiência. No caso da
+        lesão, o próprio § 2º do art. 157 admite que o negócio seja preservado
+        se a parte favorecida oferecer suplemento ou concordar com a redução —
+        revisão, novamente, em vez de anulação.
+      </p>
+      <p>
+        Sustentando todas essas portas estão dois princípios transversais: a
+        boa-fé objetiva (art. 422) e a função social do contrato (art. 421),
+        que orientam tanto a interpretação quanto a execução do que foi
+        pactuado.
+      </p>
+
+      <p style={{ marginTop: 24, padding: '18px 22px', borderLeft: '3px solid var(--accent)', background: 'var(--bg-deep)', fontSize: 15, lineHeight: 1.65 }}>
+        Na atuação consultiva do escritório em renegociações de contratos de
+        locação e de fornecimento de longo prazo, é comum que a via mais
+        eficiente seja a repactuação direta entre as partes — com a ação
+        revisional reservada aos casos em que a contraparte se recusa a
+        discutir um desequilíbrio evidente. O caminho judicial costuma ser a
+        segunda etapa, não a primeira.
+      </p>
+
+      <h2 id="regimes-especiais">Locação, financiamento e consumo <span className="s-it">seguem a mesma regra?</span></h2>
+      <p>
+        Não — e é justamente aqui que muita confusão se instala. O regime
+        aplicável muda conforme o tipo de contrato.
+      </p>
+      <p>
+        <strong>Locação.</strong> A Lei do Inquilinato (Lei 8.245/1991) tem
+        mecanismo próprio: a ação revisional de aluguel do art. 19, que pode
+        ser proposta após três anos de vigência do contrato ou do último
+        acordo, com o objetivo de ajustar o valor ao preço de mercado. Note a
+        diferença: essa revisão não depende de evento extraordinário; depende
+        do decurso do prazo e da defasagem em relação ao mercado. É instituto
+        distinto da revisão por onerosidade excessiva do Código Civil.
+      </p>
+      <p>
+        <strong>Contratos de consumo.</strong> Quando há relação de consumo,
+        aplica-se o Código de Defesa do Consumidor (Lei 8.078/1990). O art.
+        6º, V, autoriza a modificação de cláusulas desproporcionais e a
+        revisão por fatos supervenientes que as tornem excessivamente onerosas
+        — e, diferentemente do Código Civil, não exige que o fato fosse
+        imprevisível. Basta o fato superveniente e a onerosidade excessiva. É
+        um regime mais favorável a quem pede a revisão, mas que não dispensa a
+        demonstração concreta do desequilíbrio.
+      </p>
+      <p>
+        <strong>Financiamentos e contratos bancários.</strong> Em
+        financiamentos (de veículo, de imóvel), a revisão costuma girar em
+        torno de encargos e juros. O ponto sensível é que &ldquo;ficou
+        caro&rdquo; não é, por si, causa de revisão: é preciso demonstrar
+        abusividade concreta de uma cláusula específica à luz do regime
+        aplicável (civil ou consumerista). Cada contrato exige análise própria
+        de suas cláusulas e índices — não há fórmula geral.
+      </p>
+      <p>
+        A desambiguação importa: tratar locação, consumo e contrato civil
+        paritário como se fossem o mesmo regime é o erro que enfraquece a
+        maioria dos pedidos de revisão.
+      </p>
+
+      <h2 id="variacao-normal">Inflação e variação normal de mercado <span className="s-it">dão direito à revisão?</span></h2>
+      <p>
+        Em regra, não. Variação cambial, inflação dentro de patamares
+        esperados e oscilação ordinária de preços integram a álea normal dos
+        contratos de longo prazo — são riscos que as partes assumem ao
+        contratar e que, no regime civil, não preenchem o requisito de evento
+        &ldquo;extraordinário e imprevisível&rdquo;.
+      </p>
+      <p>
+        O que pode autorizar a revisão é o fato qualificado: um acontecimento
+        fora da normalidade contratual, capaz de romper a equação econômica de
+        forma que nenhuma das partes razoavelmente projetaria. Mesmo então,
+        três elementos costumam ser decisivos na prática:
+      </p>
+      <ul>
+        <li><strong>Nexo entre o evento superveniente e o desequilíbrio.</strong> É preciso ligar o fato à onerosidade — não basta apontar o prejuízo.</li>
+        <li><strong>Excepcionalidade da medida.</strong> O art. 421-A reforça que a intervenção é exceção; o pedido deve ser proporcional e bem delimitado.</li>
+        <li><strong>Tentativa de solução consensual.</strong> Documentar a busca de repactuação fortalece a posição de quem eventualmente precisa ir ao Judiciário.</li>
+      </ul>
+
+      <h2 id="comparativo">Quadro <span className="s-it">comparativo</span></h2>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Instituto</th>
+              <th>Fundamento</th>
+              <th>Quando cabe</th>
+              <th>Efeito</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Onerosidade excessiva</td>
+              <td>CC, arts. 478–480</td>
+              <td>Evento extraordinário e imprevisível em contrato continuado/diferido</td>
+              <td>Resolução — ou modificação equitativa (revisão)</td>
+            </tr>
+            <tr>
+              <td>Revisão por desproporção</td>
+              <td>CC, art. 317</td>
+              <td>Desproporção manifesta por motivo imprevisível na execução</td>
+              <td>Correção do valor da prestação</td>
+            </tr>
+            <tr>
+              <td>Lesão / estado de perigo</td>
+              <td>CC, arts. 156–157</td>
+              <td>Desequilíbrio na formação do contrato</td>
+              <td>Anulação — ou revisão (art. 157, § 2º)</td>
+            </tr>
+            <tr>
+              <td>Revisional de aluguel</td>
+              <td>Lei 8.245/91, art. 19</td>
+              <td>Após 3 anos; aluguel defasado do mercado</td>
+              <td>Reajuste ao preço de mercado</td>
+            </tr>
+            <tr>
+              <td>Revisão consumerista</td>
+              <td>CDC, art. 6º, V</td>
+              <td>Fato superveniente que gera onerosidade (sem exigir imprevisibilidade)</td>
+              <td>Modificação ou revisão da cláusula</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>Posso pedir revisão só porque o contrato ficou desvantajoso para mim?</h3>
+      <p>
+        Não. Mau negócio, arrependimento e desvantagem decorrente da álea
+        normal do contrato não autorizam revisão. É preciso um fato
+        superveniente qualificado que rompa o equilíbrio — e, no regime
+        civil, que esse fato seja extraordinário e imprevisível.
+      </p>
+      <h3>Inflação alta dá direito a rever o contrato?</h3>
+      <p>
+        Em regra, não. Inflação e variação de mercado dentro do esperado
+        integram o risco assumido por quem contrata a longo prazo. A revisão
+        pressupõe um acontecimento fora da normalidade contratual, com nexo
+        claro entre o evento e o desequilíbrio.
+      </p>
+      <h3>Qual a diferença entre revisar e rescindir o contrato?</h3>
+      <p>
+        Revisar preserva o contrato e corrige a cláusula que se tornou
+        desproporcional. Rescindir (ou resolver) extingue o vínculo. A
+        própria lei, em vários pontos, prefere a revisão à extinção quando
+        isso restaura o equilíbrio.
+      </p>
+      <h3>Preciso ir à Justiça para revisar um contrato?</h3>
+      <p>
+        Não necessariamente. A via mais rápida costuma ser a repactuação
+        consensual, formalizada em aditivo contratual. A ação revisional
+        entra quando não há acordo e o desequilíbrio é demonstrável.
+      </p>
+      <h3>Em quanto tempo posso pedir revisão de aluguel?</h3>
+      <p>
+        Na locação regida pela Lei 8.245/91, a ação revisional de aluguel
+        pode ser proposta após três anos de vigência do contrato ou do último
+        acordo de valor, para ajustar o aluguel ao preço de mercado.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/direito-civil">Direito Civil</Link>{' '}
+        reúne a atuação em contratos, responsabilidade civil, família e
+        sucessões; ver também{' '}
+        <Link href="/blog/acordo-de-socios-clausulas-litigio">Acordo de sócios: as cláusulas que evitam o litígio que você não previu</Link>{' '}
+        e{' '}
+        <Link href="/blog/holding-familiar-3-perguntas">Holding familiar: três perguntas antes de estruturar</Link>.
+      </p>
+    </>
+  ),
+
+  // ───────────── Publicado em 2026-06-10 ─────────────
+  'inventario-extrajudicial-ou-judicial-criterio': () => (
+    <>
+      <JsonLd data={FAQ_INVENTARIO} />
+
+      <p>
+        Quando alguém falece e deixa bens, a primeira pergunta da família
+        costuma ser prática: isso se resolve em cartório ou vai ter que ir
+        para a Justiça? A resposta que circula — em conversas de família, em
+        textos rápidos na internet e até em alguns escritórios — é uma
+        checklist mecânica: tem testamento? tem herdeiro menor? Se a resposta
+        for sim para qualquer uma delas, &ldquo;então é judicial&rdquo;. Por
+        muito tempo, essa leitura foi suficiente. Hoje, ela leva a decisões
+        erradas.
+      </p>
+      <p>
+        O motivo é que o mapa mudou. A Resolução CNJ 571/2024 e mais de uma
+        década de jurisprudência do Superior Tribunal de Justiça reescreveram
+        as fronteiras entre o inventário em cartório e o inventário no fórum.
+        O testamento deixou de ser uma muralha; o herdeiro menor deixou de ser
+        um impedimento automático. O que sobrou — e o que pouca gente de fato
+        aplica antes de decidir — é um critério mais simples e mais decisivo
+        do que a velha checklist. Este artigo mostra qual é.
+      </p>
+
+      <p style={{ marginTop: 24, padding: '18px 22px', borderLeft: '3px solid var(--accent)', background: 'var(--bg-deep)', fontSize: 15, lineHeight: 1.65 }}>
+        <strong>Resposta direta:</strong> O inventário pode correr em cartório
+        (extrajudicial, por escritura pública) ou na Justiça. O critério
+        decisivo não é a existência de testamento ou de herdeiro menor —
+        desde a Resolução CNJ 571/2024, os dois admitem a via extrajudicial. O
+        que realmente define é o consenso entre todos os herdeiros capazes e a
+        ausência de conflito de interesses.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#diferenca-importa">Inventário em cartório ou no fórum: a diferença que importa</a></li>
+          <li><a href="#regra-antiga">De onde vem a regra &ldquo;tem testamento ou menor, então é judicial&rdquo;</a></li>
+          <li><a href="#criterio">O critério que pouca gente aplica: consenso e ausência de conflito</a></li>
+          <li><a href="#testamento">Testamento: dá para inventariar em cartório?</a></li>
+          <li><a href="#menor-incapaz">Herdeiro menor ou incapaz: o que a Resolução 571/2024 liberou</a></li>
+          <li><a href="#obrigatoriamente-judicial">Quando o inventário ainda é obrigatoriamente judicial</a></li>
+          <li><a href="#o-que-nao-muda">O que não muda entre as duas vias: prazo, ITCMD e advogado</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="diferenca-importa">Inventário em cartório ou no fórum: <span className="s-it">a diferença que importa</span></h2>
+      <p>
+        Inventário é o procedimento que apura o patrimônio deixado por quem
+        faleceu — bens, direitos e dívidas — e o transfere aos herdeiros por
+        meio da partilha. Ele pode seguir dois caminhos.
+      </p>
+      <p>
+        O <strong>inventário extrajudicial</strong> é feito em um Tabelionato
+        de Notas, por escritura pública. Foi a{' '}
+        <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11441.htm" target="_blank" rel="noopener noreferrer">Lei 11.441/2007</a>{' '}
+        que abriu essa porta, com o objetivo declarado de tirar do Judiciário
+        os casos em que não há litígio. Costuma ser mais rápido e mais barato,
+        porque dispensa a tramitação de um processo.
+      </p>
+      <p>
+        O <strong>inventário judicial</strong> corre perante o juiz, na vara
+        competente. É o caminho necessário quando há disputa entre os
+        herdeiros ou quando a situação exige a chancela do juiz para proteger
+        algum interesse.
+      </p>
+      <p>
+        Dois pontos valem desde já, porque não dependem da via escolhida: em
+        ambos é obrigatória a presença de advogado (art. 610, § 2º, do{' '}
+        <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm" target="_blank" rel="noopener noreferrer">Código de Processo Civil</a>),
+        e em ambos incide o ITCMD, o imposto estadual sobre herança. Estando
+        atendidos os requisitos, a escolha entre as duas vias é uma
+        prerrogativa dos próprios interessados.
+      </p>
+
+      <h2 id="regra-antiga">De onde vem a regra <span className="s-it">&ldquo;tem testamento ou menor, então é judicial&rdquo;</span></h2>
+      <p>
+        A checklist popular não nasceu do nada. Ela é leitura literal do art.
+        610 do CPC:
+      </p>
+      <blockquote>
+        Havendo testamento ou interessado incapaz, proceder-se-á ao inventário
+        judicial. § 1º Se todos forem capazes e concordes, o inventário e a
+        partilha poderão ser feitos por escritura pública.
+        <cite>Código de Processo Civil, art. 610.</cite>
+      </blockquote>
+      <p>
+        O Código Civil reforça no mesmo sentido: segundo o art. 2.016,
+        &ldquo;será sempre judicial a partilha, se os herdeiros divergirem,
+        assim como se algum deles for incapaz&rdquo; (
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener noreferrer">Lei 10.406/2002</a>
+        ).
+      </p>
+      <p>
+        Lido ao pé da letra, o caput parece fechar a porta: testamento ou
+        incapaz, vai para a Justiça. Foi assim que a regra entrou no senso
+        comum. O problema é que o sentido por trás da lei nunca foi esse. A
+        exposição de motivos da Lei 11.441/2007 tratava como obstáculo não o
+        testamento em si, mas a <strong>litigiosidade</strong> em torno dele.
+        Onde não há briga, o motivo do bloqueio desaparece — e foi exatamente
+        esse raciocínio que os tribunais e, depois, o CNJ passaram a aplicar.
+      </p>
+
+      <h2 id="criterio">O critério que pouca gente aplica: <span className="s-it">consenso e ausência de conflito</span></h2>
+      <p>
+        Aqui está o ponto que o título promete. O elemento que realmente
+        separa o cartório do fórum não é nenhum item da checklist. É a
+        combinação de duas condições:
+      </p>
+      <ol>
+        <li><strong>Todos os herdeiros capazes estão de acordo com a partilha</strong> — há consenso real, não apenas ausência de briga aparente.</li>
+        <li><strong>Não há conflito de interesses</strong> que coloque um herdeiro contra o outro ou ameace os direitos de quem não pode se defender sozinho.</li>
+      </ol>
+      <p>
+        O STJ já dizia isso antes mesmo da resolução do CNJ. Ao julgar o tema,
+        a Corte registrou que a legislação contemporânea reserva a via
+        judicial às hipóteses de litígio entre herdeiros — e que, &ldquo;se a
+        via judicial é prescindível, não há razoabilidade em se proibir, na
+        ausência de conflito de interesses&rdquo;, que herdeiros maiores e
+        capazes recorram ao cartório. Testamento e herdeiro menor, nessa
+        leitura, são <strong>condições a cumprir</strong>, não muralhas
+        intransponíveis.
+      </p>
+      <p>
+        É por isso que a pergunta certa, na primeira conversa, não é &ldquo;tem
+        testamento?&rdquo; nem &ldquo;tem menor?&rdquo;. É: <em>existe
+        consenso pleno entre os herdeiros capazes e algum conflito de
+        interesses a proteger?</em> Quem aplica esse critério acerta a via na
+        primeira tentativa. Quem se prende à checklist antiga muitas vezes
+        manda para o fórum um caso que resolveria no tabelionato — ou tenta o
+        cartório onde havia litígio escondido.
+      </p>
+
+      <p style={{ marginTop: 24, padding: '18px 22px', borderLeft: '3px solid var(--accent)', background: 'var(--bg-deep)', fontSize: 15, lineHeight: 1.65 }}>
+        Na atuação do escritório em inventários de famílias com patrimônio
+        variado — imóvel, quotas de empresa, aplicações financeiras —, a
+        primeira reunião raramente começa por cartório versus fórum. Começa
+        por mapear se há consenso genuíno sobre quem fica com o quê e se
+        algum herdeiro tem interesses que possam colidir com os dos demais. É
+        esse diagnóstico, e não a simples presença de um testamento, que
+        costuma definir o caminho.
+      </p>
+
+      <h2 id="testamento">Testamento: <span className="s-it">dá para inventariar em cartório?</span></h2>
+      <p>
+        Sim — com uma condição. Em decisão de 2019, a Quarta Turma do STJ
+        (REsp 1.808.767/RJ, relator o Ministro Luis Felipe Salomão) assentou
+        que <strong>é possível o inventário extrajudicial ainda que exista
+        testamento</strong>, desde que os interessados sejam maiores, capazes
+        e concordes, estejam assistidos por advogado, e o testamento já tenha
+        sido <strong>previamente registrado em juízo</strong> ou haja{' '}
+        <strong>autorização expressa do juízo competente</strong>. A Terceira
+        Turma reafirmou o entendimento no REsp 1.951.456/RS.
+      </p>
+      <p>
+        A Resolução CNJ 571/2024 incorporou essa orientação às regras dos
+        cartórios. Hoje, havendo testamento, o caminho é: abrir e cumprir o
+        testamento em ação judicial específica, com sentença transitada em
+        julgado; e, autorizado pelo juízo, lavrar a partilha por escritura
+        pública, com todos os herdeiros capazes, concordes e assistidos por
+        advogado.
+      </p>
+      <p>
+        Em resumo: o testamento não joga o caso inteiro para a Justiça. Ele
+        exige um passo judicial — a abertura e o cumprimento — mas a partilha
+        pode ser concluída em cartório. O que continua valendo é o critério do
+        tópico anterior: capacidade, consenso e ausência de conflito.
+      </p>
+
+      <h2 id="menor-incapaz">Herdeiro menor ou incapaz: <span className="s-it">o que a Resolução 571/2024 liberou</span></h2>
+      <p>
+        Essa é a mudança mais sentida na prática. Antes de agosto de 2024, a
+        simples presença de um filho menor entre os herdeiros obrigava o
+        inventário judicial, com curadoria do Ministério Público e decisão do
+        juiz. Inventários simples se arrastavam por anos só por causa disso.
+      </p>
+      <p>
+        A{' '}
+        <a href="https://atos.cnj.jus.br/atos/detalhar/5705" target="_blank" rel="noopener noreferrer">Resolução CNJ 571/2024</a>,
+        que alterou a Resolução 35/2007, passou a admitir o inventário
+        extrajudicial mesmo com herdeiro menor ou incapaz, desde que cumpridos{' '}
+        <strong>dois requisitos cumulativos</strong>:
+      </p>
+      <ul>
+        <li><strong>Manifestação favorável do Ministério Público</strong> sobre os termos da partilha; e</li>
+        <li><strong>Partilha em quinhões iguais</strong> — cada herdeiro recebe fração ideal idêntica sobre todos os bens, de modo que o incapaz não seja prejudicado nem indevidamente favorecido.</li>
+      </ul>
+      <p>
+        A lógica é proteger quem não pode defender os próprios interesses. Por
+        isso, se a partilha pretendida for desigual, ou se a família quiser
+        atribuir bens específicos a herdeiros específicos (em vez de frações
+        iguais sobre tudo), o caminho volta a ser o judicial. E há um limite
+        que nenhuma resolução afasta: havendo <strong>conflito de
+        interesses</strong> — por exemplo, quando o pai ou a mãe sobrevivente
+        também é herdeiro e a partilha pode prejudicar o filho menor —,
+        nomeia-se curador especial e a via extrajudicial fica inviável.
+      </p>
+
+      <h2 id="obrigatoriamente-judicial">Quando o inventário <span className="s-it">ainda é obrigatoriamente judicial</span></h2>
+      <p>
+        Mesmo com o terreno mais aberto, algumas situações continuam impondo o
+        fórum:
+      </p>
+      <ul>
+        <li><strong>Divergência entre herdeiros capazes.</strong> Basta um discordar da partilha para que o cartório saia de cena. Esse é o critério-mãe: litígio é via judicial, sempre.</li>
+        <li><strong>Conflito de interesses envolvendo incapaz.</strong> Quando o representante do menor também é herdeiro e a partilha pode prejudicá-lo, o curador especial e o juiz são indispensáveis.</li>
+        <li><strong>Partilha desigual ou de bens específicos com incapaz no espólio.</strong> A exigência de quinhões iguais impede o arranjo &ldquo;este imóvel para um, aquele para outro&rdquo; quando há menor ou incapaz.</li>
+        <li><strong>Testamentos que exigem cognição judicial.</strong> Reconhecimento de filho, substituição fideicomissária e disposições que demandem interpretação litigiosa barram o procedimento extrajudicial.</li>
+        <li><strong>Disputas sobre dívidas, sonegação de bens ou necessidade de medidas urgentes</strong> que só o juiz pode determinar.</li>
+      </ul>
+
+      <h2 id="o-que-nao-muda">O que não muda entre as duas vias: <span className="s-it">prazo, ITCMD e advogado</span></h2>
+      <p>
+        Três pontos valem nos dois caminhos e costumam pegar as famílias de
+        surpresa:
+      </p>
+      <ul>
+        <li><strong>Prazo para começar.</strong> A referência é abrir o inventário em até dois meses do falecimento (art. 611 do CPC). O atraso, na prática, costuma encarecer o ITCMD por força da legislação estadual — e isso vale tanto no cartório quanto no fórum.</li>
+        <li><strong>ITCMD.</strong> O imposto é estadual e incide igual nas duas vias. Fazer em cartório não reduz o tributo; o que muda é a forma do procedimento, não a conta do imposto.</li>
+        <li><strong>Advogado obrigatório.</strong> Em ambas as vias, a escritura ou o processo só andam com advogado assistindo as partes (art. 610, § 2º, do CPC).</li>
+      </ul>
+      <p>
+        E a escolha não é irreversível: um inventário iniciado em juízo pode
+        migrar para o cartório se as condições passarem a estar presentes, e o
+        caminho contrário também ocorre quando surge um litígio no meio do
+        percurso. A via acompanha a realidade do caso — por isso o
+        diagnóstico inicial importa mais do que a primeira impressão.
+      </p>
+      <p>
+        Na prática, então, a pergunta certa não é &ldquo;tem testamento?&rdquo;
+        nem &ldquo;tem menor?&rdquo;. É: <em>todos os herdeiros capazes
+        concordam com a partilha e não há conflito de interesses a
+        proteger?</em> Se a resposta for consenso pleno e nenhum conflito, o
+        cartório quase sempre é viável — mesmo com testamento, mesmo com
+        incapaz. Se há divergência ou conflito, o fórum não é escolha, é
+        imposição. Esse é o critério que decide; o resto são condições a
+        cumprir.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>Inventário com testamento pode ser feito em cartório?</h3>
+      <p>
+        Pode, desde que todos os herdeiros sejam maiores, capazes e concordes,
+        assistidos por advogado, e o testamento já tenha sido aberto e
+        registrado em juízo ou haja autorização expressa do juízo competente.
+        Cumpridas essas condições, a partilha é lavrada por escritura pública
+        (STJ, REsp 1.808.767/RJ; Resolução CNJ 571/2024).
+      </p>
+      <h3>E se houver herdeiro menor de idade ou incapaz?</h3>
+      <p>
+        Desde a Resolução CNJ 571/2024, é possível fazer em cartório,
+        cumpridos dois requisitos cumulativos: manifestação favorável do
+        Ministério Público e partilha em quinhões iguais, sem prejuízo ao
+        incapaz. Se houver conflito de interesses ou partilha desigual, volta
+        a ser judicial.
+      </p>
+      <h3>Qual via é mais rápida e mais barata?</h3>
+      <p>
+        Em regra, a extrajudicial, porque dispensa o processo. Mas ela só é
+        possível quando há consenso entre os herdeiros capazes e nenhum
+        conflito de interesses. Onde existe litígio, a via judicial não é uma
+        opção mais lenta — é a única cabível.
+      </p>
+      <h3>O imposto (ITCMD) muda se eu fizer em cartório?</h3>
+      <p>
+        Não. O ITCMD é estadual e incide igual nas duas vias. O que muda é a
+        forma do procedimento, não o valor do imposto.
+      </p>
+      <h3>Comecei o inventário na Justiça. Posso transferir para o cartório?</h3>
+      <p>
+        Sim, se as condições passarem a estar presentes — capacidade,
+        consenso e os requisitos próprios de testamento ou de herdeiro
+        incapaz. A via não é definitiva: ela acompanha a existência ou não de
+        litígio.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/direito-civil">Direito Civil</Link>{' '}
+        reúne a atuação em contratos, responsabilidade civil, família e
+        sucessões; ver também{' '}
+        <Link href="/blog/holding-familiar-3-perguntas">Holding familiar: três perguntas antes de estruturar</Link>{' '}
+        — o planejamento patrimonial que antecede e simplifica a sucessão — e{' '}
+        <Link href="/blog/revisao-contratual-desequilibrio-contrato">Revisão contratual: quando o desequilíbrio autoriza rever o que foi assinado</Link>.
+      </p>
+    </>
+  ),
+
+  // ───────────── Publicado em 2026-06-10 ─────────────
+  'dano-moral-valor-alem-alegacao': () => (
+    <>
+      <JsonLd data={FAQ_DANO_MORAL} />
+
+      <p>
+        Em ações indenizatórias, é comum a parte afirmar que &ldquo;sofreu
+        muito&rdquo; e pedir um valor alto — como se a intensidade do relato
+        bastasse para definir a condenação. Não basta. O ordenamento
+        brasileiro separa nitidamente <em>alegar</em> de <em>demonstrar</em>,
+        e o Superior Tribunal de Justiça (STJ) construiu um método para que o
+        valor não fique ao sabor da impressão do julgador. Entender o que
+        sustenta o <em>quantum</em> é o que separa um pedido frágil de um
+        pedido sólido.
+      </p>
+
+      <p style={{ marginTop: 24, padding: '18px 22px', borderLeft: '3px solid var(--accent)', background: 'var(--bg-deep)', fontSize: 15, lineHeight: 1.65 }}>
+        <strong>Resposta direta:</strong> O valor do dano moral não se
+        sustenta na simples alegação de sofrimento: depende da prova do dano
+        (ou de sua presunção, nos casos de dano <em>in re ipsa</em>) e do
+        método bifásico adotado pelo STJ, que fixa um valor-base conforme o
+        interesse jurídico lesado e os precedentes, ajustando-o às
+        circunstâncias concretas do caso.
+      </p>
+
+      <p>
+        <strong>Neste artigo:</strong> o fundamento legal do dano moral,
+        quando ele se prova e quando se presume, os requisitos da
+        responsabilidade civil, como o STJ calcula o valor pelo método
+        bifásico, e o que, na prática, dá lastro ao pedido.
+      </p>
+
+      <nav className="article-toc" aria-label="Sumário">
+        <div className="article-toc-title">Sumário</div>
+        <ol>
+          <li><a href="#fundamento-legal">Qual é o fundamento legal do dano moral?</a></li>
+          <li><a href="#prova-presuncao">Dano moral se prova ou se presume?</a></li>
+          <li><a href="#requisitos">Quais requisitos a indenização exige?</a></li>
+          <li><a href="#metodo-bifasico">Como o STJ calcula o valor? O método bifásico</a></li>
+          <li><a href="#lastro-valor">O que, na prática, sustenta o valor?</a></li>
+          <li><a href="#aborrecimento">Todo aborrecimento vira dano moral?</a></li>
+          <li><a href="#empresa">Empresa pode sofrer dano moral?</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="fundamento-legal">Qual é o <span className="s-it">fundamento legal do dano moral?</span></h2>
+      <p>
+        O direito à reparação tem base constitucional e civil. A Constituição
+        Federal assegura a indenização por dano moral nos incisos V e X do
+        art. 5º, ao proteger a honra, a imagem, a intimidade e a vida privada
+        (
+        <a href="http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener noreferrer">Planalto — CF/88</a>
+        ).
+      </p>
+      <p>
+        No plano infraconstitucional, o Código Civil estrutura o dever de
+        reparar:
+      </p>
+      <ul>
+        <li><strong>Art. 186</strong> — comete ato ilícito quem, por ação ou omissão voluntária, negligência ou imprudência, viola direito e causa dano a outrem, <em>ainda que exclusivamente moral</em>.</li>
+        <li><strong>Art. 187</strong> — também é ilícito o abuso de direito.</li>
+        <li><strong>Art. 927</strong> — quem, por ato ilícito, causa dano a outrem fica obrigado a repará-lo.</li>
+        <li><strong>Art. 944</strong> — a indenização mede-se pela <em>extensão do dano</em>.</li>
+      </ul>
+      <p>
+        A íntegra está no{' '}
+        <a href="http://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm" target="_blank" rel="noopener noreferrer">Código Civil (Lei 10.406/2002) — Planalto</a>.
+        O art. 944 é a chave do tema deste artigo: é a extensão do dano — e
+        não o tamanho do pedido — que baliza o valor.
+      </p>
+
+      <h2 id="prova-presuncao">Dano moral <span className="s-it">se prova ou se presume?</span></h2>
+      <p>
+        Depende do caso, e essa distinção é decisiva para o valor.
+      </p>
+      <p>
+        Em parte das hipóteses, o dano é <strong>presumido</strong> (a
+        doutrina e a jurisprudência o chamam de <em>dano in re ipsa</em>):
+        decorre do próprio fato, dispensando prova do sofrimento. É o que
+        ocorre, por exemplo, com inscrição indevida em cadastro de
+        inadimplentes ou recusa injustificada de cobertura por plano de
+        saúde. Aqui, o que se discute não é <em>se</em> houve dano, mas{' '}
+        <em>quanto</em> vale.
+      </p>
+      <p>
+        Nas demais situações, o dano <strong>precisa ser demonstrado</strong>{' '}
+        — por documentos, testemunhas, perícia, contexto. Vale lembrar o
+        Enunciado 445 da V Jornada de Direito Civil: o dano moral indenizável
+        não pressupõe necessariamente a verificação de sentimentos
+        desagradáveis como dor ou sofrimento. Ou seja: prova-se a violação ao
+        direito da personalidade, não a emoção.
+      </p>
+
+      <h2 id="requisitos">Quais requisitos <span className="s-it">a indenização exige?</span></h2>
+      <p>
+        A responsabilidade civil subjetiva reúne quatro elementos. Faltando
+        um, o pedido não se sustenta — por maior que seja a alegação.
+      </p>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Requisito</th>
+              <th>O que precisa estar demonstrado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Conduta</td>
+              <td>Ação ou omissão do ofensor (voluntária ou culposa)</td>
+            </tr>
+            <tr>
+              <td>Dano</td>
+              <td>Violação a direito da personalidade (provado ou presumido)</td>
+            </tr>
+            <tr>
+              <td>Nexo causal</td>
+              <td>Ligação direta entre a conduta e o dano</td>
+            </tr>
+            <tr>
+              <td>Culpa ou dolo</td>
+              <td>Exigível na responsabilidade subjetiva; dispensável na objetiva (art. 927, parágrafo único)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Na responsabilidade <strong>objetiva</strong> — relações de consumo,
+        atividade de risco, certas situações de Administração Pública — a
+        culpa é dispensada, mas o dano e o nexo continuam indispensáveis.
+      </p>
+
+      <h2 id="metodo-bifasico">Como o STJ calcula o valor? <span className="s-it">O método bifásico</span></h2>
+      <p>
+        Reconhecido o dano, vem a parte mais difícil: arbitrar o valor. Para
+        reduzir a subjetividade e dar tratamento isonômico a casos
+        semelhantes, o STJ adota o <strong>método bifásico</strong>,
+        sistematizado a partir do voto do Min. Paulo de Tarso Sanseverino no
+        REsp 959.780/ES e consolidado na Jurisprudência em Teses do STJ
+        (Edição nº 125).
+      </p>
+      <div className="article-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Fase</th>
+              <th>O que se analisa</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1ª fase — valor-base</strong></td>
+              <td>O <em>interesse jurídico lesado</em> e um grupo de precedentes sobre o mesmo tipo de lesão</td>
+              <td>Um patamar inicial, ancorado em casos semelhantes</td>
+            </tr>
+            <tr>
+              <td><strong>2ª fase — ajuste</strong></td>
+              <td>As <em>circunstâncias concretas</em> do caso (gravidade, repercussão, condições das partes, reprovabilidade da conduta)</td>
+              <td>O valor-base sobe ou desce até a quantia definitiva</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A lógica é direta: primeiro se busca o que tribunais costumam fixar
+        para aquele tipo de lesão; depois, ajusta-se para mais ou para menos
+        conforme as particularidades. É o que dá objetividade ao{' '}
+        <em>quantum</em> e o que permite revisão quando o valor é irrisório
+        ou exorbitante.
+      </p>
+
+      <h2 id="lastro-valor">O que, na prática, <span className="s-it">sustenta o valor?</span></h2>
+      <p>
+        Quem litiga só com adjetivos entrega ao juiz um valor sem âncora. O
+        que efetivamente dá lastro ao pedido:
+      </p>
+      <ol>
+        <li><strong>Prova do dano (ou enquadramento como <em>in re ipsa</em>)</strong> — documentos, mensagens, boletins, laudos, testemunhas. Em casos de dano presumido, a demonstração do fato gerador.</li>
+        <li><strong>Demonstração do nexo causal</strong> — a ligação clara entre a conduta e a lesão.</li>
+        <li><strong>Precedentes do mesmo interesse jurídico</strong> — alimentam a 1ª fase do método bifásico e ancoram o patamar pedido.</li>
+        <li><strong>Circunstâncias que pesam no valor</strong> — gravidade, duração, exposição pública, vulnerabilidade da vítima, grau de reprovabilidade da conduta (a 2ª fase).</li>
+      </ol>
+
+      <p style={{ marginTop: 24, padding: '18px 22px', borderLeft: '3px solid var(--accent)', background: 'var(--bg-deep)', fontSize: 15, lineHeight: 1.65 }}>
+        Na atuação do escritório em ações de responsabilidade civil,
+        observa-se que o ponto que mais influencia o valor não é a retórica
+        da petição, mas a robustez da prova do dano e a apresentação de
+        precedentes sobre o mesmo interesse jurídico lesado — exatamente os
+        dois elementos que o método bifásico exige.
+      </p>
+
+      <h2 id="aborrecimento">Todo aborrecimento <span className="s-it">vira dano moral?</span></h2>
+      <p>
+        Não. A jurisprudência distingue o dano moral indenizável do{' '}
+        <strong>mero aborrecimento</strong> — o dissabor cotidiano que, por
+        si só, não viola direito da personalidade. Fila demorada, atraso
+        comum, frustração de expectativa banal: em regra, não geram
+        indenização. O que se indeniza é a ofensa relevante à dignidade, à
+        honra, à imagem ou à integridade.
+      </p>
+
+      <h2 id="empresa">Empresa <span className="s-it">pode sofrer dano moral?</span></h2>
+      <p>
+        Sim. A <strong>Súmula 227 do STJ</strong> reconhece que a pessoa
+        jurídica pode sofrer dano moral — tipicamente quando há abalo à sua
+        honra objetiva (reputação no mercado). Não se trata de
+        &ldquo;dor&rdquo;, mas de lesão à imagem e ao bom nome.
+      </p>
+      <p>
+        Vale registrar ainda que dano moral e <strong>dano estético</strong>{' '}
+        podem ser cumulados, mesmo decorrentes do mesmo fato, conforme a{' '}
+        <strong>Súmula 387 do STJ</strong> — outro ponto que, quando
+        presente, soma-se ao valor.
+      </p>
+
+      <h2 id="faq">Perguntas frequentes</h2>
+      <h3>Existe um valor &ldquo;tabelado&rdquo; para dano moral?</h3>
+      <p>
+        Não há tarifação geral. O STJ rejeita o tabelamento e adota o método
+        bifásico, que parte de precedentes (valor-base) e ajusta às
+        circunstâncias do caso. Há parâmetros de referência, não tabelas
+        fixas obrigatórias.
+      </p>
+      <h3>Preciso provar que sofri para receber?</h3>
+      <p>
+        Nem sempre. Em casos de dano <em>in re ipsa</em> (presumido), basta
+        demonstrar o fato gerador. Nos demais, prova-se a violação ao direito
+        — não necessariamente a emoção, conforme o Enunciado 445 da V
+        Jornada de Direito Civil.
+      </p>
+      <h3>Quanto tempo tenho para entrar com a ação?</h3>
+      <p>
+        A pretensão de reparação civil prescreve, em regra, em três anos
+        (art. 206, §3º, V, do Código Civil), contados da ciência da lesão.
+        Prazos específicos podem variar conforme a relação jurídica (consumo,
+        Administração Pública), o que recomenda análise do caso concreto.
+      </p>
+      <h3>Pedir um valor alto ajuda a receber mais?</h3>
+      <p>
+        Não diretamente. O valor segue a extensão do dano (art. 944) e o
+        método bifásico, não o tamanho do pedido. Um valor exorbitante pode
+        ser reduzido em recurso; um valor bem fundamentado, com precedentes
+        e prova, é mais difícil de derrubar.
+      </p>
+
+      <p style={{ marginTop: 32, fontSize: 14, color: 'var(--ink-faint)', fontStyle: 'italic', lineHeight: 1.6 }}>
+        Leitura complementar: a página de{' '}
+        <Link href="/atuacao/direito-civil">Direito Civil</Link>{' '}
+        reúne a atuação em contratos, responsabilidade civil, família e
+        sucessões; ver também{' '}
+        <Link href="/blog/revisao-contratual-desequilibrio-contrato">Revisão contratual: quando o desequilíbrio autoriza rever o que foi assinado</Link>{' '}
+        e{' '}
+        <Link href="/blog/inventario-extrajudicial-ou-judicial-criterio">Inventário: extrajudicial ou judicial — o critério que pouca gente aplica</Link>.
       </p>
     </>
   ),
